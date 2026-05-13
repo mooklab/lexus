@@ -154,6 +154,7 @@ section.stages div.list div.item div.line {
   }
 }
 section.stages div.list div.item div.line div {
+  position: relative;
   width: calc(100% + var(--grid-gap) - 8px);
   height: 2px;
   background: #cbd7e8;
@@ -206,7 +207,152 @@ section.stages div.list div.item span {
     font-size: 32px;
   }
 }
+section.stages div.list.animate div.item div.line div::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #15A0FD;
+  -webkit-animation-name: stages_width;
+          animation-name: stages_width;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+}
+@media (max-width: 640px) {
+  section.stages div.list.animate div.item div.line div::after {
+    width: 2px;
+    height: 0;
+    -webkit-animation-name: stages_height;
+            animation-name: stages_height;
+  }
+}
+section.stages div.list.animate div.item div.line::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 0;
+  height: 10px;
+  background: #15A0FD;
+  -webkit-animation-name: square_width;
+          animation-name: square_width;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+}
+@media (max-width: 640px) {
+  section.stages div.list.animate div.item div.line::after {
+    width: 10px;
+    height: 0;
+    -webkit-animation-name: square_height;
+            animation-name: square_height;
+  }
+}
+section.stages div.list.animate div.item:nth-child(1) div.line div:after {
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+}
+section.stages div.list.animate div.item:nth-child(2) div.line div:after {
+  -webkit-animation-delay: 3s;
+          animation-delay: 3s;
+}
+section.stages div.list.animate div.item:nth-child(2) div.line::after {
+  -webkit-animation-delay: 2.5s;
+          animation-delay: 2.5s;
+}
+section.stages div.list.animate div.item:nth-child(3) div.line div:after {
+  -webkit-animation-delay: 5.5s;
+          animation-delay: 5.5s;
+}
+section.stages div.list.animate div.item:nth-child(3) div.line::after {
+  -webkit-animation-delay: 5s;
+          animation-delay: 5s;
+}
+section.stages div.list.animate div.item:nth-child(4) div.line div:after {
+  -webkit-animation-delay: 8s;
+          animation-delay: 8s;
+}
+section.stages div.list.animate div.item:nth-child(4) div.line::after {
+  -webkit-animation-delay: 7.5s;
+          animation-delay: 7.5s;
+}
 
+@-webkit-keyframes stages_width {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes stages_width {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+@-webkit-keyframes square_width {
+  0% {
+    width: 0px;
+  }
+  100% {
+    width: 10px;
+  }
+}
+@keyframes square_width {
+  0% {
+    width: 0px;
+  }
+  100% {
+    width: 10px;
+  }
+}
+@-webkit-keyframes stages_height {
+  0% {
+    height: 0%;
+  }
+  100% {
+    height: 100%;
+  }
+}
+@keyframes stages_height {
+  0% {
+    height: 0%;
+  }
+  100% {
+    height: 100%;
+  }
+}
+@-webkit-keyframes square_height {
+  0% {
+    height: 0px;
+  }
+  100% {
+    height: 10px;
+  }
+}
+@keyframes square_height {
+  0% {
+    height: 0px;
+  }
+  100% {
+    height: 10px;
+  }
+}
 section.consulting {
   margin-top: var(--section-gap);
   margin-bottom: var(--section-gap);
@@ -640,12 +786,12 @@ section.faq div.list {
 section.faq div.question {
   border: 1px solid rgba(21, 160, 253, 0.5);
   border-radius: 16px;
-  padding: 32px;
-}
-@media (max-width: 960px) {
-  section.faq div.question {
-    padding: 20px;
-  }
+  -webkit-box-shadow: 0 2px 28px 0 transparent;
+          box-shadow: 0 2px 28px 0 transparent;
+  -webkit-transition: -webkit-box-shadow 0.5s;
+  transition: -webkit-box-shadow 0.5s;
+  transition: box-shadow 0.5s;
+  transition: box-shadow 0.5s, -webkit-box-shadow 0.5s;
 }
 section.faq div.question div.title {
   cursor: pointer;
@@ -656,6 +802,14 @@ section.faq div.question div.title {
   grid-template-columns: 1fr -webkit-max-content;
   grid-template-columns: 1fr max-content;
   grid-gap: 24px;
+  padding: 32px;
+  -webkit-transition: padding 0.5s;
+  transition: padding 0.5s;
+}
+@media (max-width: 960px) {
+  section.faq div.question div.title {
+    padding: 20px;
+  }
 }
 section.faq div.question div.title div.icon {
   display: grid;
@@ -690,7 +844,22 @@ section.faq div.question div.content div.overflow {
   overflow: hidden;
 }
 section.faq div.question div.content div.wrap {
-  padding-top: 16px;
+  padding: 32px;
+  padding-top: unset;
+}
+@media (max-width: 960px) {
+  section.faq div.question div.content div.wrap {
+    padding: 20px;
+    padding-top: unset;
+  }
+}
+section.faq div.question.open div.title {
+  padding-bottom: 24px;
+}
+@media (max-width: 960px) {
+  section.faq div.question.open div.title {
+    padding-bottom: 16px;
+  }
 }
 section.faq div.question.open div.title h4 {
   color: #15a0fd;
@@ -703,6 +872,10 @@ section.faq div.question.open div.title div.icon img.plus {
 }
 section.faq div.question.open div.content {
   grid-template-rows: 1fr;
+}
+section.faq div.question:hover {
+  -webkit-box-shadow: 0 2px 28px 0 rgba(21, 160, 253, 0.6);
+          box-shadow: 0 2px 28px 0 rgba(21, 160, 253, 0.6);
 }
 
 section.decision {

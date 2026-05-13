@@ -398,10 +398,12 @@ fieldset.select div.select_choice input:checked + span {
 fieldset.select:focus-within {
   z-index: 5;
 }
+fieldset.select:focus-within div.select_choice {
+  border-color: white;
+}
 fieldset.select:focus-within div.select_dropdown {
   grid-template-rows: 1fr;
   border: 1px solid rgba(255, 255, 255, 0.6);
-  border-radius: 40px;
   background: #0b0f15;
 }
 fieldset.select:focus-within img.arrow, fieldset.select:focus-within svg {
@@ -421,7 +423,7 @@ fieldset.select div.select_dropdown {
   width: 100%;
   z-index: 6;
   border: 0px solid transparent;
-  border-radius: 40px;
+  border-radius: 20px;
   background: #0b0f15;
   overflow: hidden;
 }
@@ -430,10 +432,9 @@ fieldset.select div.select_dropdown div.select_dropdown_overflow {
 }
 fieldset.select div.select_dropdown div.select_dropdown_content {
   display: grid;
-  grid-gap: 10px;
-  max-height: 240px;
+  max-height: 464px;
   overflow: auto;
-  padding: 20px 0;
+  padding: 8px 24px;
 }
 fieldset.select div.select_dropdown div.select_dropdown_content::-webkit-scrollbar {
   width: 20px;
@@ -445,10 +446,14 @@ fieldset.select div.select_dropdown div.select_dropdown_content::-webkit-scrollb
 }
 fieldset.select div.select_dropdown label {
   cursor: pointer;
-  padding: 5px 20px;
+  padding: 16px 0px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3019607843);
 }
 fieldset.select div.select_dropdown label:hover {
   opacity: 0.7;
+}
+fieldset.select div.select_dropdown label:last-child {
+  border: unset;
 }
 fieldset.select div.select_dropdown input {
   width: 100%;

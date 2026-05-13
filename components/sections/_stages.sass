@@ -44,7 +44,9 @@ section.stages
                     grid-template-rows: max-content 1fr
                     height: 100%
                     justify-items: center
+
                 div
+                    position: relative
                     width: calc(100% + var(--grid-gap) - 8px)
                     height: 2px
                     background: #cbd7e8
@@ -76,3 +78,88 @@ section.stages
             h3
                 +s(s)
                     +f(20px, 32px)
+
+        &.animate
+            div.item
+                div.line
+                    div
+                        &::after
+                            content: ''
+                            display: block
+                            position: absolute
+                            top: 0
+                            left: 0
+                            width: 0
+                            height: 2px
+                            background: #15A0FD
+                            animation-name: stages_width
+                            animation-duration: 2s
+                            animation-fill-mode: forwards
+                            animation-timing-function: linear
+                            +s(s)
+                                width: 2px
+                                height: 0
+                                animation-name: stages_height
+                    &::after
+                        content: ''
+                        position: absolute
+                        top: 0
+                        left: 0
+                        display: block
+                        width: 0
+                        height: 10px
+                        background: #15A0FD
+                        animation-name: square_width
+                        animation-duration: 0.5s
+                        animation-fill-mode: forwards
+                        animation-timing-function: linear
+                        +s(s)
+                            width: 10px
+                            height: 0
+                            animation-name: square_height
+                &:nth-child(1)
+                    div.line
+                        div:after
+                            animation-delay: 0.5s
+                &:nth-child(2)
+                    div.line
+                        div:after
+                            animation-delay: 3s
+                        &::after
+                            animation-delay: 2.5s
+                &:nth-child(3)
+                    div.line
+                        div:after
+                            animation-delay: 5.5s
+                        &::after
+                            animation-delay: 5s
+                &:nth-child(4)
+                    div.line
+                        div:after
+                            animation-delay: 8s
+                        &::after
+                            animation-delay: 7.5s
+
+@keyframes stages_width
+    0%
+        width: 0%
+    100%
+        width: 100%
+
+@keyframes square_width
+    0%
+        width: 0px
+    100%
+        width: 10px
+
+@keyframes stages_height
+    0%
+        height: 0%
+    100%
+        height: 100%
+
+@keyframes square_height
+    0%
+        height: 0px
+    100%
+        height: 10px

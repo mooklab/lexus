@@ -60,9 +60,8 @@ section.faq
     div.question
         border: 1px solid rgba(21, 160, 253, 0.5)
         border-radius: 16px
-        padding: 32px
-        +s(m)
-            padding: 20px
+        box-shadow: 0 2px 28px 0 transparent
+        transition: box-shadow 0.5s
 
         div.title
             cursor: pointer
@@ -70,6 +69,11 @@ section.faq
             align-items: center
             grid-template-columns: 1fr max-content
             grid-gap: 24px
+            padding: 32px
+            transition: padding 0.5s
+            +s(m)
+                padding: 20px
+
             div.icon
                 display: grid
                 align-items: center
@@ -85,6 +89,7 @@ section.faq
                     display: none
                 img.plus
                     display: block
+
         div.content
             display: grid
             grid-template-rows: 0fr
@@ -92,10 +97,18 @@ section.faq
             div.overflow
                 overflow: hidden
             div.wrap
-                padding-top: 16px
+                padding: 32px
+                padding-top: unset
+                +s(m)
+                    padding: 20px
+                    padding-top: unset
 
         &.open
             div.title
+                padding-bottom: 24px
+                +s(m)
+                    padding-bottom: 16px
+
                 h4
                     color: #15a0fd
                 div.icon
@@ -105,3 +118,6 @@ section.faq
                         display: none
             div.content
                 grid-template-rows: 1fr
+
+        &:hover
+            box-shadow: 0 2px 28px 0 #15a0fd99
