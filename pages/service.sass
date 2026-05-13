@@ -170,13 +170,20 @@ section.about
                 align-items: center
                 justify-items: center
 
-                img.play
+                svg
+                    cursor: pointer
                     +s(m)
                         width: 42px
                         height: 42px
+                    rect
+                        transition: all 0.5s
+
+                    &:hover
+                        rect
+                            fill: #76C8FF
 
                 &.playing
-                    img.play
+                    svg
                         opacity: 0
 
 section.examples

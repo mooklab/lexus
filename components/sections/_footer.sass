@@ -63,6 +63,11 @@ footer
                 +s(s)
                     max-width: unset
                     align-items: center
+            a:hover
+                color: #15A0FD
+                svg
+                    path
+                        stroke: #15A0FD
 
         div.menus
             grid-area: Menus
@@ -115,6 +120,9 @@ footer
                             padding-top: 4px
                             padding-bottom: 4px
 
+                        &:hover
+                            color: #15A0FD
+
             &.open
                 div.title
                     img
@@ -152,14 +160,24 @@ footer
                 align-items: center
                 grid-template-columns: max-content 1fr
                 grid-gap: 12px
+                &:hover
+                    text-decoration: underline
+                    color: #15A0FD
+                    svg
+                        path
+                            fill: #15A0FD
 
         img.scroll_top
             cursor: pointer
             position: absolute
             top: 12px
             right: 0
+            transition: all 0.5s
             +s(m)
                 display: none
+
+            &:hover
+                filter: brightness(120%)
 
     div.bottom
         position: relative

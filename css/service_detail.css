@@ -1175,13 +1175,23 @@ section.about div.container div.video div.play {
           align-items: center;
   justify-items: center;
 }
+section.about div.container div.video div.play svg {
+  cursor: pointer;
+}
 @media (max-width: 960px) {
-  section.about div.container div.video div.play img.play {
+  section.about div.container div.video div.play svg {
     width: 42px;
     height: 42px;
   }
 }
-section.about div.container div.video div.play.playing img.play {
+section.about div.container div.video div.play svg rect {
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+section.about div.container div.video div.play svg:hover rect {
+  fill: #76C8FF;
+}
+section.about div.container div.video div.play.playing svg {
   opacity: 0;
 }
 

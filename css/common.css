@@ -293,7 +293,7 @@ button:hover, a.button:hover {
   background: #76c8ff;
 }
 
-input {
+input[type=text] {
   border: 1px solid rgba(255, 255, 255, 0.6);
   border-radius: 48px;
   padding: 20px 24px;
@@ -302,33 +302,33 @@ input {
   font-size: 14px;
 }
 @media (min-width: 480px) {
-  input {
+  input[type=text] {
     font-size: calc(0.003125 * 100vw + 12.5px);
   }
 }
 @media (min-width: 1760px) {
-  input {
+  input[type=text] {
     font-size: 18px;
   }
 }
 @media (max-width: 640px) {
-  input {
+  input[type=text] {
     padding: 14px 24px;
   }
 }
-input::-webkit-input-placeholder {
+input[type=text]::-webkit-input-placeholder {
   color: rgba(255, 255, 255, 0.6);
 }
-input::-moz-placeholder {
+input[type=text]::-moz-placeholder {
   color: rgba(255, 255, 255, 0.6);
 }
-input:-ms-input-placeholder {
+input[type=text]:-ms-input-placeholder {
   color: rgba(255, 255, 255, 0.6);
 }
-input::-ms-input-placeholder {
+input[type=text]::-ms-input-placeholder {
   color: rgba(255, 255, 255, 0.6);
 }
-input::placeholder {
+input[type=text]::placeholder {
   color: rgba(255, 255, 255, 0.6);
 }
 
@@ -1055,6 +1055,9 @@ header menu div.submenu div.list a {
 header menu div.submenu div.list a:last-child {
   border: unset;
 }
+header menu div.submenu div.list a:hover {
+  color: #15A0FD;
+}
 header menu div.submenu div.title.open img {
   -webkit-transform: rotate(180deg);
       -ms-transform: rotate(180deg);
@@ -1062,6 +1065,25 @@ header menu div.submenu div.title.open img {
 }
 header menu div.submenu div.title.open + div.list {
   grid-template-rows: 1fr;
+}
+header menu .link {
+  position: relative;
+}
+header menu .link::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  display: block;
+  width: 0%;
+  height: 4px;
+  background: #15A0FD;
+  margin-top: 10px;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+header menu .link:hover::after {
+  width: 100%;
 }
 header div.search {
   cursor: pointer;
@@ -1105,10 +1127,17 @@ header a.phone {
   grid-template-columns: repeat(2, max-content);
   grid-gap: 8px;
 }
+header a.phone span {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
 @media (max-width: 480px) {
   header a.phone span {
     display: none;
   }
+}
+header a.phone:hover span {
+  color: #15A0FD;
 }
 header button {
   padding-top: 12px;
@@ -1453,6 +1482,12 @@ footer div.top div.contacts a, footer div.top div.contacts span {
             align-items: center;
   }
 }
+footer div.top div.contacts a:hover {
+  color: #15A0FD;
+}
+footer div.top div.contacts a:hover svg path {
+  stroke: #15A0FD;
+}
 footer div.top div.menus {
   grid-area: Menus;
   display: contents;
@@ -1548,6 +1583,10 @@ footer div.top div.more div.menu div.list a {
     padding-bottom: 4px;
   }
 }
+footer div.top div.services div.menu div.list a:hover,
+footer div.top div.more div.menu div.list a:hover {
+  color: #15A0FD;
+}
 footer div.top div.services.open div.title img,
 footer div.top div.more.open div.title img {
   -webkit-transform: rotate(180deg);
@@ -1609,16 +1648,29 @@ footer div.top div.socials a {
   grid-template-columns: max-content 1fr;
   grid-gap: 12px;
 }
+footer div.top div.socials a:hover {
+  text-decoration: underline;
+  color: #15A0FD;
+}
+footer div.top div.socials a:hover svg path {
+  fill: #15A0FD;
+}
 footer div.top img.scroll_top {
   cursor: pointer;
   position: absolute;
   top: 12px;
   right: 0;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
 }
 @media (max-width: 960px) {
   footer div.top img.scroll_top {
     display: none;
   }
+}
+footer div.top img.scroll_top:hover {
+  -webkit-filter: brightness(120%);
+          filter: brightness(120%);
 }
 footer div.bottom {
   position: relative;

@@ -79,12 +79,30 @@ header
                     border-bottom: 1px solid #ffffff4d
                     &:last-child
                         border: unset
-
+                    &:hover
+                        color: #15A0FD
             div.title.open
                 img
                     transform: rotate(180deg)
                 & + div.list
                     grid-template-rows: 1fr
+
+        .link
+            position: relative
+            &::after
+                content: ''
+                position: absolute
+                top: 100%
+                left: 0
+                display: block
+                width: 0%
+                height: 4px
+                background: #15A0FD
+                margin-top: 10px
+                transition: all 0.5s
+            &:hover
+                &::after
+                    width: 100%
 
     div.search
         cursor: pointer
@@ -117,8 +135,13 @@ header
         grid-template-columns: repeat(2, max-content)
         grid-gap: 8px
         span
+            transition: all 0.3s
             +s(xs)
                 display: none
+
+        &:hover
+            span
+                color: #15A0FD
 
     button
         padding-top: 12px

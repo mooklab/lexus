@@ -9,7 +9,7 @@ header
 
         menu
             div.submenu
-                    div(onclick="this.classList.toggle('open')").title
+                    div(onclick="this.classList.toggle('open')").title.link
                         span Услуги
                         img(src="images/menu_arrow.svg")
                     div.list
@@ -23,8 +23,8 @@ header
                                 a(href="#") Чип-тюнинг
                                 a(href="#") Установка Android систем
                                 a(href="#") Активация CarPlay
-            a(href="#") Подбор по авто
-            a(href="#") Контакты
+            a(href="#").link Подбор по авто
+            a(href="#").link Контакты
 
         div(onclick="headerPopup('search')").search
             include ../../images/search.svg

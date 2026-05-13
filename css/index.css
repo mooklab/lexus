@@ -666,6 +666,9 @@ section.services div.service.active a.button {
 section.services div.service.active img.background {
   display: block;
 }
+section.services div.service:hover h4 {
+  color: #15A0FD;
+}
 section.services img.background {
   display: none;
   position: absolute;
@@ -738,7 +741,6 @@ section.example div.container div.video video {
      object-fit: cover;
 }
 section.example div.container div.video div.play {
-  cursor: pointer;
   position: absolute;
   top: 0;
   left: 0;
@@ -750,13 +752,23 @@ section.example div.container div.video div.play {
           align-items: center;
   justify-items: center;
 }
+section.example div.container div.video div.play svg {
+  cursor: pointer;
+}
 @media (max-width: 960px) {
-  section.example div.container div.video div.play img.play {
+  section.example div.container div.video div.play svg {
     width: 42px;
     height: 42px;
   }
 }
-section.example div.container div.video div.play.playing img.play {
+section.example div.container div.video div.play svg rect {
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+section.example div.container div.video div.play svg:hover rect {
+  fill: #76C8FF;
+}
+section.example div.container div.video div.play.playing svg {
   opacity: 0;
 }
 

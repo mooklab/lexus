@@ -148,6 +148,10 @@ section.services
             img.background
                 display: block
 
+        &:hover
+            h4
+                color: #15A0FD
+
     img.background
         display: none
         position: absolute
@@ -202,7 +206,6 @@ section.example
                 object-fit: cover
 
             div.play
-                cursor: pointer
                 position: absolute
                 top: 0
                 left: 0
@@ -212,13 +215,20 @@ section.example
                 align-items: center
                 justify-items: center
 
-                img.play
+                svg
+                    cursor: pointer
                     +s(m)
                         width: 42px
                         height: 42px
+                    rect
+                        transition: all 0.5s
+
+                    &:hover
+                        rect
+                            fill: #76C8FF
 
                 &.playing
-                    img.play
+                    svg
                         opacity: 0
 
 @keyframes timeline
