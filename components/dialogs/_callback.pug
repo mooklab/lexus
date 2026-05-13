@@ -1,0 +1,37 @@
+dialog(data-modal-name="callback")
+    div.container
+        div.text
+            h3 Способы связи
+            span Свяжитесь с  нами любым удобным способом или оставьте свои контакты — мы перезвоним
+        form(action="#")
+            div.inputs
+                div.input
+                    span Имя
+                    input(type="text", placeholder="Введите имя", required)
+                div.input
+                    span Телефон
+                    input(type="tel", placeholder="+7 (___) ___-__-__", required)
+            button Перезвоните мне
+        div.list
+            div.contact
+                div.icon
+                    img(src="images/decision_phone.svg")
+                div.description
+                    span Телефон
+                    a(href="#"): h4 +7 (495) 150-60-70
+            div.contact
+                div.icon
+                    img(src="images/decision_phone_mobile.svg")
+                div.description
+                    span Телефон мобильный
+                    a(href="#"): h4 +7 (916) 888-80-00
+            div.contact
+                div.icon
+                    img(src="images/decision_email.svg")
+                div.description
+                    span Email
+                    a(href="#"): h4 info@lexus-navi.ru
+
+        div(data-modal-close).cross
+            img(src="images/dialog_cross.svg").cross
+    img(src="images/callback_background.webp").background

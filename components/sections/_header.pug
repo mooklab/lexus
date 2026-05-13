@@ -1,0 +1,82 @@
+header
+    div.container
+
+        div(onclick="headerPopup('menu')").mobile_menu
+            img(src="images/menu_icon.svg")
+
+        a(href="pages.html").logotype
+            img(src="images/logotype.svg", alt="Lexus Navi")
+
+        menu
+            div.submenu
+                    div(onclick="this.classList.toggle('open')").title
+                        span Услуги
+                        img(src="images/menu_arrow.svg")
+                    div.list
+                        div.overflow
+                            div.wrap
+                                a(href="#") Русификация Lexus / Toyota
+                                a(href="#") Ремонт мультимедиа Lexus / Toyota
+                                a(href="#") Установка противоугонного комплекса
+                                a(href="#") Шумоизоляция автомобиля
+                                a(href="#") Компьютерная диагностика
+                                a(href="#") Чип-тюнинг
+                                a(href="#") Установка Android систем
+                                a(href="#") Активация CarPlay
+            a(href="#") Подбор по авто
+            a(href="#") Контакты
+
+        div(onclick="headerPopup('search')").search
+            include ../../images/search.svg
+            span Поиск
+
+        a(href="#").phone
+            img(src="images/phone.svg")
+            span +7 (495) 150-60-70
+        
+        button(data-modal-target="callback") Записаться
+
+        div.search_popup
+            form(action="#") 
+                input(type="search", placeholder="Введите поисковый запрос")
+
+        div.menu_popup
+            a(href="pages.html").logotype
+                img(src="images/logotype.svg", alt="Lexus Navi")
+
+            form(action="#")
+                input(type="search", placeholder="Введите поисковый запрос")
+
+            div.menu
+                div.item
+                    div(onclick="this.nextElementSibling.classList.toggle('open')").title
+                        span Услуги
+                        img(src="images/menu_arrow.svg")
+                    div.submenu
+                        div.overflow
+                            div.list
+                                a(href="#") Русификация Lexus / Toyota
+                                a(href="#") Ремонт мультимедиа Lexus / Toyota
+                                a(href="#") Установка противоугонного комплекса
+                                a(href="#") Шумоизоляция автомобиля
+                                a(href="#") Компьютерная диагностика
+                                a(href="#") Чип-тюнинг
+                                a(href="#") Установка Android систем
+                                a(href="#") Активация CarPlay
+                div.item
+                    div.title
+                        a(href="#") Подбор по авто
+                div.item
+                    div.title
+                        a(href="#") Контакты
+
+            a(href="#").phone_mobile
+                img(src="images/phone.svg")
+                span +7 (495) 150-60-70
+
+            button(data-modal-target="callback") Записаться
+
+            img(src="images/menu_cross.svg", onclick="headerPopup('close')").cross
+
+        div(onclick="headerPopup('close')").backdrop
+

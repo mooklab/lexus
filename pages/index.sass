@@ -1,0 +1,228 @@
+@use '../components/common/sass/_mixins' as *
+@use '../components/common/sass/_variables' as *
+
+@use '../components/sections/_digits' as *
+@use '../components/sections/_advantages' as *
+@use '../components/sections/_decision' as *
+@use '../components/sections/_navigation' as *
+
+section.main
+    background: black
+    padding-bottom: var(--section-gap)
+    min-height: 100vh
+
+    div.container
+        display: grid
+        align-items: end
+        align-content: end
+        z-index: 2
+        h1
+            margin-top: 280px
+            margin-bottom: 48px
+            max-width: 1160px
+            +s(s)
+                margin-bottom: 25px
+
+    div.group
+        display: grid
+        align-items: center
+        grid-template-columns: 1fr max-content
+        grid-gap: 32px
+        border-top: 1px solid #ffffff66
+        padding-top: 40px
+        +s(s)
+            grid-template-columns: 1fr
+            grid-gap: 24px
+            padding-top: 25px
+
+        span
+            max-width: 650px
+            color: #ffffffb3
+            b
+                color: white
+                font-weight: 400
+
+        a.button
+            +s(s)
+                width: 100%
+                text-align: center
+
+    img.background
+        grid-column: full
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        object-fit: cover
+        z-index: 1
+        +s(s)
+            height: 50%
+            object-position: left top
+
+section.services
+    background: black
+    padding-top: var(--section-gap)
+    padding-bottom: var(--section-gap)
+
+    h2
+        position: relative
+        z-index: 2
+        margin-bottom: 90px
+
+    div.slider
+        max-width: 600px
+
+        &:hover
+            div.service:after
+                animation: none
+
+    div.service
+        cursor: pointer
+        display: grid
+        grid-gap: 24px
+        position: relative
+        padding-right: 86px
+        border-top: 1px solid #ffffff66
+        padding-top: 24px
+        padding-bottom: 24px
+        margin-bottom: -24px
+        z-index: 2
+        h4
+            color: #ffffffb3
+        span
+            color: #ffffffb3
+
+        &::after
+            content: ''
+            position: absolute
+            top: 0
+            left: 0
+            display: block
+            width: 0%
+            height: 1px
+            background: #15A0FD
+            transition: all 5s linear
+
+        div.text
+            display: grid
+            grid-template-rows: 0fr
+            transition: all 0.5s
+            padding-bottom: 0px
+            transition: all 0.5s
+
+        div.overflow
+            overflow: hidden
+
+        a.button
+            position: absolute
+            top: 24px
+            right: 0
+            display: grid
+            align-items: center
+            justify-items: center
+            border-radius: 84px
+            padding: 0px
+            width: 64px
+            height: 40px
+            opacity: 0
+            pointer-events: none
+            transition: opacity 0.5s
+            +s(s)
+                width: 49px
+                height: 30px
+
+        &.active
+            &::after
+                animation: timeline 5s forwards
+                animation-direction: normal
+                animation-timing-function: linear
+            h4
+                color: white
+            div.text
+                grid-template-rows: 1fr
+                padding-bottom: 24px
+            a.button
+                opacity: 1
+                pointer-events: auto
+            img.background
+                display: block
+
+    img.background
+        display: none
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        object-fit: cover
+        z-index: 1
+        &.active
+            display: block
+
+section.example
+    color: black
+    margin-top: var(--section-gap)
+    margin-bottom: var(--section-gap)
+
+    div.container
+        display: grid
+        grid-gap: 64px
+        +s(m)
+            grid-gap: 32px
+        +s(s)
+            grid-gap: 20px
+
+        div.text
+            display: grid
+            align-items: center
+            grid-template-columns: repeat(2, 1fr)
+            grid-gap: var(--grid-gap)
+            +s(s)
+                grid-template-columns: 1fr
+                grid-gap: 12px
+
+            span
+                display: block
+                max-width: 600px
+
+        div.video
+            width: 100%
+            height: 100%
+            aspect-ratio: 16 / 9
+            position: relative
+            border-radius: 16px
+            overflow: clip
+            +s(s)
+                aspect-ratio: 1 / 1
+
+            video
+                width: 100%
+                height: 100%
+                object-fit: cover
+
+            div.play
+                cursor: pointer
+                position: absolute
+                top: 0
+                left: 0
+                width: 100%
+                height: 100%
+                display: grid
+                align-items: center
+                justify-items: center
+
+                img.play
+                    +s(m)
+                        width: 42px
+                        height: 42px
+
+                &.playing
+                    img.play
+                        opacity: 0
+
+@keyframes timeline
+    from
+        width: 0%
+    to
+        width: 100%

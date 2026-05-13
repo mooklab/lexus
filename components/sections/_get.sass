@@ -1,0 +1,50 @@
+@use '../../components/common/sass/_variables' as *
+@use '../../components/common/sass/_mixins' as *
+
+section.get
+    padding-top: var(--section-gap)
+    padding-bottom: var(--section-gap)
+    color: black
+    +s(m)
+        padding-top: unset
+
+    div.container
+        display: grid
+        grid-gap: 80px
+        +s(l)
+            grid-gap: 60px
+        +s(m)
+            grid-gap: 40px
+        +s(s)
+            grid-gap: 20px
+
+    div.list
+        display: grid
+        grid-template-columns: repeat(3, 1fr)
+        grid-gap: 64px var(--grid-gap)
+        counter-reset: list
+        padding-left: 25%
+        +s(l)
+            padding-left: unset
+        +s(m)
+            grid-template-columns: repeat(2, 1fr)
+            grid-gap: 20px
+        +s(s)
+            grid-template-columns: 1fr
+
+        span
+            counter-increment: list
+            &:before
+                content: '0' counter(list)
+                display: block
+                +f(16px, 24px)
+                line-height: 110%
+                letter-spacing: 0.01em
+                color: #15a0fd
+                width: 100%
+                border-bottom: 1px solid #afbaca
+                padding-bottom: 24px
+                margin-bottom: 24px
+                +s(m)
+                    padding-bottom: 16px
+                    margin-bottom: 10px

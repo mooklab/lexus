@@ -1,0 +1,53 @@
+mixin select(name, placeholder, ...items)
+    fieldset(class=name, tabindex="0").select
+        div.select_choice
+            if placeholder
+                input(type="radio", id=name, name=name, checked).placeholder
+                span= placeholder
+            each item, index in items
+                input(type="radio", id=name + "_" + index, name=name, checked=(!placeholder && index === 0))
+                span !{item}
+            if block
+                block
+            else
+                img(src="images/select_arrow.svg", alt="").arrow
+        div.select_dropdown
+            div.select_dropdown_overflow
+                div.select_dropdown_content
+                    each item, index in items
+                        label(for=name + "_" + index) !{item}
+
+mixin work(image, title)
+    div.work
+        img(src=image, alt=title).preview
+        div.content
+            div.text
+                h3 Интеграция CarPlay
+                span Выполнен полный перевод интерфейса мультимедийной системы и приборной панели на русский язык.
+                button
+                    img(src="images/service_arrow.svg")
+            div.details
+                div
+                    span.note Автомобиль:
+                    span Toyota Camry
+                div
+                    span.note Год выпуска:
+                    span 2024
+                div
+                    span.note Страна:
+                    span Япония
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

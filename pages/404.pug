@@ -1,0 +1,16 @@
+extends ../components/common/pug/_layout.pug
+include ../components/common/pug/_mixins.pug
+
+block links
+    link(rel="stylesheet", href="css/404.css")
+
+block content
+
+    section.main
+        div.container
+            h1 Что-то пошло не так
+            div.group
+                span Похоже, такой страницы не существует или она была перемещена. Вернитесь на главную или воспользуйтесь меню — мы поможем найти нужную услугу.
+                a(href="#").button На главную
+
+        img(src="images/404.webp").background

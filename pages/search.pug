@@ -1,0 +1,45 @@
+extends ../components/common/pug/_layout.pug
+include ../components/common/pug/_mixins.pug
+
+block links
+    link(rel="stylesheet", href="css/search.css")
+
+block content
+
+    section.search
+        div.container
+
+            div.breadcrumbs
+                a(href="#") Главная
+                span.divide /
+                span Результаты поиска
+
+            h2 Поиск
+
+            div.form
+                span Запрос
+                form(action="").search
+                    input(type="search", placeholder="Введите поисковый запрос")
+                    button Искать
+
+            hr
+
+            div.results
+                h3.result_title Вот что удалось найти по Вашему запросу
+
+                div.group
+                    h3 Услуги
+                    div.list
+                        +work('images/service_card.webp', 'Интеграция CarPlay')
+
+                div.group
+                    h3 Выполненные работы
+                    div.list
+                        +work('images/service_card.webp', 'Интеграция CarPlay')
+                        +work('images/service_card.webp', 'Интеграция CarPlay')
+                        +work('images/service_card.webp', 'Интеграция CarPlay')
+                        +work('images/service_card.webp', 'Интеграция CarPlay')
+
+        img(src="images/search_background.webp").background
+            
+    include ../components/sections/_consulting_3.pug

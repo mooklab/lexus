@@ -1,0 +1,150 @@
+@use '../components/common/sass/_mixins' as *
+@use '../components/common/sass/_variables' as *
+
+@use '../components/sections/_consulting' as *
+
+section.main
+    padding-top: var(--header-gap)
+    padding-bottom: 48px
+    background: black
+
+    div.breadcrumbs
+        position: relative
+        width: 100%
+        justify-items: start
+        z-index: 3
+        margin-bottom: 48px
+        +s(m)
+            margin-bottom: 30px
+
+    div.container
+        display: grid
+        justify-items: center
+
+    div.text
+        position: relative
+        display: grid
+        grid-gap: 32px
+        text-align: center
+        max-width: 560px
+        z-index: 3
+        margin-bottom: 48px
+        +s(l)
+            margin-bottom: 32px
+            grid-gap: 24px
+        +s(m)
+            margin-bottom: 24px
+            grid-gap: 16px
+
+    form
+        position: relative
+        display: grid
+        grid-template-columns: repeat(4, 1fr)
+        grid-gap: 40px
+        border-radius: 16px
+        padding: 40px
+        background: #000
+        width: 100%
+        z-index: 3
+        +s(l)
+            grid-gap: 24px
+            padding: 24px
+        +s(m)
+            grid-template-columns: repeat(2, 1fr)
+            grid-gap: 16px
+            padding: 16px
+        +s(s)
+            grid-template-columns: 1fr
+
+        div.radios
+            display: grid
+            grid-template-columns: repeat(2, 1fr)
+            grid-gap: 6px
+            border: 1px solid #fff
+            border-radius: 40px
+            padding: 6px
+            +s(m)
+                height: 50px
+            label
+                cursor: pointer
+            div.logotype
+                display: grid
+                align-items: center
+                justify-items: center
+                height: 60px
+                border-radius: 36px
+                background: transparent
+                transition: all 0.3s
+                padding: 12px
+                +s(m)
+                    height: 36px
+                    padding: 0px 12px
+            svg
+                max-width: 100%
+                path
+                    fill: white
+
+            input:checked + div.logotype
+                background: #15a0fd
+                svg
+                    path
+                        fill: black
+
+        div.select
+            display: grid
+            grid-gap: 16px
+            +s(m)
+                grid-gap: 8px
+
+    img.background
+        grid-column: full
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        object-fit: cover
+        z-index: 1
+
+    &.padding
+        div.container
+            padding-bottom: 480px
+
+section.results
+    background: black
+    div.container
+        display: grid
+        justify-items: center
+        grid-template-columns: repeat(2, 1fr)
+        grid-gap: 80px var(--grid-gap)
+        +s(s)
+            grid-template-columns: 1fr
+            grid-gap: 48px
+
+    div.work
+        div.content
+            div.text
+                border-bottom: 1px solid rgba(255, 255, 255, 0.3)
+
+    div.empty
+        grid-column: 2 span
+        max-width: 560px
+        text-align: center
+        display: grid
+        justify-items: center
+        grid-gap: 32px
+        z-index: 2
+
+        span.note
+            opacity: 0.7
+
+    &.padding
+        padding-top: var(--section-gap)
+        padding-bottom: var(--section-gap)
+        margin-top: -480px
+
+section.consulting
+    background: black
+    padding-top: var(--section-gap)
+    padding-bottom: var(--section-gap)
+    margin: unset

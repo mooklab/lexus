@@ -1,0 +1,107 @@
+@use '../../components/common/sass/_variables' as *
+@use '../../components/common/sass/_mixins' as *
+
+section.faq
+    background: #000
+    padding-top: var(--section-gap)
+    padding-bottom: var(--section-gap)
+    +s(m)
+        padding-top: unset
+
+    div.container
+        display: grid
+        align-items: start
+        grid-template-columns: repeat(12, 1fr)
+        grid-gap: 30px var(--grid-gap)
+        +s(m)
+            grid-template-columns: repeat(2, 1fr)
+        +s(s)
+            grid-template-columns: 1fr
+
+    div.description
+        display: grid
+        grid-gap: 16px
+        grid-column: 4 span
+        max-width: 420px
+        +s(m)
+            order: 1
+            grid-column: unset
+
+    div.callback
+        display: grid
+        grid-gap: 16px
+        grid-column: 4 span
+        align-self: end
+        max-width: 420px
+        +s(m)
+            order: 2
+            grid-column: unset
+        +s(s)
+            order: 4
+
+        button
+            margin-top: 16px
+            min-width: 280px
+            +s(m)
+                margin-top: 8px
+
+    div.list
+        display: grid
+        grid-row: 2 span
+        grid-column: 8 span
+        grid-gap: 16px
+        +s(m)
+            order: 3
+            grid-row: unset
+            grid-column: 2 span
+        +s(s)
+            grid-column: unset
+
+    div.question
+        border: 1px solid rgba(21, 160, 253, 0.5)
+        border-radius: 16px
+        padding: 32px
+        +s(m)
+            padding: 20px
+
+        div.title
+            cursor: pointer
+            display: grid
+            align-items: center
+            grid-template-columns: 1fr max-content
+            grid-gap: 24px
+            div.icon
+                display: grid
+                align-items: center
+                justify-items: center
+                background: #15a0fd
+                width: 48px
+                height: 48px
+                border-radius: 84px
+                +s(m)
+                    width: 30px
+                    height: 30px
+                img.minus
+                    display: none
+                img.plus
+                    display: block
+        div.content
+            display: grid
+            grid-template-rows: 0fr
+            transition: all 0.5s
+            div.overflow
+                overflow: hidden
+            div.wrap
+                padding-top: 16px
+
+        &.open
+            div.title
+                h4
+                    color: #15a0fd
+                div.icon
+                    img.minus
+                        display: block
+                    img.plus
+                        display: none
+            div.content
+                grid-template-rows: 1fr

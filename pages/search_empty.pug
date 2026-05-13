@@ -1,0 +1,37 @@
+extends ../components/common/pug/_layout.pug
+include ../components/common/pug/_mixins.pug
+
+block links
+    link(rel="stylesheet", href="css/search.css")
+
+block content
+
+    section.search
+        div.container
+
+            div.breadcrumbs
+                a(href="#") Главная
+                span.divide /
+                span Результаты поиска
+
+            h2 Поиск
+
+            div.form
+                span Запрос
+                form(action="").search
+                    input(type="search", placeholder="Введите поисковый запрос")
+                    button Искать
+
+            hr
+
+            div.results
+                div.empty
+                    h3 К сожалению, по вашему запросу услуг не найдено
+                    span Попробуйте ввести другой запрос, или перейти в раздел “Подбор по авто”, или вернуться на главную.
+                    div.buttons
+                        a(href="#").button Подбор по авто
+                        a(href="#").button На главную
+
+        img(src="images/search_background.webp").background
+            
+    include ../components/sections/_consulting_3.pug

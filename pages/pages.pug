@@ -1,0 +1,24 @@
+extends ../components/common/pug/_layout.pug
+include ../components/common/pug/_mixins.pug
+
+block links
+    link(rel="stylesheet", href="css/pages.css")
+
+block content
+
+    section.page
+        div.container
+            a(href="index.html") Главная
+            a(href="services.html") Услуги
+            a(href="service.html") Услуга общая
+            a(href="service_detail.html") Услуга детальная
+            a(href="contacts.html") Контакты
+            a(href="choose.html") Подбор по авто
+            a(href="choose_services.html") Подбор по авто - Услуги
+            a(href="choose_empty.html") Подбор по авто - Не найдено
+            a(href="search.html") Результаты поиска
+            a(href="search_empty.html") Пустой результат поиска
+            a(href="policy.html") Политика конфиденциальности
+            a(href="agreement.html") Пользовательское соглашение
+            a(href="cookie.html") Политика использования Cookie
+            a(href="404.html") Политика использования Cookie

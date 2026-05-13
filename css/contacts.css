@@ -1,0 +1,282 @@
+section.decision {
+  background: #000;
+  padding-top: var(--section-gap);
+  padding-bottom: var(--section-gap);
+}
+@media (max-width: 960px) {
+  section.decision {
+    padding-top: unset;
+  }
+}
+section.decision div.container {
+  display: grid;
+  grid-gap: 64px;
+}
+@media (max-width: 1280px) {
+  section.decision div.container {
+    grid-gap: 32px;
+  }
+}
+@media (max-width: 640px) {
+  section.decision div.container {
+    gap: 20px;
+  }
+}
+section.decision div.container div.text {
+  display: grid;
+  grid-gap: 16px;
+  width: 50%;
+}
+@media (max-width: 640px) {
+  section.decision div.container div.text {
+    width: unset;
+    grid-gap: 12px;
+  }
+}
+section.decision div.container div.text span {
+  opacity: 0.7;
+}
+section.decision div.container div.grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-gap: var(--grid-gap);
+}
+@media (max-width: 640px) {
+  section.decision div.container div.grid {
+    grid-template-columns: 1fr;
+  }
+}
+section.decision div.container div.grid div.contacts {
+  position: relative;
+  display: grid;
+  grid-gap: 40px;
+  grid-column: 4 span;
+  border-radius: 16px;
+  padding: 40px;
+  overflow: clip;
+}
+@media (max-width: 1280px) {
+  section.decision div.container div.grid div.contacts {
+    grid-column: 6 span;
+  }
+}
+@media (max-width: 640px) {
+  section.decision div.container div.grid div.contacts {
+    padding: 20px;
+    grid-gap: 20px;
+    grid-column: unset;
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
+}
+section.decision div.container div.grid div.contacts h3 {
+  position: relative;
+  color: #000;
+  z-index: 1;
+  font-size: 20px;
+}
+@media (min-width: 480px) {
+  section.decision div.container div.grid div.contacts h3 {
+    font-size: calc(0.015625 * 100vw + 12.5px);
+  }
+}
+@media (min-width: 1760px) {
+  section.decision div.container div.grid div.contacts h3 {
+    font-size: 40px;
+  }
+}
+section.decision div.container div.grid div.contacts div.list {
+  position: relative;
+  display: grid;
+  grid-gap: 32px;
+  z-index: 1;
+}
+@media (max-width: 640px) {
+  section.decision div.container div.grid div.contacts div.list {
+    grid-gap: 20px;
+  }
+}
+section.decision div.container div.grid div.contacts div.list div.contact {
+  display: grid;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  grid-template-columns: -webkit-max-content 1fr;
+  grid-template-columns: max-content 1fr;
+  grid-gap: 32px;
+}
+section.decision div.container div.grid div.contacts div.list div.contact div.icon {
+  display: grid;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  justify-items: center;
+  background: #000;
+  border: 1px solid #15a0fd;
+  border-radius: 40px;
+  width: 80px;
+  height: 80px;
+}
+@media (max-width: 1600px) {
+  section.decision div.container div.grid div.contacts div.list div.contact div.icon {
+    width: 60px;
+    height: 60px;
+  }
+}
+@media (max-width: 960px) {
+  section.decision div.container div.grid div.contacts div.list div.contact div.icon {
+    width: 40px;
+    height: 40px;
+  }
+}
+section.decision div.container div.grid div.contacts div.list div.contact div.description {
+  display: grid;
+  grid-gap: 8px;
+}
+section.decision div.container div.grid div.contacts div.list div.contact div.description a {
+  white-space: nowrap;
+}
+section.decision div.container div.grid div.contacts div.list div.contact div.description span {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 12px;
+}
+@media (min-width: 480px) {
+  section.decision div.container div.grid div.contacts div.list div.contact div.description span {
+    font-size: calc(0.0046875 * 100vw + 9.75px);
+  }
+}
+@media (min-width: 1760px) {
+  section.decision div.container div.grid div.contacts div.list div.contact div.description span {
+    font-size: 18px;
+  }
+}
+section.decision div.container div.grid div.contacts img.background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  z-index: 0;
+}
+section.decision div.container div.grid div.map {
+  grid-column: 8 span;
+  border-radius: 16px;
+  overflow: clip;
+}
+@media (max-width: 1280px) {
+  section.decision div.container div.grid div.map {
+    grid-column: 6 span;
+  }
+}
+@media (max-width: 640px) {
+  section.decision div.container div.grid div.map {
+    height: 300px;
+    grid-column: unset;
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+}
+
+section.breadcrumbs {
+  background: black;
+  padding-top: var(--header-gap);
+}
+
+section.decision {
+  padding-top: calc(var(--section-gap) / 2);
+}
+
+section.payment {
+  padding-top: var(--section-gap);
+  padding-bottom: var(--section-gap);
+}
+section.payment div.container {
+  display: grid;
+  grid-gap: 30px;
+}
+@media (max-width: 960px) {
+  section.payment div.container {
+    grid-gap: 24px;
+  }
+}
+section.payment h2 {
+  color: black;
+}
+section.payment div.list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: var(--grid-gap);
+}
+@media (max-width: 1280px) {
+  section.payment div.list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 640px) {
+  section.payment div.list {
+    grid-template-columns: 1fr;
+  }
+}
+section.payment div.list div.advantage {
+  display: grid;
+  -ms-flex-line-pack: end;
+      align-content: end;
+  position: relative;
+  border-radius: 20px;
+  overflow: clip;
+  padding: 56px 40px;
+  height: 450px;
+  background: black;
+}
+@media (max-width: 1600px) {
+  section.payment div.list div.advantage {
+    height: 400px;
+  }
+}
+@media (max-width: 960px) {
+  section.payment div.list div.advantage {
+    height: 350px;
+    padding: 32px 24px;
+  }
+}
+@media (max-width: 640px) {
+  section.payment div.list div.advantage {
+    height: 240px;
+  }
+}
+section.payment div.list div.advantage div.text {
+  position: relative;
+  padding-top: 24px;
+  border-top: 1px solid rgba(255, 255, 255, 0.4);
+  display: grid;
+  grid-gap: 16px;
+  z-index: 1;
+}
+@media (max-width: 640px) {
+  section.payment div.list div.advantage div.text {
+    grid-gap: 10px;
+  }
+}
+section.payment div.list div.advantage div.text span {
+  opacity: 0.7;
+}
+section.payment div.list div.advantage img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  -o-object-position: top left;
+     object-position: top left;
+}
+@media (max-width: 640px) {
+  section.payment div.list div.advantage img {
+    height: 80%;
+  }
+}/*# sourceMappingURL=contacts.css.map */

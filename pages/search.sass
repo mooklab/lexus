@@ -1,0 +1,159 @@
+@use '../components/common/sass/_mixins' as *
+@use '../components/common/sass/_variables' as *
+
+@use '../components/sections/_consulting' as *
+
+section.search
+    padding-top: var(--header-gap)
+    padding-bottom: var(--section-gap)
+    background: black
+
+    div.container
+        display: grid
+        position: relative
+        z-index: 3
+
+        input
+            border: 1px solid rgba(255, 255, 255, 0.6)
+            border-radius: 48px
+            padding: 20px 24px
+            width: 100%
+            background: rgba(11, 15, 21, 0.7)
+            +f(12px, 18px)
+            +s(m)
+                padding-top: 11px
+                padding-bottom: 11px
+            &::placeholder
+                color: rgba(255, 255, 255, 0.6)
+
+            &::-webkit-search-cancel-button
+                appearance: none
+                cursor: pointer
+                height: 24px
+                width: 24px
+                background-image: url('../images/search_cross.svg')
+                background-size: contain
+
+    div.breadcrumbs
+        margin-top: 48px
+        margin-bottom: var(--section-gap)
+        +s(m)
+            margin-top: 30px
+
+    h2
+        margin-bottom: 36px
+        +s(m)
+            margin-bottom: 24px
+
+    div.results
+        counter-reset: list
+        margin-top: 60px
+        border-top: 1px solid rgba(255, 255, 255, 0.4)
+        padding-top: 56px
+        +s(l)
+            margin-top: 40px
+            padding-top: 48px
+        +s(m)
+            margin-top: 20px
+            padding-bottom: 24px
+
+        h3.result_title
+            margin-bottom: 80px
+            +s(l)
+                margin-bottom: 60px
+            +s(m)
+                margin-bottom: 40px
+            & + div.group
+                padding-top: unset
+
+        div.group
+            border-bottom: 1px solid rgba(255, 255, 255, 0.4)
+            counter-increment: list
+            padding-top: 80px
+            padding-bottom: 80px
+            &:last-child
+                border: unset
+                padding-bottom: unset
+
+            & > h3
+                margin-bottom: 48px
+                +s(l)
+                    margin-bottom: 32px
+                +s(m)
+                    margin-bottom: 24px
+
+                &::before
+                    content: '0' counter(list) '.'
+                    font-weight: 400
+                    +f(14px, 24px)
+                    line-height: 110%
+                    letter-spacing: 0.01em
+                    color: #15a0fd
+                    padding-right: 16px
+
+        div.list
+            display: grid
+            grid-template-columns: repeat(2, 1fr)
+            grid-gap: 80px var(--grid-gap)
+            +s(s)
+                grid-template-columns: 1fr
+
+        div.empty
+            display: grid
+            justify-items: center
+            grid-gap: 32px
+            max-width: 480px
+            text-align: center
+            margin: 0 auto
+            padding-top: var(--section-gap)
+            +s(l)
+                grid-gap: 24px
+            div.buttons
+                display: grid
+                grid-auto-flow: column
+                grid-auto-columns: max-content
+                grid-gap: 16px
+                a.button:last-child
+                    background: unset
+                    border: 1px solid #15a0fd
+                    color: #15a0fd
+
+    div.form
+        display: grid
+        grid-gap: 16px
+        padding: 32px 40px
+        background: black
+        border-radius: 16px
+        +s(m)
+            padding: 24px 32px
+        +s(s)
+            padding: 24px
+
+        form
+            display: grid
+            align-items: center
+            grid-template-columns: 1fr max-content
+            grid-gap: 24px
+            +s(s)
+                grid-template-columns: 1fr
+                grid-gap: var(--grid-gap)
+            button
+                min-width: 280px
+                +s(m)
+                    min-width: unset
+                    width: 100%
+
+    img.background
+        grid-column: full
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        object-fit: cover
+        z-index: 1
+
+section.consulting
+    margin: unset
+    padding-top: var(--section-gap)
+    padding-bottom: var(--section-gap)
+    background: black

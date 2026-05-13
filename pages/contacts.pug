@@ -1,0 +1,44 @@
+extends ../components/common/pug/_layout.pug
+include ../components/common/pug/_mixins.pug
+
+block links
+    link(rel="stylesheet", href="css/contacts.css")
+
+block content
+
+    section.breadcrumbs
+        div.container
+            div.breadcrumbs
+                a(href="#") Главная
+                span.divide /
+                span Контакты
+
+    include ../components/sections/_decision.pug
+
+    section.payment
+        div.container
+
+            h2 Оплата
+
+            div.list
+                div.advantage
+                    div.text
+                        h3 Оплата #[br]наличными
+                        span   
+                    img(src="images/payment_1.webp")
+                div.advantage
+                    div.text
+                        h3 Оплата #[br]по QR Code
+                        span (+15%)
+                    img(src="images/payment_2.webp")
+                div.advantage
+                    div.text
+                        h3 Оплата #[br]картой
+                        span (+15%)
+                    img(src="images/payment_3.webp")
+                div.advantage
+                    div.text
+                        h3 Безналичный расчет #[br]для организаций
+                        span +22%
+                    img(src="images/payment_4.webp")
+

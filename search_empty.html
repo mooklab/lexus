@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta http-equiv="Cache-Control" content="no-cache">
+        <meta name="viewport" content="user-scalable=no, width=device-width, height=device-height">
+        <meta name="description" content="Описание сайта">
+        <meta name="keywords" content="Ключевые слова">
+        <title>Туристическая компания &quot;Чудесный Отдых&quot;</title>
+        <meta name="robots" content="index, follow">
+        <meta name="HandheldFriendly" content="True">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="format-detection" content="date=no">
+        <meta name="format-detection" content="address=no">
+        <meta name="format-detection" content="email=no">
+        <meta name="application-name" content="Туристическая компания &quot;Чудесный Отдых&quot;">
+        <meta name="color-scheme" content="only light">
+        <meta property="og:title" content="Туристическая компания &quot;Чудесный Отдых&quot;">
+        <meta property="og:type" content="website">
+        <meta property="og:description" content="Описание сайта">
+        <meta property="og:image" content="Изображение">
+        <meta property="og:site_name" content="Туристическая компания &quot;Чудесный Отдых&quot;">
+        <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+        <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+        <link rel="icon" href="images/favicon.png" type="image/png">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css">
+        <link rel="stylesheet" href="css/common.css">
+        <link rel="stylesheet" href="css/search.css">
+        <script defer src="scripts/main.js" type="module"></script>
+        <script defer src="scripts/dialog.js"></script>
+    </head>
+    <body>
+        <header>
+            <div class="container">
+                <div class="mobile_menu" onclick="headerPopup('menu')"><img src="images/menu_icon.svg"></div><a class="logotype" href="pages.html"><img src="images/logotype.svg" alt="Lexus Navi"></a>
+                <menu>
+                    <div class="submenu">
+                        <div class="title" onclick="this.classList.toggle('open')"><span>Услуги</span><img src="images/menu_arrow.svg"></div>
+                        <div class="list">
+                            <div class="overflow">
+                                <div class="wrap"><a href="#">Русификация Lexus / Toyota</a><a href="#">Ремонт мультимедиа Lexus / Toyota</a><a href="#">Установка противоугонного комплекса</a><a href="#">Шумоизоляция автомобиля</a><a href="#">Компьютерная диагностика</a><a href="#">Чип-тюнинг</a><a href="#">Установка Android систем</a><a href="#">Активация CarPlay</a></div>
+                            </div>
+                        </div>
+                    </div><a href="#">Подбор по авто</a><a href="#">Контакты</a>
+                </menu>
+                <div class="search" onclick="headerPopup('search')"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M15.7143 6.83779C16.8913 8.01482 17.5526 9.61122 17.5526 11.2758C17.5526 12.9404 16.8913 14.5368 15.7143 15.7138C14.5372 16.8908 12.9409 17.5521 11.2763 17.5521C9.61171 17.5521 8.01531 16.8908 6.83828 15.7138C5.66125 14.5368 5 12.9404 5 11.2758C5 9.61122 5.66125 8.01482 6.83828 6.83779C8.01531 5.66076 9.61171 4.99951 11.2763 4.99951C12.9409 4.99951 14.5372 5.66076 15.7143 6.83779" stroke="#15A0FD" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M19.0009 19L15.7109 15.71" stroke="#15A0FD" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+<span>Поиск</span>
+                </div><a class="phone" href="#"><img src="images/phone.svg"><span>+7 (495) 150-60-70</span></a>
+                <button data-modal-target="callback">Записаться</button>
+                <div class="search_popup">
+                    <form action="#"> 
+                        <input type="search" placeholder="Введите поисковый запрос">
+                    </form>
+                </div>
+                <div class="menu_popup"><a class="logotype" href="pages.html"><img src="images/logotype.svg" alt="Lexus Navi"></a>
+                    <form action="#">
+                        <input type="search" placeholder="Введите поисковый запрос">
+                    </form>
+                    <div class="menu">
+                        <div class="item">
+                            <div class="title" onclick="this.nextElementSibling.classList.toggle('open')"><span>Услуги</span><img src="images/menu_arrow.svg"></div>
+                            <div class="submenu">
+                                <div class="overflow">
+                                    <div class="list"><a href="#">Русификация Lexus / Toyota</a><a href="#">Ремонт мультимедиа Lexus / Toyota</a><a href="#">Установка противоугонного комплекса</a><a href="#">Шумоизоляция автомобиля</a><a href="#">Компьютерная диагностика</a><a href="#">Чип-тюнинг</a><a href="#">Установка Android систем</a><a href="#">Активация CarPlay</a></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="title"><a href="#">Подбор по авто</a></div>
+                        </div>
+                        <div class="item">
+                            <div class="title"><a href="#">Контакты</a></div>
+                        </div>
+                    </div><a class="phone_mobile" href="#"><img src="images/phone.svg"><span>+7 (495) 150-60-70</span></a>
+                    <button data-modal-target="callback">Записаться</button><img class="cross" src="images/menu_cross.svg" onclick="headerPopup('close')">
+                </div>
+                <div class="backdrop" onclick="headerPopup('close')"></div>
+            </div>
+        </header>
+        <main>
+            <section class="search">
+                <div class="container">
+                    <div class="breadcrumbs"><a href="#">Главная</a><span class="divide">/</span><span>Результаты поиска</span></div>
+                    <h2>Поиск</h2>
+                    <div class="form"><span>Запрос</span>
+                        <form class="search" action="">
+                            <input type="search" placeholder="Введите поисковый запрос">
+                            <button>Искать</button>
+                        </form>
+                    </div>
+                    <hr>
+                    <div class="results">
+                        <div class="empty">
+                            <h3>К сожалению, по вашему запросу услуг не найдено</h3><span>Попробуйте ввести другой запрос, или перейти в раздел “Подбор по авто”, или вернуться на главную.</span>
+                            <div class="buttons"><a class="button" href="#">Подбор по авто</a><a class="button" href="#">На главную</a></div>
+                        </div>
+                    </div>
+                </div><img class="background" src="images/search_background.webp">
+            </section>
+            <section class="consulting">
+                <div class="container">
+                    <div class="text">
+                        <h2>Не нашли то, что искали?</h2><span>Позвоните нам — уточним, работаем ли с вашим автомобилем и что можем сделать</span>
+                    </div>
+                    <div class="phone"><a class="phone" href="#"> <img src="images/consulting_phone.svg"><span>+7 (495) 150-60-70</span></a><span class="schedule">Пн–Вс, 9:00–19:00</span></div><img class="hand" src="images/consulting_hand.webp"><img class="background" src="images/consulting_background.webp">
+                </div>
+            </section>
+        </main>
+        <footer>
+            <div class="container">
+                <div class="top"><a class="logotype" href="#"><img src="images/logotype.svg" alt="Lexus-Navi"></a>
+                    <div class="menus">
+                        <div class="services">
+                            <div class="title" onclick="this.parentNode.classList.toggle('open')">
+                                <h4>Услуги</h4><img src="images/footer_arrow.svg">
+                            </div>
+                            <div class="menu">
+                                <div class="overflow">
+                                    <div class="list"><a href="#">Русификация Lexus / Toyota</a><a href="#">Ремонт мультимедиа Lexus / Toyota</a><a href="#">Установка противоугонного комплекса</a><a href="#">Шумоизоляция автомобиля</a><a href="#">Компьютерная диагностика</a><a href="#">Чип-тюнинг</a><a href="#">Установка Android систем</a><a href="#">Активация CarPlay</a></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="more">
+                            <div class="title" onclick="this.parentNode.classList.toggle('open')">
+                                <h4>Сервисы и контакты</h4><img src="images/footer_arrow.svg">
+                            </div>
+                            <div class="menu">
+                                <div class="overflow">
+                                    <div class="list"><a href="#">Подбор по авто</a><a href="#">Контакты</a></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="socials">
+                        <h4>Соцсети</h4><a href="#"> <img src="images/footer_telegram.svg" alt="Telegram">Telegram</a><a href="#"> <img src="images/footer_rutube.svg" alt="RuTube">RuTube</a><a href="#"> <img src="images/footer_avito.svg" alt="Avito">Avito</a>
+                    </div>
+                    <div class="contacts"><a href="#"> <img src="images/footer_phone.svg">+7 (495) 150-60-70</a><a href="#"> <img src="images/footer_email.svg">info@lexus-navi.ru</a><span> <img src="images/footer_pin.svg">г. Москва, 3-й Угрешский проезд, 8а стр. 3</span></div><img class="scroll_top" src="images/scroll_top.svg">
+                </div>
+                <div class="bottom"><span>© 2025 Lexus-Navi. Все права защищены.</span><a href="#">Настройки cookies</a><a href="#">Условия использования</a><a href="#">Политика конфиденциальности</a><a class="develop" href="#"><span>Дизайн, разработка сайта</span><img src="images/mwi.svg" alt="MWI"></a></div><img class="background" src="images/footer_background.webp">
+            </div>
+        </footer>
+        <div id="cookie-banner"><span>Продолжая навигацию по сайту, вы соглашаетесь с <a href="#">правилами использования cookie-файлов</a></span>
+            <button id="accept-cookies">Согласен</button>
+        </div>
+        <dialog data-modal-name="callback">
+            <div class="container">
+                <div class="text">
+                    <h3>Способы связи</h3><span>Свяжитесь с  нами любым удобным способом или оставьте свои контакты — мы перезвоним</span>
+                </div>
+                <form action="#">
+                    <div class="inputs">
+                        <div class="input"><span>Имя</span>
+                            <input type="text" placeholder="Введите имя" required>
+                        </div>
+                        <div class="input"><span>Телефон</span>
+                            <input type="tel" placeholder="+7 (___) ___-__-__" required>
+                        </div>
+                    </div>
+                    <button>Перезвоните мне</button>
+                </form>
+                <div class="list">
+                    <div class="contact">
+                        <div class="icon"><img src="images/decision_phone.svg"></div>
+                        <div class="description"><span>Телефон</span><a href="#">
+                                <h4>+7 (495) 150-60-70</h4></a></div>
+                    </div>
+                    <div class="contact">
+                        <div class="icon"><img src="images/decision_phone_mobile.svg"></div>
+                        <div class="description"><span>Телефон мобильный</span><a href="#">
+                                <h4>+7 (916) 888-80-00</h4></a></div>
+                    </div>
+                    <div class="contact">
+                        <div class="icon"><img src="images/decision_email.svg"></div>
+                        <div class="description"><span>Email</span><a href="#">
+                                <h4>info@lexus-navi.ru</h4></a></div>
+                    </div>
+                </div>
+                <div class="cross" data-modal-close><img class="cross" src="images/dialog_cross.svg"></div>
+            </div><img class="background" src="images/callback_background.webp">
+        </dialog>
+    </body>
+</html>

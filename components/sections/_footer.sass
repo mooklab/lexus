@@ -1,0 +1,246 @@
+@use '../../components/common/sass/_variables' as *
+@use '../../components/common/sass/_mixins' as *
+
+footer
+    background: #000
+
+    div.top
+        position: relative
+        display: grid
+        align-items: start
+        grid-template-columns: repeat(4, 1fr)
+        grid-template-rows: max-content 1fr
+        grid-template-areas: 'Logotype Services More Socials' 'Contacts Services More Socials'
+        grid-gap: 48px var(--grid-gap)
+        margin-top: var(--section-gap)
+        margin-bottom: var(--section-gap)
+        z-index: 2
+        +s(l)
+            grid-template-columns: repeat(3, 1fr)
+            grid-template-areas: 'Logotype Services More' 'Contacts Services Socials'
+        +s(m)
+            grid-template-columns: repeat(2, 1fr)
+            grid-template-areas: 'Logotype Logotype' 'Services More' 'Contacts Socials'
+        +s(s)
+            grid-template-columns: 1fr
+            grid-gap: 30px var(--grid-gap)
+            grid-template-areas: 'Logotype' 'Menus' 'Contacts' 'Socials'
+            margin-top: 30px
+            margin-bottom: 30px
+
+        h4
+            margin-bottom: 24px
+            +s(l)
+                margin-bottom: 14px
+            +s(s)
+                margin-bottom: unset
+
+        a, span
+            color: rgba(255, 255, 255, 0.7)
+            padding: 8px 0
+
+        a.logotype
+            grid-area: Logotype
+            padding: unset
+            img
+                width: calc(100% - 32px)
+                max-width: 255px
+                +s(s)
+                    max-width: 120px
+
+        div.contacts
+            grid-area: Contacts
+            +s(l)
+                align-self: end
+            +s(m)
+                align-self: start
+
+            a, span
+                display: grid
+                grid-template-columns: max-content 1fr
+                grid-gap: 12px
+                max-width: 280px
+                +s(s)
+                    max-width: unset
+                    align-items: center
+
+        div.menus
+            grid-area: Menus
+            display: contents
+            +s(s)
+                display: grid
+
+        div.services,
+        div.more
+            display: grid
+            margin-top: 10px
+            +s(l)
+                margin-top: unset
+            +s(s)
+                border-top: 1px solid #ffffff33
+                border-bottom: 1px solid #ffffff33
+
+            div.title
+                cursor: pointer
+                +s(s)
+                    display: grid
+                    align-items: center
+                    grid-template-columns: 1fr max-content
+                    padding-top: 15px
+                    padding-bottom: 15px
+                img
+                    display: none
+                    transition: all 0.2s
+                    +s(s)
+                        display: grid
+
+            div.menu
+                display: grid
+                grid-template-rows: 1fr
+                transition: all 0.5s
+                +s(s)
+                    grid-template-rows: 0fr
+
+                div.overflow
+                    overflow: hidden
+
+                div.list
+                    display: grid
+                    +s(s)
+                        margin-bottom: 15px
+                    a
+                        padding-top: 8px
+                        padding-bottom: 8px
+                        +s(s)
+                            padding-top: 4px
+                            padding-bottom: 4px
+
+            &.open
+                div.title
+                    img
+                        transform: rotate(180deg)
+                div.menu
+                    grid-template-rows: 1fr
+
+        div.services
+            grid-area: Services
+            +s(s)
+                grid-area: unset
+
+        div.more
+            grid-area: More
+            +s(s)
+                grid-area: unset
+                border-top: unset
+
+        div.socials
+            grid-area: Socials
+            display: grid
+            margin-top: 10px
+            +s(l)
+                align-self: end
+                margin-top: unset
+            +s(s)
+                grid-auto-flow: column
+                grid-auto-columns: max-content
+                grid-gap: 32px
+            h4
+                +s(s)
+                    display: none
+            a
+                display: grid
+                align-items: center
+                grid-template-columns: max-content 1fr
+                grid-gap: 12px
+
+        img.scroll_top
+            cursor: pointer
+            position: absolute
+            top: 12px
+            right: 0
+            +s(m)
+                display: none
+
+    div.bottom
+        position: relative
+        display: grid
+        grid-auto-flow: column
+        grid-auto-columns: auto
+        justify-content: space-between
+        grid-gap: var(--grid-gap)
+        color: rgba(255, 255, 255, 0.7)
+        border-top: 1px solid #ffffff4d
+        padding-top: 40px
+        padding-bottom: 40px
+        z-index: 2
+        +f(12px, 16px)
+
+        +s(l)
+            grid-auto-flow: unset
+            grid-template-columns: repeat(3, 1fr)
+            padding-top: 30px
+            padding-bottom: 60px
+        +s(m)
+            grid-template-columns: repeat(2, 1fr)
+        +s(s)
+            grid-template-columns: 1fr
+
+        a
+            text-decoration: underline
+            &:hover
+                text-decoration: none
+
+        a.develop
+            display: grid
+            align-items: center
+            justify-content: start
+            grid-template-columns: auto max-content
+            grid-gap: 5px
+            text-decoration: none
+            +s(l)
+                grid-column: 2 span
+            +s(s)
+                grid-column: unset
+
+    img.background
+        grid-column: full
+        position: absolute
+        bottom: 0
+        left: 0
+        right: 0
+        width: 100%
+        max-height: 100%
+        z-index: 1
+
+div#cookie-banner
+    position: fixed
+    right: var(--side-gap)
+    bottom: var(--section-gap)
+    background: white
+    width: 620px
+    align-items: center
+    grid-template-columns: 1fr max-content
+    grid-gap: 20px
+    padding: 32px
+    color: black
+    z-index: 999
+    display: none
+    +s(m)
+        padding: 24px
+    +s(s)
+        grid-template-columns: 1fr
+        width: 100%
+        bottom: 0
+        right: 0
+
+    a
+        text-decoration: underline
+        &:hover
+            text-decoration: none
+
+    button
+        +s(s)
+            width: 100%
+
+    &.show
+        display: grid

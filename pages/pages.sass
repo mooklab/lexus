@@ -1,0 +1,32 @@
+@use '../components/common/sass/_mixins' as *
+@use '../components/common/sass/_variables' as *
+
+header
+    background: black
+    position: relative
+
+section.page
+    padding-top: var(--section-gap)
+    padding-bottom: var(--section-gap)
+
+    div.container
+        display: grid
+        grid-template-columns: repeat(3, 1fr)
+        grid-gap: var(--grid-gap)
+        +s(m)
+            grid-template-columns: repeat(2, 1fr)
+        +s(s)
+            grid-template-columns: 1fr
+
+        a
+            padding: 16px 32px
+            border: 1px solid black
+            color: black
+            transition: all 0.5s
+            +s(l)
+                padding: 12px 24px
+            +s(m)
+                padding: 12px 16px
+            &:hover
+                background: black
+                color: white

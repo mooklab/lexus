@@ -1,0 +1,45 @@
+header {
+  background: black;
+  position: relative;
+}
+
+section.page {
+  padding-top: var(--section-gap);
+  padding-bottom: var(--section-gap);
+}
+section.page div.container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: var(--grid-gap);
+}
+@media (max-width: 960px) {
+  section.page div.container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 640px) {
+  section.page div.container {
+    grid-template-columns: 1fr;
+  }
+}
+section.page div.container a {
+  padding: 16px 32px;
+  border: 1px solid black;
+  color: black;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+@media (max-width: 1280px) {
+  section.page div.container a {
+    padding: 12px 24px;
+  }
+}
+@media (max-width: 960px) {
+  section.page div.container a {
+    padding: 12px 16px;
+  }
+}
+section.page div.container a:hover {
+  background: black;
+  color: white;
+}/*# sourceMappingURL=pages.css.map */

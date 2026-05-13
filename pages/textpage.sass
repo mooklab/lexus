@@ -1,0 +1,88 @@
+@use '../components/common/sass/_mixins' as *
+@use '../components/common/sass/_variables' as *
+
+header
+    background: black
+
+section.textpage_header
+    background: black
+    div.container
+        display: grid
+        grid-gap: var(--section-gap)
+        padding-top: var(--header-gap)
+        padding-bottom: var(--section-gap)
+    h2
+        max-width: 1280px
+
+section.textpage
+    padding-top: var(--section-gap)
+    padding-bottom: var(--section-gap)
+    color: black
+
+    div.container
+        display: grid
+        justify-content: center
+
+    div.wrap
+        display: grid
+        grid-gap: 24px
+        max-width: 890px
+        +s(s)
+            grid-gap: 16px
+
+        h3
+            margin-top: 16px
+            margin-bottom: 8px
+            font-weight: 600
+
+        h4
+            margin-bottom: -8px
+            font-weight: 500
+
+        ul
+            display: grid
+            grid-gap: 16px
+            +s(s)
+                grid-gap: 8px
+            li
+                position: relative
+                padding-left: 32px
+                &::before
+                    content: ''
+                    display: block
+                    width: 5px
+                    height: 5px
+                    border-radius: 100%
+                    position: absolute
+                    top: 0.65em
+                    left: 12px
+                    background: black
+
+        table
+
+            thead
+                th
+                    +f(12px, 18px)
+                    color: rgba(0, 0, 0, 0.6)
+                    text-align: left
+                    padding-bottom: 24px
+                    +s(s)
+                        padding-bottom: 16px
+            tbody
+                td
+                    vertical-align: top
+                    border-top: 1px solid #e2e2e2
+                    padding-top: 32px
+                    padding-bottom: 32px
+                    +s(l)
+                        padding-top: 24px
+                        padding-bottom: 24px
+                    +s(m)
+                        padding-top: 16px
+                        padding-bottom: 16px
+                    &:not(:last-child)
+                        padding-right: 24px
+
+                tr:last-child
+                    td
+                        border-bottom: 1px solid #e2e2e2

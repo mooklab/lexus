@@ -1,0 +1,82 @@
+extends ../components/common/pug/_layout.pug
+include ../components/common/pug/_mixins.pug
+
+block links
+    link(rel="stylesheet", href="css/service.css")
+
+block content
+
+    section.main
+        div.container
+            div.breadcrumbs
+                a(href="#") Главная
+                span.divide /
+                a(href="#") Услуги
+                span.divide /
+                span Русификация мультимедиа
+            div.content
+                div.text
+                    h1 Русификация мультимедиа
+                    span Профессиональное обновление навигации и интерфейса вашего автомобиля. Оригинальные прошивки, полная гарантия и быстрое выполнение в России.
+                div.list
+                    strong Мы выполняем:
+                    ul
+                        li Базовая русификация (интерфейс и меню)
+                        li Полная русификация (интерфейс, меню, навигация, голосовые команды)
+                        li Премиум русификация (полная + интеграция CarPlay)
+
+                a(href="#").button Подобрать по авто
+            
+            div.preview
+                img(src="images/service_main_preview.webp").preview
+
+        img(src="images/service_main.webp").background
+
+    section.about
+        div.container
+
+            h2 Об услуге
+            div.text
+                h3 Мы переведем весь интерфейс вашей мультимедиа и приборной панели на русский язык, чтобы вы смогли использовать возможности своего авто на максимум
+                span Предлагаем русифицировать оригинальную мультимедиа в автомобилях Lexus и Toyota, ввезённых по параллельному импорту из Китая, Кореи, Японии, США и ОАЭ, в меню которых отсутствует русский язык. После перепрошивки вы получите полный перевод штатных пунктов меню и настройки автомобиля на русский язык.
+            div.video
+                video(src="images/video.mp4", poster="images/example_video_preview.webp")
+                div.play
+                    img(src="images/play.svg").play
+
+    include ../components/sections/_get.pug
+
+    section.examples
+        div.container
+
+            div.title
+                h2 Примеры нашей работы
+                div.swiper-navigation
+                    div.arrow
+                        img(src="images/swiper_arrow.svg")
+                    div.arrow
+                        img(src="images/swiper_arrow.svg")
+            div.swiper
+                div.swiper-wrapper
+                    div.swiper-slide
+                        +work('images/service_1.webp', 'Интеграция CarPlay')
+                    div.swiper-slide
+                        +work('images/service_1.webp', 'Интеграция CarPlay')
+                    div.swiper-slide
+                        +work('images/service_1.webp', 'Интеграция CarPlay')
+                    div.swiper-slide
+                        +work('images/service_1.webp', 'Интеграция CarPlay')
+                    div.swiper-slide
+                        +work('images/service_1.webp', 'Интеграция CarPlay')
+                    div.swiper-slide
+                        +work('images/service_1.webp', 'Интеграция CarPlay')
+
+            div.swiper-pagination
+
+    include ../components/sections/_consulting_2.pug
+    include ../components/sections/_stages.pug
+    include ../components/sections/_advantages.pug
+    include ../components/sections/_reviews.pug
+    include ../components/sections/_faq.pug
+    include ../components/sections/_decision.pug
+    include ../components/sections/_navigation.pug

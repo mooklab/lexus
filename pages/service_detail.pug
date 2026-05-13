@@ -1,0 +1,115 @@
+extends ../components/common/pug/_layout.pug
+include ../components/common/pug/_mixins.pug
+
+block links
+    link(rel="stylesheet", href="css/service_detail.css")
+
+block content
+
+    section.main
+        div.container
+            div.breadcrumbs
+                a(href="#") Главная
+                span.divide /
+                a(href="#") Услуги
+                span.divide /
+                span Русификация мультимедиа Lexus ES 200 из Китая
+            div.content
+                div.text
+                    h1 Русификация мультимедиа Lexus ES 200 из Китая
+                    span Полный перевод интерфейса мультимедийной системы и приборной панели на русский язык.
+                div.details
+                    div
+                        span.note Автомобиль:
+                        span Toyota Camry
+                    div
+                        span.note Год выпуска:
+                        span 2024
+                    div
+                        span.note Страна:
+                        span Япония
+
+                a(href="#").button Записаться
+            
+            div.preview
+                img(src="images/service_main_preview.webp").preview
+
+        img(src="images/service_main.webp").background
+
+    section.about
+        div.container
+
+            h2 Об услуге
+            div.text
+                h3 Мы переведем весь интерфейс вашей мультимедиа и приборной панели на русский язык, чтобы вы смогли использовать возможности своего авто на максимум
+                span Предлагаем русифицировать оригинальную мультимедиа в автомобилях Lexus ES 200  модельных рядов после 2023 года, ввезённых по параллельному импорту из Китая, в меню которых отсутствует русский язык. После перепрошивки вы получите полный перевод штатных пунктов меню и настройки автомобиля на русский язык.
+            div.video
+                video(src="images/video.mp4", poster="images/example_video_preview.webp")
+                div.play
+                    img(src="images/play.svg").play
+
+    include ../components/sections/_get.pug
+
+    section.results
+        div.container
+
+            div.title
+                h2 Результат нашей работы
+                div.swiper-navigation
+                    div.arrow
+                        img(src="images/swiper_arrow.svg")
+                    div.arrow
+                        img(src="images/swiper_arrow.svg")
+            div.swiper
+                div.swiper-wrapper
+                    div.swiper-slide
+                        img(src="images/service_1.webp")
+                    div.swiper-slide
+                        img(src="images/service_2.webp")
+                    div.swiper-slide
+                        img(src="images/service_3.webp")
+                    div.swiper-slide
+                        img(src="images/service_4.webp")
+                    div.swiper-slide
+                        img(src="images/service_5.webp")
+                    div.swiper-slide
+                        img(src="images/service_6.webp")
+
+            div.swiper-pagination
+
+    include ../components/sections/_consulting_2.pug
+
+    section.stages
+        div.container
+            h2 Перед установкой важно знать
+
+            div.list
+                div.item
+                    div.line
+                        div
+                    img(src="images/stages_2.svg")
+                    h3 Безопасность
+                    span Профессиональная прошивка сохраняет все штатные функции  автомобиля в полностью рабочем состоянии. 
+                div.item
+                    div.line
+                        div
+                    img(src="images/stages_5.svg")
+                    h3 Дистанционно
+                    span Работа возможна по отправке: снимите монитор Lexus ES 200 и передайте нам через транспортную компанию.
+                div.item
+                    div.line
+                        div
+                    img(src="images/stages_6.svg")
+                    h3 Гарантия
+                    span Процедура не влияет на гарантию — установка происходит без вмешательства в проводку.
+                div.item
+                    div.line
+                        div
+                    img(src="images/stages_1.svg")
+                    h3 Для консультации
+                    span Напишите или позвоните по телефону #[a(href="#") +7 916 888 80 00], также доступны консультации в Telegram — #[a(href="#") @lexusnavi].
+
+    include ../components/sections/_reviews.pug
+    include ../components/sections/_faq.pug
+    include ../components/sections/_decision.pug
+    include ../components/sections/_navigation.pug

@@ -1,0 +1,44 @@
+mixin review(name, car, review)
+    div.review
+        div.author
+            img(src="images/avatar_empty.webp")
+            div.name
+                span= name
+                span= car
+        div.stars
+            img(src="images/star.svg")
+            img(src="images/star.svg")
+            img(src="images/star.svg")
+            img(src="images/star.svg")
+            img(src="images/star.svg")
+        span.review= review
+        img(src="images/review_background.webp").backgroound
+
+section.reviews
+    div.container
+        
+        div.title
+            h2 Отзывы о нашей работе
+            div.swiper-navigation
+                div.arrow
+                    img(src="images/swiper_arrow.svg")
+                div.arrow
+                    img(src="images/swiper_arrow.svg")
+        div.swiper
+            div.swiper-wrapper
+                div.swiper-slide
+                    +review('Сергей Петров', 'Владелец Lexus RX', '«Привез машину в плохом состоянии, а забрал с полностью рабочей системой. Ребята крутые!»')
+                div.swiper-slide
+                    +review('Анна Сидорова', 'Владелец Toyota Camry', '«Услуга оказалась на высшем уровне! Быстро, качественно и с душой.»')
+                div.swiper-slide
+                    +review('Сергей Петров', 'Владелец Lexus RX', '«Привез машину в плохом состоянии, а забрал с полностью рабочей системой. Ребята крутые!»')
+                div.swiper-slide
+                    +review('Сергей Петров', 'Владелец Lexus RX', '«Привез машину в плохом состоянии, а забрал с полностью рабочей системой. Ребята крутые!»')
+                div.swiper-slide
+                    +review('Сергей Петров', 'Владелец Lexus RX', '«Привез машину в плохом состоянии, а забрал с полностью рабочей системой. Ребята крутые!»')
+                div.swiper-slide
+                    +review('Сергей Петров', 'Владелец Lexus RX', '«Привез машину в плохом состоянии, а забрал с полностью рабочей системой. Ребята крутые!»')
+
+        div.swiper-pagination
+
+        img(src="images/reviews_background.webp").reviews_background

@@ -1,0 +1,78 @@
+@use '../../components/common/sass/_variables' as *
+@use '../../components/common/sass/_mixins' as *
+
+section.stages
+    margin-top: var(--section-gap)
+    margin-bottom: var(--section-gap)
+    color: black
+
+    div.container
+        display: grid
+        grid-gap: 80px
+        +s(m)
+            grid-gap: 40px
+        +s(s)
+            grid-gap: 20px
+
+    div.list
+        display: grid
+        align-items: start
+        grid-template-columns: repeat(4, 1fr)
+        grid-gap: var(--grid-gap)
+        +s(s)
+            grid-template-columns: 1fr
+
+        div.item
+            position: relative
+            display: grid
+            grid-gap: 16px
+            +s(m)
+                grid-gap: 10px
+            +s(s)
+                padding-left: 30px
+
+            div.line
+                display: grid
+                align-items: center
+                grid-template-columns: max-content 1fr
+                grid-gap: 8px
+                +s(s)
+                    position: absolute
+                    top: 0
+                    left: 0
+                    grid-template-columns: max-content
+                    grid-template-rows: max-content 1fr
+                    height: 100%
+                    justify-items: center
+                div
+                    width: calc(100% + var(--grid-gap) - 8px)
+                    height: 2px
+                    background: #cbd7e8
+                    +s(s)
+                        height: 100%
+                        width: 2px
+
+                &::before
+                    content: ''
+                    display: block
+                    width: 10px
+                    height: 10px
+                    background: #cbd7e8
+
+            img
+                margin-top: 48px
+                margin-bottom: 24px
+                +s(m)
+                    width: 30px
+                    height: 30px
+                    margin-top: 8px
+                    margin-bottom: unset
+
+            span
+                opacity: 0.6
+                +s(s)
+                    padding-bottom: 10px
+
+            h3
+                +s(s)
+                    +f(20px, 32px)

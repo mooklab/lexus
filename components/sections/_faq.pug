@@ -1,0 +1,32 @@
+mixin question(title)
+    div.question
+        div(onclick="this.parentNode.classList.toggle('open')").title
+            h4= title
+            div.icon
+                img(src="images/faq_minus.svg").minus
+                img(src="images/faq_plus.svg").plus
+        div.content
+            div.overflow
+                div.wrap 
+                    span Базовая русификация выполняется за один день. Полная русификация с обновлением карт может занять до двух дней. Мы работаем по предварительной записи, чтобы не было ожидания.
+
+
+section.faq
+    div.container
+
+        div.description
+            h2 Вопросы
+            span Ответы на самые частые вопросы о русификации и обновлении навигации.
+
+
+        div.list
+            +question('Сколько времени занимает русификация?')
+            +question('Будет ли гарантия на выполненные работы?')
+            +question('Какие модели Lexus и Toyota поддерживаются?')
+            +question('Потеряются ли мои данные при обновлении?')
+            +question('Какие еще дополнительные услуги вы оказываете?')
+
+        div.callback
+            h3 Остались вопросы?
+            span Свяжитесь   нами по телефону или заполните форму консультации.
+            button Задать вопрос

@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta http-equiv="Cache-Control" content="no-cache">
+        <meta name="viewport" content="user-scalable=no, width=device-width, height=device-height">
+        <meta name="description" content="Описание сайта">
+        <meta name="keywords" content="Ключевые слова">
+        <title>Туристическая компания &quot;Чудесный Отдых&quot;</title>
+        <meta name="robots" content="index, follow">
+        <meta name="HandheldFriendly" content="True">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="format-detection" content="date=no">
+        <meta name="format-detection" content="address=no">
+        <meta name="format-detection" content="email=no">
+        <meta name="application-name" content="Туристическая компания &quot;Чудесный Отдых&quot;">
+        <meta name="color-scheme" content="only light">
+        <meta property="og:title" content="Туристическая компания &quot;Чудесный Отдых&quot;">
+        <meta property="og:type" content="website">
+        <meta property="og:description" content="Описание сайта">
+        <meta property="og:image" content="Изображение">
+        <meta property="og:site_name" content="Туристическая компания &quot;Чудесный Отдых&quot;">
+        <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+        <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+        <link rel="icon" href="images/favicon.png" type="image/png">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css">
+        <link rel="stylesheet" href="css/common.css">
+        <link rel="stylesheet" href="css/services.css">
+        <script defer src="scripts/main.js" type="module"></script>
+        <script defer src="scripts/dialog.js"></script>
+    </head>
+    <body>
+        <header>
+            <div class="container">
+                <div class="mobile_menu" onclick="headerPopup('menu')"><img src="images/menu_icon.svg"></div><a class="logotype" href="pages.html"><img src="images/logotype.svg" alt="Lexus Navi"></a>
+                <menu>
+                    <div class="submenu">
+                        <div class="title" onclick="this.classList.toggle('open')"><span>Услуги</span><img src="images/menu_arrow.svg"></div>
+                        <div class="list">
+                            <div class="overflow">
+                                <div class="wrap"><a href="#">Русификация Lexus / Toyota</a><a href="#">Ремонт мультимедиа Lexus / Toyota</a><a href="#">Установка противоугонного комплекса</a><a href="#">Шумоизоляция автомобиля</a><a href="#">Компьютерная диагностика</a><a href="#">Чип-тюнинг</a><a href="#">Установка Android систем</a><a href="#">Активация CarPlay</a></div>
+                            </div>
+                        </div>
+                    </div><a href="#">Подбор по авто</a><a href="#">Контакты</a>
+                </menu>
+                <div class="search" onclick="headerPopup('search')"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M15.7143 6.83779C16.8913 8.01482 17.5526 9.61122 17.5526 11.2758C17.5526 12.9404 16.8913 14.5368 15.7143 15.7138C14.5372 16.8908 12.9409 17.5521 11.2763 17.5521C9.61171 17.5521 8.01531 16.8908 6.83828 15.7138C5.66125 14.5368 5 12.9404 5 11.2758C5 9.61122 5.66125 8.01482 6.83828 6.83779C8.01531 5.66076 9.61171 4.99951 11.2763 4.99951C12.9409 4.99951 14.5372 5.66076 15.7143 6.83779" stroke="#15A0FD" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M19.0009 19L15.7109 15.71" stroke="#15A0FD" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+<span>Поиск</span>
+                </div><a class="phone" href="#"><img src="images/phone.svg"><span>+7 (495) 150-60-70</span></a>
+                <button data-modal-target="callback">Записаться</button>
+                <div class="search_popup">
+                    <form action="#"> 
+                        <input type="search" placeholder="Введите поисковый запрос">
+                    </form>
+                </div>
+                <div class="menu_popup"><a class="logotype" href="pages.html"><img src="images/logotype.svg" alt="Lexus Navi"></a>
+                    <form action="#">
+                        <input type="search" placeholder="Введите поисковый запрос">
+                    </form>
+                    <div class="menu">
+                        <div class="item">
+                            <div class="title" onclick="this.nextElementSibling.classList.toggle('open')"><span>Услуги</span><img src="images/menu_arrow.svg"></div>
+                            <div class="submenu">
+                                <div class="overflow">
+                                    <div class="list"><a href="#">Русификация Lexus / Toyota</a><a href="#">Ремонт мультимедиа Lexus / Toyota</a><a href="#">Установка противоугонного комплекса</a><a href="#">Шумоизоляция автомобиля</a><a href="#">Компьютерная диагностика</a><a href="#">Чип-тюнинг</a><a href="#">Установка Android систем</a><a href="#">Активация CarPlay</a></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="title"><a href="#">Подбор по авто</a></div>
+                        </div>
+                        <div class="item">
+                            <div class="title"><a href="#">Контакты</a></div>
+                        </div>
+                    </div><a class="phone_mobile" href="#"><img src="images/phone.svg"><span>+7 (495) 150-60-70</span></a>
+                    <button data-modal-target="callback">Записаться</button><img class="cross" src="images/menu_cross.svg" onclick="headerPopup('close')">
+                </div>
+                <div class="backdrop" onclick="headerPopup('close')"></div>
+            </div>
+        </header>
+        <main>
+            <section class="main">
+                <div class="container">
+                    <div class="breadcrumbs"><a href="#">Главная</a><span class="divide">/</span><span>Услуги</span></div>
+                    <h1>Делаем ваш автомобиль действительно понятным</h1>
+                    <div class="group"><span class="text">Все услуги по мультимедиа Toyota и Lexus — в одном месте: русификация, карты России с пробками, локальные онлайн‑сервисы, активация нужных функций. Интерфейс становится понятным и удобным, а системы работают стабильно и сохраняют настройки после обновлений и сервиса.</span><span class="language">中文</span></div>
+                </div><img class="background" src="images/services_main.webp">
+            </section>
+            <section class="services">
+                <div class="container">
+                    <h2>Услуги, которые мы оказываем</h2>
+                    <div class="list"><a class="service" href="#">
+                            <h3>Русификация</h3>
+                            <div class="text"><img class="preview" src="images/service_1.webp" alt="Русификация"/><span>Перевод интерфейса мультимедийной системы на русский язык для автомобилей с зарубежных рынков.</span>
+                                <button><img src="images/service_arrow.svg"/></button>
+                            </div></a><a class="service" href="#">
+                            <h3>Ремонт мультимедиа </h3>
+                            <div class="text"><img class="preview" src="images/service_2.webp" alt="Ремонт мультимедиа "/><span>Перевод интерфейса мультимедийной системы на русский язык для автомобилей с зарубежных рынков.</span>
+                                <button><img src="images/service_arrow.svg"/></button>
+                            </div></a><a class="service" href="#">
+                            <h3>Установка противоугонного комплекса</h3>
+                            <div class="text"><img class="preview" src="images/service_3.webp" alt="Установка противоугонного комплекса"/><span>Перевод интерфейса мультимедийной системы на русский язык для автомобилей с зарубежных рынков.</span>
+                                <button><img src="images/service_arrow.svg"/></button>
+                            </div></a><a class="service" href="#">
+                            <h3>Шумоизоляция автомобиля</h3>
+                            <div class="text"><img class="preview" src="images/service_4.webp" alt="Шумоизоляция автомобиля"/><span>Перевод интерфейса мультимедийной системы на русский язык для автомобилей с зарубежных рынков.</span>
+                                <button><img src="images/service_arrow.svg"/></button>
+                            </div></a><a class="service" href="#">
+                            <h3>Компьютерная диагностика</h3>
+                            <div class="text"><img class="preview" src="images/service_5.webp" alt="Компьютерная диагностика"/><span>Перевод интерфейса мультимедийной системы на русский язык для автомобилей с зарубежных рынков.</span>
+                                <button><img src="images/service_arrow.svg"/></button>
+                            </div></a><a class="service" href="#">
+                            <h3>Чип-тюнинг</h3>
+                            <div class="text"><img class="preview" src="images/service_6.webp" alt="Чип-тюнинг"/><span>Перевод интерфейса мультимедийной системы на русский язык для автомобилей с зарубежных рынков.</span>
+                                <button><img src="images/service_arrow.svg"/></button>
+                            </div></a><a class="service" href="#">
+                            <h3>Установка Android систем</h3>
+                            <div class="text"><img class="preview" src="images/service_7.webp" alt="Установка Android систем"/><span>Перевод интерфейса мультимедийной системы на русский язык для автомобилей с зарубежных рынков.</span>
+                                <button><img src="images/service_arrow.svg"/></button>
+                            </div></a><a class="service" href="#">
+                            <h3>Активация CarPlay</h3>
+                            <div class="text"><img class="preview" src="images/service_8.webp" alt="Активация CarPlay"/><span>Перевод интерфейса мультимедийной системы на русский язык для автомобилей с зарубежных рынков.</span>
+                                <button><img src="images/service_arrow.svg"/></button>
+                            </div></a>
+                    </div>
+                </div><img class="background" src="images/services_background.webp">
+            </section>
+            <section class="stages">
+                <div class="container">
+                    <h2>Как мы работаем</h2>
+                    <div class="list">
+                        <div class="item">
+                            <div class="line">
+                                <div></div>
+                            </div><img src="images/stages_1.svg">
+                            <h3>Первый контакт</h3><span>Вы звоните нам или заполняете форму на сайте</span>
+                        </div>
+                        <div class="item">
+                            <div class="line">
+                                <div></div>
+                            </div><img src="images/stages_2.svg">
+                            <h3>Диагностика машины</h3><span>Наш специалист осматривает систему и определяет объем работ</span>
+                        </div>
+                        <div class="item">
+                            <div class="line">
+                                <div></div>
+                            </div><img src="images/stages_3.svg">
+                            <h3>Согласование плана</h3><span>Мы обсуждаем сроки, стоимость и выбираем нужные услуги</span>
+                        </div>
+                        <div class="item">
+                            <div class="line">
+                                <div></div>
+                            </div><img src="images/stages_4.svg">
+                            <h3>Выполнение и гарантия</h3><span>Работа завершена, система готова к использованию на долгие годы</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="consulting">
+                <div class="container">
+                    <div class="text">
+                        <h2>Бесплатная диагностика и консультация</h2><span>Оцените состояние ваших мультимедийных систем: мы выявим неполадки и восстановим комфорт в ваших поездках.</span>
+                    </div>
+                    <button>Записаться</button><img class="hand" src="images/consulting_hand.webp"><img class="background" src="images/consulting_background.webp">
+                </div>
+            </section>
+            <section class="digits">
+                <div class="container">
+                    <h3>Мы не универсальный сервис — работаем только с Lexus и Toyota. За 12 лет мы отточили решения для задач, от которых обычно отказывается дилер: язык, навигация и прошивки под любой рынок — с гарантией качества.</h3>
+                    <div class="preview"><img src="images/digits.webp"></div>
+                    <div class="list">
+                        <div class="item"><span class="digit">3 000+</span><span>выполненных работ</span></div>
+                        <div class="item"><span class="digit">12+</span><span>лет на рынке</span></div>
+                        <div class="item"><span class="digit">100%</span><span>гарантия качества</span></div>
+                    </div>
+                </div>
+            </section>
+            <section class="reviews">
+                <div class="container">
+                    <div class="title">
+                        <h2>Отзывы о нашей работе</h2>
+                        <div class="swiper-navigation">
+                            <div class="arrow"><img src="images/swiper_arrow.svg"></div>
+                            <div class="arrow"><img src="images/swiper_arrow.svg"></div>
+                        </div>
+                    </div>
+                    <div class="swiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                            <div class="review">
+                                                <div class="author"><img src="images/avatar_empty.webp">
+                                                    <div class="name"><span>Сергей Петров</span><span>Владелец Lexus RX</span></div>
+                                                </div>
+                                                <div class="stars"><img src="images/star.svg"><img src="images/star.svg"><img src="images/star.svg"><img src="images/star.svg"><img src="images/star.svg"></div><span class="review">«Привез машину в плохом состоянии, а забрал с полностью рабочей системой. Ребята крутые!»</span><img class="backgroound" src="images/review_background.webp">
+                                            </div>
+                            </div>
+                            <div class="swiper-slide">
+                                            <div class="review">
+                                                <div class="author"><img src="images/avatar_empty.webp">
+                                                    <div class="name"><span>Анна Сидорова</span><span>Владелец Toyota Camry</span></div>
+                                                </div>
+                                                <div class="stars"><img src="images/star.svg"><img src="images/star.svg"><img src="images/star.svg"><img src="images/star.svg"><img src="images/star.svg"></div><span class="review">«Услуга оказалась на высшем уровне! Быстро, качественно и с душой.»</span><img class="backgroound" src="images/review_background.webp">
+                                            </div>
+                            </div>
+                            <div class="swiper-slide">
+                                            <div class="review">
+                                                <div class="author"><img src="images/avatar_empty.webp">
+                                                    <div class="name"><span>Сергей Петров</span><span>Владелец Lexus RX</span></div>
+                                                </div>
+                                                <div class="stars"><img src="images/star.svg"><img src="images/star.svg"><img src="images/star.svg"><img src="images/star.svg"><img src="images/star.svg"></div><span class="review">«Привез машину в плохом состоянии, а забрал с полностью рабочей системой. Ребята крутые!»</span><img class="backgroound" src="images/review_background.webp">
+                                            </div>
+                            </div>
+                            <div class="swiper-slide">
+                                            <div class="review">
+                                                <div class="author"><img src="images/avatar_empty.webp">
+                                                    <div class="name"><span>Сергей Петров</span><span>Владелец Lexus RX</span></div>
+                                                </div>
+                                                <div class="stars"><img src="images/star.svg"><img src="images/star.svg"><img src="images/star.svg"><img src="images/star.svg"><img src="images/star.svg"></div><span class="review">«Привез машину в плохом состоянии, а забрал с полностью рабочей системой. Ребята крутые!»</span><img class="backgroound" src="images/review_background.webp">
+                                            </div>
+                            </div>
+                            <div class="swiper-slide">
+                                            <div class="review">
+                                                <div class="author"><img src="images/avatar_empty.webp">
+                                                    <div class="name"><span>Сергей Петров</span><span>Владелец Lexus RX</span></div>
+                                                </div>
+                                                <div class="stars"><img src="images/star.svg"><img src="images/star.svg"><img src="images/star.svg"><img src="images/star.svg"><img src="images/star.svg"></div><span class="review">«Привез машину в плохом состоянии, а забрал с полностью рабочей системой. Ребята крутые!»</span><img class="backgroound" src="images/review_background.webp">
+                                            </div>
+                            </div>
+                            <div class="swiper-slide">
+                                            <div class="review">
+                                                <div class="author"><img src="images/avatar_empty.webp">
+                                                    <div class="name"><span>Сергей Петров</span><span>Владелец Lexus RX</span></div>
+                                                </div>
+                                                <div class="stars"><img src="images/star.svg"><img src="images/star.svg"><img src="images/star.svg"><img src="images/star.svg"><img src="images/star.svg"></div><span class="review">«Привез машину в плохом состоянии, а забрал с полностью рабочей системой. Ребята крутые!»</span><img class="backgroound" src="images/review_background.webp">
+                                            </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div><img class="reviews_background" src="images/reviews_background.webp">
+                </div>
+            </section>
+            <section class="faq">
+                <div class="container">
+                    <div class="description">
+                        <h2>Вопросы</h2><span>Ответы на самые частые вопросы о русификации и обновлении навигации.</span>
+                    </div>
+                    <div class="list">
+                                    <div class="question">
+                                        <div class="title" onclick="this.parentNode.classList.toggle('open')">
+                                            <h4>Сколько времени занимает русификация?</h4>
+                                            <div class="icon"><img class="minus" src="images/faq_minus.svg"><img class="plus" src="images/faq_plus.svg"></div>
+                                        </div>
+                                        <div class="content">
+                                            <div class="overflow">
+                                                <div class="wrap"> <span>Базовая русификация выполняется за один день. Полная русификация с обновлением карт может занять до двух дней. Мы работаем по предварительной записи, чтобы не было ожидания.</span></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="question">
+                                        <div class="title" onclick="this.parentNode.classList.toggle('open')">
+                                            <h4>Будет ли гарантия на выполненные работы?</h4>
+                                            <div class="icon"><img class="minus" src="images/faq_minus.svg"><img class="plus" src="images/faq_plus.svg"></div>
+                                        </div>
+                                        <div class="content">
+                                            <div class="overflow">
+                                                <div class="wrap"> <span>Базовая русификация выполняется за один день. Полная русификация с обновлением карт может занять до двух дней. Мы работаем по предварительной записи, чтобы не было ожидания.</span></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="question">
+                                        <div class="title" onclick="this.parentNode.classList.toggle('open')">
+                                            <h4>Какие модели Lexus и Toyota поддерживаются?</h4>
+                                            <div class="icon"><img class="minus" src="images/faq_minus.svg"><img class="plus" src="images/faq_plus.svg"></div>
+                                        </div>
+                                        <div class="content">
+                                            <div class="overflow">
+                                                <div class="wrap"> <span>Базовая русификация выполняется за один день. Полная русификация с обновлением карт может занять до двух дней. Мы работаем по предварительной записи, чтобы не было ожидания.</span></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="question">
+                                        <div class="title" onclick="this.parentNode.classList.toggle('open')">
+                                            <h4>Потеряются ли мои данные при обновлении?</h4>
+                                            <div class="icon"><img class="minus" src="images/faq_minus.svg"><img class="plus" src="images/faq_plus.svg"></div>
+                                        </div>
+                                        <div class="content">
+                                            <div class="overflow">
+                                                <div class="wrap"> <span>Базовая русификация выполняется за один день. Полная русификация с обновлением карт может занять до двух дней. Мы работаем по предварительной записи, чтобы не было ожидания.</span></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="question">
+                                        <div class="title" onclick="this.parentNode.classList.toggle('open')">
+                                            <h4>Какие еще дополнительные услуги вы оказываете?</h4>
+                                            <div class="icon"><img class="minus" src="images/faq_minus.svg"><img class="plus" src="images/faq_plus.svg"></div>
+                                        </div>
+                                        <div class="content">
+                                            <div class="overflow">
+                                                <div class="wrap"> <span>Базовая русификация выполняется за один день. Полная русификация с обновлением карт может занять до двух дней. Мы работаем по предварительной записи, чтобы не было ожидания.</span></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                    </div>
+                    <div class="callback">
+                        <h3>Остались вопросы?</h3><span>Свяжитесь   нами по телефону или заполните форму консультации.</span>
+                        <button>Задать вопрос</button>
+                    </div>
+                </div>
+            </section>
+            <section class="decision">
+                <div class="container">
+                    <div class="text">
+                        <h2>Мы вникаем в задачу и помогаем найти решение</h2><span>Поэтому с нами можно быстро обсудить вопрос и получить понятную поддержку</span>
+                    </div>
+                    <div class="grid">
+                        <div class="contacts">
+                            <h3>Способы связи</h3>
+                            <div class="list">
+                                <div class="contact">
+                                    <div class="icon"><img src="images/decision_phone.svg"></div>
+                                    <div class="description"><span>Телефон</span><a href="#">
+                                            <h4>+7 (495) 150-60-70</h4></a></div>
+                                </div>
+                                <div class="contact">
+                                    <div class="icon"><img src="images/decision_phone_mobile.svg"></div>
+                                    <div class="description"><span>Телефон мобильный</span><a href="#">
+                                            <h4>+7 (916) 888-80-00</h4></a></div>
+                                </div>
+                                <div class="contact">
+                                    <div class="icon"><img src="images/decision_email.svg"></div>
+                                    <div class="description"><span>Email</span><a href="#">
+                                            <h4>info@lexus-navi.ru</h4></a></div>
+                                </div>
+                                <div class="contact">
+                                    <div class="icon"><img src="images/decision_pin.svg"></div>
+                                    <div class="description"><span>Офис</span>
+                                        <h4>г. Москва, 3-й Угрешский проезд 8а, стр.3</h4>
+                                    </div>
+                                </div>
+                            </div><img class="background" src="images/decision_background.webp">
+                        </div>
+                        <div class="map">
+                            <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A3a68fd6473f89a894f39d13ec99479672416507740cdfd56a6d87b53b3694853&amp;amp;source=constructor" width="100%" height="100%" frameborder="0"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="navigation">
+                <div class="container">
+                    <div class="text">
+                        <h2>Обновим навигацию в вашем авто бесплатно</h2><span>При русификации вашего автомобиля у нас вы получаете обновление навигационных карт в подарок. Без скрытых платежей и универсальных решений — только официальные обновления именно для вашей модели.</span>
+                        <button>Записаться</button>
+                    </div><img class="desktop" src="images/navigation_desktop.webp"><img class="mobile" src="images/navigation_mobile.webp">
+                </div>
+            </section>
+        </main>
+        <footer>
+            <div class="container">
+                <div class="top"><a class="logotype" href="#"><img src="images/logotype.svg" alt="Lexus-Navi"></a>
+                    <div class="menus">
+                        <div class="services">
+                            <div class="title" onclick="this.parentNode.classList.toggle('open')">
+                                <h4>Услуги</h4><img src="images/footer_arrow.svg">
+                            </div>
+                            <div class="menu">
+                                <div class="overflow">
+                                    <div class="list"><a href="#">Русификация Lexus / Toyota</a><a href="#">Ремонт мультимедиа Lexus / Toyota</a><a href="#">Установка противоугонного комплекса</a><a href="#">Шумоизоляция автомобиля</a><a href="#">Компьютерная диагностика</a><a href="#">Чип-тюнинг</a><a href="#">Установка Android систем</a><a href="#">Активация CarPlay</a></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="more">
+                            <div class="title" onclick="this.parentNode.classList.toggle('open')">
+                                <h4>Сервисы и контакты</h4><img src="images/footer_arrow.svg">
+                            </div>
+                            <div class="menu">
+                                <div class="overflow">
+                                    <div class="list"><a href="#">Подбор по авто</a><a href="#">Контакты</a></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="socials">
+                        <h4>Соцсети</h4><a href="#"> <img src="images/footer_telegram.svg" alt="Telegram">Telegram</a><a href="#"> <img src="images/footer_rutube.svg" alt="RuTube">RuTube</a><a href="#"> <img src="images/footer_avito.svg" alt="Avito">Avito</a>
+                    </div>
+                    <div class="contacts"><a href="#"> <img src="images/footer_phone.svg">+7 (495) 150-60-70</a><a href="#"> <img src="images/footer_email.svg">info@lexus-navi.ru</a><span> <img src="images/footer_pin.svg">г. Москва, 3-й Угрешский проезд, 8а стр. 3</span></div><img class="scroll_top" src="images/scroll_top.svg">
+                </div>
+                <div class="bottom"><span>© 2025 Lexus-Navi. Все права защищены.</span><a href="#">Настройки cookies</a><a href="#">Условия использования</a><a href="#">Политика конфиденциальности</a><a class="develop" href="#"><span>Дизайн, разработка сайта</span><img src="images/mwi.svg" alt="MWI"></a></div><img class="background" src="images/footer_background.webp">
+            </div>
+        </footer>
+        <div id="cookie-banner"><span>Продолжая навигацию по сайту, вы соглашаетесь с <a href="#">правилами использования cookie-файлов</a></span>
+            <button id="accept-cookies">Согласен</button>
+        </div>
+        <dialog data-modal-name="callback">
+            <div class="container">
+                <div class="text">
+                    <h3>Способы связи</h3><span>Свяжитесь с  нами любым удобным способом или оставьте свои контакты — мы перезвоним</span>
+                </div>
+                <form action="#">
+                    <div class="inputs">
+                        <div class="input"><span>Имя</span>
+                            <input type="text" placeholder="Введите имя" required>
+                        </div>
+                        <div class="input"><span>Телефон</span>
+                            <input type="tel" placeholder="+7 (___) ___-__-__" required>
+                        </div>
+                    </div>
+                    <button>Перезвоните мне</button>
+                </form>
+                <div class="list">
+                    <div class="contact">
+                        <div class="icon"><img src="images/decision_phone.svg"></div>
+                        <div class="description"><span>Телефон</span><a href="#">
+                                <h4>+7 (495) 150-60-70</h4></a></div>
+                    </div>
+                    <div class="contact">
+                        <div class="icon"><img src="images/decision_phone_mobile.svg"></div>
+                        <div class="description"><span>Телефон мобильный</span><a href="#">
+                                <h4>+7 (916) 888-80-00</h4></a></div>
+                    </div>
+                    <div class="contact">
+                        <div class="icon"><img src="images/decision_email.svg"></div>
+                        <div class="description"><span>Email</span><a href="#">
+                                <h4>info@lexus-navi.ru</h4></a></div>
+                    </div>
+                </div>
+                <div class="cross" data-modal-close><img class="cross" src="images/dialog_cross.svg"></div>
+            </div><img class="background" src="images/callback_background.webp">
+        </dialog>
+    </body>
+</html>

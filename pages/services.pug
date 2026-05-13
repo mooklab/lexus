@@ -1,0 +1,52 @@
+extends ../components/common/pug/_layout.pug
+include ../components/common/pug/_mixins.pug
+
+block links
+    link(rel="stylesheet", href="css/services.css")
+
+mixin service(title, text, image)
+    a(href="#").service
+        h3= title
+        div.text
+            img(src=image, alt=title).preview
+            span Перевод интерфейса мультимедийной системы на русский язык для автомобилей с зарубежных рынков.
+            button
+                img(src="images/service_arrow.svg")
+
+block content
+
+    section.main
+        div.container
+            div.breadcrumbs
+                a(href="#") Главная
+                span.divide /
+                span Услуги
+            h1 Делаем ваш автомобиль действительно понятным
+            div.group
+                span.text Все услуги по мультимедиа Toyota и Lexus — в одном месте: русификация, карты России с пробками, локальные онлайн‑сервисы, активация нужных функций. Интерфейс становится понятным и удобным, а системы работают стабильно и сохраняют настройки после обновлений и сервиса.
+                span.language 中文
+
+        img(src="images/services_main.webp").background
+
+    section.services
+        div.container
+            h2 Услуги, которые мы оказываем
+            div.list
+                +service('Русификация', 'Перевод интерфейса мультимедийной системы на русский язык для автомобилей с зарубежных рынков.', 'images/service_1.webp')
+                +service('Ремонт мультимедиа ', 'Комплексное восстановление мультимедийных систем: устраняем неполадки и возвращаем комфорт в каждую поездку.', 'images/service_2.webp')
+                +service('Установка противоугонного комплекса', 'Профессиональный монтаж сертифицированных систем без нарушения штатной электрики.', 'images/service_3.webp')
+                +service('Шумоизоляция автомобиля', 'Снижаем шум и вибрации с помощью многослойных вибро‑ и шумоизоляционных материалов. ', 'images/service_4.webp')
+                +service('Компьютерная диагностика', 'Точная проверка всех систем автомобиля с использованием профессионального оборудования. ', 'images/service_5.webp')
+                +service('Чип-тюнинг', 'Повышаем мощность, динамику и экономичность через обновление программного обеспечения.', 'images/service_6.webp')
+                +service('Установка Android систем', 'Современное мультимедиа с навигацией, голосовым управлением и доступом к приложениям. ', 'images/service_7.webp')
+                +service('Активация CarPlay', 'Быстрый доступ к навигации, музыке и звонкам прямо на экране авто. Комфортное и безопасное использование смартфона за рулём.', 'images/service_8.webp')
+
+        img(src="images/services_background.webp").background
+
+    include ../components/sections/_stages.pug
+    include ../components/sections/_consulting.pug
+    include ../components/sections/_digits.pug
+    include ../components/sections/_reviews.pug
+    include ../components/sections/_faq.pug
+    include ../components/sections/_decision.pug
+    include ../components/sections/_navigation.pug

@@ -1,0 +1,116 @@
+@use '../../components/common/sass/_variables' as *
+@use '../../components/common/sass/_mixins' as *
+
+section.decision
+    background: #000
+    padding-top: var(--section-gap)
+    padding-bottom: var(--section-gap)
+    +s(m)
+        padding-top: unset
+
+    div.container
+        display: grid
+        grid-gap: 64px
+        +s(l)
+            grid-gap: 32px
+        +s(s)
+            gap: 20px
+
+        div.text
+            display: grid
+            grid-gap: 16px
+            width: 50%
+            +s(s)
+                width: unset
+                grid-gap: 12px
+
+            span
+                opacity: 0.7
+
+        div.grid
+            display: grid
+            grid-template-columns: repeat(12, 1fr)
+            grid-gap: var(--grid-gap)
+            +s(s)
+                grid-template-columns: 1fr
+
+            div.contacts
+                position: relative
+                display: grid
+                grid-gap: 40px
+                grid-column: 4 span
+                border-radius: 16px
+                padding: 40px
+                overflow: clip
+                +s(l)
+                    grid-column: 6 span
+                +s(s)
+                    padding: 20px
+                    grid-gap: 20px
+                    grid-column: unset
+                    order: 2
+
+                h3
+                    position: relative
+                    color: #000
+                    z-index: 1
+                    +f(20px, 40px)
+
+                div.list
+                    position: relative
+                    display: grid
+                    grid-gap: 32px
+                    z-index: 1
+                    +s(s)
+                        grid-gap: 20px
+
+                    div.contact
+                        display: grid
+                        align-items: center
+                        grid-template-columns: max-content 1fr
+                        grid-gap: 32px
+
+                        div.icon
+                            display: grid
+                            align-items: center
+                            justify-items: center
+                            background: #000
+                            border: 1px solid #15a0fd
+                            border-radius: 40px
+                            width: 80px
+                            height: 80px
+                            +s(xl)
+                                width: 60px
+                                height: 60px
+                            +s(m)
+                                width: 40px
+                                height: 40px
+
+                        div.description
+                            display: grid
+                            grid-gap: 8px
+                            a
+                                white-space: nowrap
+                            span
+                                color: rgba(255, 255, 255, 0.6)
+                                +f(12px, 18px)
+
+                img.background
+                    position: absolute
+                    top: 0
+                    left: 0
+                    width: 100%
+                    height: 100%
+                    object-fit: cover
+                    z-index: 0
+
+            div.map
+                grid-column: 8 span
+                border-radius: 16px
+                overflow: clip
+                +s(l)
+                    grid-column: 6 span
+                +s(s)
+                    height: 300px
+                    grid-column: unset
+                    order: 1

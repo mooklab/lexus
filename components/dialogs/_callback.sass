@@ -1,0 +1,131 @@
+@use '../../components/common/sass/_variables' as *
+@use '../../components/common/sass/_mixins' as *
+
+dialog[data-modal-name=callback]
+    background: transparent
+    left: 50%
+    top: 50%
+    width: 100%
+    max-width: 1020px
+    transform: translate(-50%, -50%)
+    border-radius: 16px
+    +s(s)
+        height: 100vh
+        top: 0
+        left: 0
+        border-radius: unset
+        transform: unset
+
+    div.container
+        position: relative
+        background: transparent
+        z-index: 10
+        color: white
+        display: grid
+        align-items: end
+        align-content: start
+        grid-template-columns: repeat(2, 1fr)
+        grid-gap: 48px 72px
+        +s(s)
+            grid-template-columns: 1fr
+            grid-gap: 24px
+            padding: 30px 20px
+
+    div.text
+        display: grid
+        grid-gap: 16px
+        grid-column: 2 span
+        padding-right: 100px
+        +s(s)
+            grid-column: unset
+            grid-gap: 10px
+            padding-right: 60px
+
+        h3
+            +f(24px, 40px)
+
+        span
+            max-width: 480px
+
+    form
+        display: grid
+        grid-gap: 48px
+        +s(s)
+            grid-gap: 24px
+        div.inputs
+            display: grid
+            grid-gap: 24px
+            +s(s)
+                grid-gap: 20px
+        div.input
+            display: grid
+            grid-gap: 12px
+        button
+            +s(s)
+                width: 100%
+
+    div.list
+        position: relative
+        display: grid
+        grid-gap: 44px
+        z-index: 1
+        +s(s)
+            grid-gap: 20px
+
+        div.contact
+            display: grid
+            align-items: center
+            grid-template-columns: max-content 1fr
+            grid-gap: 32px
+
+            div.icon
+                display: grid
+                align-items: center
+                justify-items: center
+                background: #000
+                border: 1px solid #15a0fd
+                border-radius: 40px
+                width: 80px
+                height: 80px
+                +s(xl)
+                    width: 60px
+                    height: 60px
+                +s(m)
+                    width: 40px
+                    height: 40px
+
+            div.description
+                display: grid
+                grid-gap: 8px
+                a
+                    white-space: nowrap
+                span
+                    color: rgba(255, 255, 255, 0.6)
+                    +f(12px, 18px)
+
+    div.cross
+        display: grid
+        align-items: center
+        justify-items: center
+        position: absolute
+        top: 24px
+        right: 24px
+        border-radius: 84px
+        width: 72px
+        height: 72px
+        background: #15a0fd
+        +s(m)
+            width: 48px
+            height: 48px
+        +s(s)
+            width: 30px
+            height: 30px
+
+    img.background
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        object-fit: cover
+        z-index: 9

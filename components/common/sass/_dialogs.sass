@@ -1,0 +1,47 @@
+@use '../../dialogs/_callback' as  *
+
+// html:has(dialog[open])
+//     overflow-y: hidden
+//     margin-right: var(--scrollbar-width)
+
+dialog
+    position: fixed
+    opacity: 0
+    left: 100%
+    &::backdrop
+        position: fixed
+        inset: 0px
+        background: rgba(0, 0, 0, 0.85)
+    &::-webkit-scrollbar
+        width: 0
+        height: 0
+    &[open]
+        animation-name: dialog
+        animation-delay: 0s
+        animation-duration: .5s
+        animation-fill-mode: forwards
+
+    div.container
+        width: 100%
+        min-height: 100%
+        border-radius: 16px
+        padding: 30px
+        background: black
+        overflow: auto
+
+        &::-webkit-scrollbar
+            opacity: 0
+            display: none
+
+    div.cross
+        cursor: pointer
+        transition: all 0.3s
+        &:hover
+            transform: rotate(180deg)
+            background: #76C8FF
+
+@keyframes dialog
+    0%
+        opacity: 0
+    100%
+        opacity: 1
