@@ -442,6 +442,8 @@ section.reviews div.title {
 section.reviews div.review {
   padding: 32px;
   padding-bottom: 80px;
+  background: black;
+  border-radius: 16px;
 }
 @media (max-width: 1280px) {
   section.reviews div.review {
@@ -558,22 +560,6 @@ section.reviews div.review span.review {
 @media (min-width: 1760px) {
   section.reviews div.review span.review {
     font-size: 32px;
-  }
-}
-section.reviews div.review img.backgroound {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  z-index: 1;
-  border-radius: 16px;
-}
-@media (max-width: 960px) {
-  section.reviews div.review img.backgroound {
-    border-radius: 6px;
   }
 }
 @media (max-width: 640px) {
@@ -854,7 +840,7 @@ section.digits div.container div.preview {
     padding: unset;
   }
 }
-section.digits div.container img {
+section.digits div.container div.preview img {
   border-radius: 16px;
   width: 100%;
   height: 100%;
@@ -862,7 +848,7 @@ section.digits div.container img {
      object-fit: cover;
 }
 @media (max-width: 640px) {
-  section.digits div.container img {
+  section.digits div.container div.preview img {
     -webkit-box-ordinal-group: 2;
         -ms-flex-order: 1;
             order: 1;
@@ -926,6 +912,9 @@ section.digits div.container div.list div.item span.digit {
   section.digits div.container div.list div.item span.digit {
     font-size: 60px;
   }
+}
+section.digits div.container div.list div.item span.digit::after {
+  content: attr(data-symbol);
 }
 
 section.decision {
@@ -1162,7 +1151,7 @@ section.navigation div.text button {
     margin-top: 12px;
   }
 }
-section.navigation img {
+section.navigation img.background {
   position: absolute;
   top: 0;
   left: 0;
@@ -1171,21 +1160,21 @@ section.navigation img {
   -o-object-fit: cover;
      object-fit: cover;
 }
-section.navigation img.desktop {
+section.navigation img.background.desktop {
   display: block;
 }
 @media (max-width: 640px) {
-  section.navigation img.desktop {
+  section.navigation img.background.desktop {
     display: none;
   }
 }
-section.navigation img.mobile {
+section.navigation img.background.mobile {
   display: none;
   -o-object-position: bottom;
      object-position: bottom;
 }
 @media (max-width: 640px) {
-  section.navigation img.mobile {
+  section.navigation img.background.mobile {
     display: block;
   }
 }

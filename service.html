@@ -25,6 +25,8 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css">
         <link rel="stylesheet" href="css/common.css">
         <link rel="stylesheet" href="css/service.css">
+        <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+        <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
         <script defer src="scripts/main.js" type="module"></script>
         <script defer src="scripts/dialog.js"></script>
     </head>
@@ -96,7 +98,7 @@
                         </div><a class="button" href="#">Подобрать по авто</a>
                     </div>
                     <div class="preview"><img class="preview" src="images/service_main_preview.webp"></div>
-                </div><img class="background" src="images/service_main.webp">
+                </div><img class="background" src="images/service_main.webp"><img class="dots" src="images/dots.svg"><img class="dots" src="images/dots.svg">
             </section>
             <section class="about">
                 <div class="container">
@@ -135,8 +137,8 @@
                             <div class="swiper-slide">
                                 <div class="work"><img class="preview" src="images/service_1.webp" alt="Интеграция CarPlay"/>
                                     <div class="content">
-                                        <div class="text">
-                                            <h3>Интеграция CarPlay</h3><span>Выполнен полный перевод интерфейса мультимедийной системы и приборной панели на русский язык.</span>
+                                        <div class="text"><a href="#"> 
+                                                <h3>Интеграция CarPlay</h3></a><span>Выполнен полный перевод интерфейса мультимедийной системы и приборной панели на русский язык.</span>
                                             <button><img src="images/service_arrow.svg"/></button>
                                         </div>
                                         <div class="details">
@@ -150,8 +152,8 @@
                             <div class="swiper-slide">
                                 <div class="work"><img class="preview" src="images/service_1.webp" alt="Интеграция CarPlay"/>
                                     <div class="content">
-                                        <div class="text">
-                                            <h3>Интеграция CarPlay</h3><span>Выполнен полный перевод интерфейса мультимедийной системы и приборной панели на русский язык.</span>
+                                        <div class="text"><a href="#"> 
+                                                <h3>Интеграция CarPlay</h3></a><span>Выполнен полный перевод интерфейса мультимедийной системы и приборной панели на русский язык.</span>
                                             <button><img src="images/service_arrow.svg"/></button>
                                         </div>
                                         <div class="details">
@@ -165,8 +167,8 @@
                             <div class="swiper-slide">
                                 <div class="work"><img class="preview" src="images/service_1.webp" alt="Интеграция CarPlay"/>
                                     <div class="content">
-                                        <div class="text">
-                                            <h3>Интеграция CarPlay</h3><span>Выполнен полный перевод интерфейса мультимедийной системы и приборной панели на русский язык.</span>
+                                        <div class="text"><a href="#"> 
+                                                <h3>Интеграция CarPlay</h3></a><span>Выполнен полный перевод интерфейса мультимедийной системы и приборной панели на русский язык.</span>
                                             <button><img src="images/service_arrow.svg"/></button>
                                         </div>
                                         <div class="details">
@@ -180,8 +182,8 @@
                             <div class="swiper-slide">
                                 <div class="work"><img class="preview" src="images/service_1.webp" alt="Интеграция CarPlay"/>
                                     <div class="content">
-                                        <div class="text">
-                                            <h3>Интеграция CarPlay</h3><span>Выполнен полный перевод интерфейса мультимедийной системы и приборной панели на русский язык.</span>
+                                        <div class="text"><a href="#"> 
+                                                <h3>Интеграция CarPlay</h3></a><span>Выполнен полный перевод интерфейса мультимедийной системы и приборной панели на русский язык.</span>
                                             <button><img src="images/service_arrow.svg"/></button>
                                         </div>
                                         <div class="details">
@@ -195,8 +197,8 @@
                             <div class="swiper-slide">
                                 <div class="work"><img class="preview" src="images/service_1.webp" alt="Интеграция CarPlay"/>
                                     <div class="content">
-                                        <div class="text">
-                                            <h3>Интеграция CarPlay</h3><span>Выполнен полный перевод интерфейса мультимедийной системы и приборной панели на русский язык.</span>
+                                        <div class="text"><a href="#"> 
+                                                <h3>Интеграция CarPlay</h3></a><span>Выполнен полный перевод интерфейса мультимедийной системы и приборной панели на русский язык.</span>
                                             <button><img src="images/service_arrow.svg"/></button>
                                         </div>
                                         <div class="details">
@@ -210,8 +212,8 @@
                             <div class="swiper-slide">
                                 <div class="work"><img class="preview" src="images/service_1.webp" alt="Интеграция CarPlay"/>
                                     <div class="content">
-                                        <div class="text">
-                                            <h3>Интеграция CarPlay</h3><span>Выполнен полный перевод интерфейса мультимедийной системы и приборной панели на русский язык.</span>
+                                        <div class="text"><a href="#"> 
+                                                <h3>Интеграция CarPlay</h3></a><span>Выполнен полный перевод интерфейса мультимедийной системы и приборной панели на русский язык.</span>
                                             <button><img src="images/service_arrow.svg"/></button>
                                         </div>
                                         <div class="details">
@@ -273,17 +275,17 @@
                         <div class="advantage">
                             <div class="text">
                                 <h3>Многолетний <br>опыт и надежность</h3><span>Мы уже десять лет работаем с Lexus и Toyota, и знаем все тонкости и нюансы работы.</span>
-                            </div><img src="images/advantage_1.webp">
+                            </div><img class="background" src="images/advantage_1.webp"><img class="dots" src="images/dots.svg">
                         </div>
                         <div class="advantage">
                             <div class="text">
                                 <h3>Оригинальные <br>комплектующие</h3><span>Мы слушаем каждого клиента и находим решение, которое подходит именно его машине.</span>
-                            </div><img src="images/advantage_2.webp">
+                            </div><img class="background" src="images/advantage_2.webp"><img class="dots" src="images/dots.svg">
                         </div>
                         <div class="advantage">
                             <div class="text">
                                 <h3>Гарантийное <br>обслуживание</h3><span>Каждая работа выполняется оригинальными компонентами и гарантией на все выполненное.</span>
-                            </div><img src="images/advantage_3.webp">
+                            </div><img class="background" src="images/advantage_3.webp"><img class="dots" src="images/dots.svg">
                         </div>
                     </div>
                 </div>
@@ -304,7 +306,7 @@
                                                 <div class="author"><img src="images/avatar_empty.webp">
                                                     <div class="name"><span>Сергей Петров</span><span>Владелец Lexus RX</span></div>
                                                 </div>
-                                                <div class="stars"><img src="images/star.svg"><img src="images/star.svg"><img src="images/star.svg"><img src="images/star.svg"><img src="images/star.svg"></div><span class="review">«Привез машину в плохом состоянии, а забрал с полностью рабочей системой. Ребята крутые!»</span><img class="backgroound" src="images/review_background.webp">
+                                                <div class="stars"><img src="images/star.svg"><img src="images/star.svg"><img src="images/star.svg"><img src="images/star.svg"><img src="images/star.svg"></div><span class="review">«Привез машину в плохом состоянии, а забрал с полностью рабочей системой. Ребята крутые!»</span><img class="dots" src="images/dots.svg">
                                             </div>
                             </div>
                             <div class="swiper-slide">
@@ -312,7 +314,7 @@
                                                 <div class="author"><img src="images/avatar_empty.webp">
                                                     <div class="name"><span>Анна Сидорова</span><span>Владелец Toyota Camry</span></div>
                                                 </div>
-                                                <div class="stars"><img src="images/star.svg"><img src="images/star.svg"><img src="images/star.svg"><img src="images/star.svg"><img src="images/star.svg"></div><span class="review">«Услуга оказалась на высшем уровне! Быстро, качественно и с душой.»</span><img class="backgroound" src="images/review_background.webp">
+                                                <div class="stars"><img src="images/star.svg"><img src="images/star.svg"><img src="images/star.svg"><img src="images/star.svg"><img src="images/star.svg"></div><span class="review">«Услуга оказалась на высшем уровне! Быстро, качественно и с душой.»</span><img class="dots" src="images/dots.svg">
                                             </div>
                             </div>
                             <div class="swiper-slide">
@@ -320,7 +322,7 @@
                                                 <div class="author"><img src="images/avatar_empty.webp">
                                                     <div class="name"><span>Сергей Петров</span><span>Владелец Lexus RX</span></div>
                                                 </div>
-                                                <div class="stars"><img src="images/star.svg"><img src="images/star.svg"><img src="images/star.svg"><img src="images/star.svg"><img src="images/star.svg"></div><span class="review">«Привез машину в плохом состоянии, а забрал с полностью рабочей системой. Ребята крутые!»</span><img class="backgroound" src="images/review_background.webp">
+                                                <div class="stars"><img src="images/star.svg"><img src="images/star.svg"><img src="images/star.svg"><img src="images/star.svg"><img src="images/star.svg"></div><span class="review">«Привез машину в плохом состоянии, а забрал с полностью рабочей системой. Ребята крутые!»</span><img class="dots" src="images/dots.svg">
                                             </div>
                             </div>
                             <div class="swiper-slide">
@@ -328,7 +330,7 @@
                                                 <div class="author"><img src="images/avatar_empty.webp">
                                                     <div class="name"><span>Сергей Петров</span><span>Владелец Lexus RX</span></div>
                                                 </div>
-                                                <div class="stars"><img src="images/star.svg"><img src="images/star.svg"><img src="images/star.svg"><img src="images/star.svg"><img src="images/star.svg"></div><span class="review">«Привез машину в плохом состоянии, а забрал с полностью рабочей системой. Ребята крутые!»</span><img class="backgroound" src="images/review_background.webp">
+                                                <div class="stars"><img src="images/star.svg"><img src="images/star.svg"><img src="images/star.svg"><img src="images/star.svg"><img src="images/star.svg"></div><span class="review">«Привез машину в плохом состоянии, а забрал с полностью рабочей системой. Ребята крутые!»</span><img class="dots" src="images/dots.svg">
                                             </div>
                             </div>
                             <div class="swiper-slide">
@@ -336,7 +338,7 @@
                                                 <div class="author"><img src="images/avatar_empty.webp">
                                                     <div class="name"><span>Сергей Петров</span><span>Владелец Lexus RX</span></div>
                                                 </div>
-                                                <div class="stars"><img src="images/star.svg"><img src="images/star.svg"><img src="images/star.svg"><img src="images/star.svg"><img src="images/star.svg"></div><span class="review">«Привез машину в плохом состоянии, а забрал с полностью рабочей системой. Ребята крутые!»</span><img class="backgroound" src="images/review_background.webp">
+                                                <div class="stars"><img src="images/star.svg"><img src="images/star.svg"><img src="images/star.svg"><img src="images/star.svg"><img src="images/star.svg"></div><span class="review">«Привез машину в плохом состоянии, а забрал с полностью рабочей системой. Ребята крутые!»</span><img class="dots" src="images/dots.svg">
                                             </div>
                             </div>
                             <div class="swiper-slide">
@@ -344,7 +346,7 @@
                                                 <div class="author"><img src="images/avatar_empty.webp">
                                                     <div class="name"><span>Сергей Петров</span><span>Владелец Lexus RX</span></div>
                                                 </div>
-                                                <div class="stars"><img src="images/star.svg"><img src="images/star.svg"><img src="images/star.svg"><img src="images/star.svg"><img src="images/star.svg"></div><span class="review">«Привез машину в плохом состоянии, а забрал с полностью рабочей системой. Ребята крутые!»</span><img class="backgroound" src="images/review_background.webp">
+                                                <div class="stars"><img src="images/star.svg"><img src="images/star.svg"><img src="images/star.svg"><img src="images/star.svg"><img src="images/star.svg"></div><span class="review">«Привез машину в плохом состоянии, а забрал с полностью рабочей системой. Ребята крутые!»</span><img class="dots" src="images/dots.svg">
                                             </div>
                             </div>
                         </div>
@@ -455,7 +457,7 @@
                         <div class="map">
                             <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A3a68fd6473f89a894f39d13ec99479672416507740cdfd56a6d87b53b3694853&amp;amp;source=constructor" width="100%" height="100%" frameborder="0"></iframe>
                         </div>
-                    </div>
+                    </div><img class="dots" src="images/dots.svg">
                 </div>
             </section>
             <section class="navigation">
@@ -463,7 +465,7 @@
                     <div class="text">
                         <h2>Обновим навигацию в вашем авто бесплатно</h2><span>При русификации вашего автомобиля у нас вы получаете обновление навигационных карт в подарок. Без скрытых платежей и универсальных решений — только официальные обновления именно для вашей модели.</span>
                         <button>Записаться</button>
-                    </div><img class="desktop" src="images/navigation_desktop.webp"><img class="mobile" src="images/navigation_mobile.webp">
+                    </div><img class="background desktop" src="images/navigation_desktop.webp"><img class="background mobile" src="images/navigation_mobile.webp"><img class="dots" src="images/dots.svg">
                 </div>
             </section>
         </main>

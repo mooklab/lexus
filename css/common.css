@@ -652,6 +652,12 @@ div.work div.content div.text button {
     height: 30px;
   }
 }
+div.work div.content div.text button:hover {
+  background: white;
+}
+div.work div.content div.text a:hover {
+  color: #15a0fd;
+}
 div.work div.content div.details {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -668,6 +674,14 @@ div.work div.content div.details div {
 }
 div.work div.content div.details span.note {
   opacity: 0.7;
+}
+
+img.dots {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  pointer-events: none;
 }
 
 dialog[data-modal-name=callback] {

@@ -261,3 +261,78 @@ const observer = new IntersectionObserver(entries => {
 var animateElements = document.querySelectorAll('div.observe')
 animateElements.forEach(element => observer.observe(element))
 console.log(animateElements)
+
+
+
+
+gsap.registerPlugin(ScrollTrigger);
+
+document.querySelectorAll('span.digit').forEach(counter => {
+    const target = +counter.getAttribute('data-target');
+    const obj = { value: 0 };
+
+    gsap.to(obj, {
+        value: target,
+        duration: 2,
+        ease: "power1.out",
+        onUpdate: () => {
+            counter.innerHTML = Math.ceil(obj.value).toLocaleString();
+        },
+        scrollTrigger: {
+            trigger: counter,
+            start: "top 80%"
+        }
+    });
+});
+
+
+
+
+
+
+
+
+
+
+const dots = document.querySelectorAll('img.dots')
+dots.forEach(dot => {
+    const box = dot.parentNode
+    const speed = 0.03;
+    const overflowAmount = 250;
+
+    let targetX, targetY;
+    let x = 0;
+    let y = 0;
+
+    function setNewTarget() {
+        const imgWidth = dot.offsetWidth;
+        const imgHeight = dot.offsetHeight;
+        const boxWidth = box.clientWidth;
+        const boxHeight = box.clientHeight;
+
+        // Границы для выхода за все стороны
+        const minX = -overflowAmount;
+        const maxX = boxWidth - imgWidth + overflowAmount;
+        const minY = -overflowAmount;
+        const maxY = boxHeight - imgHeight + overflowAmount;
+
+        targetX = minX + Math.random() * (maxX - minX);
+        targetY = minY + Math.random() * (maxY - minY);
+    }
+
+    function move() {
+        x += (targetX - x) * speed;
+        y += (targetY - y) * speed;
+
+        dot.style.transform = `translate(${x}px, ${y}px)`;
+
+        if (Math.hypot(targetX - x, targetY - y) < 2) {
+            setNewTarget();
+        }
+
+        requestAnimationFrame(move);
+    }
+
+    setNewTarget();
+    move();
+})

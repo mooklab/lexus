@@ -285,6 +285,12 @@ div.work
                     position: absolute
                     width: 49px
                     height: 30px
+                &:hover
+                    background: white
+
+            a:hover
+                color: #15a0fd
+
         div.details
             display: grid
             grid-template-columns: repeat(3, 1fr)
@@ -296,3 +302,10 @@ div.work
                     grid-gap: 6px
             span.note
                 opacity: 0.7
+
+img.dots
+    position: absolute
+    top: 0
+    left: 0
+    z-index: 1
+    pointer-events: none

@@ -25,6 +25,8 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css">
         <link rel="stylesheet" href="css/common.css">
         <link rel="stylesheet" href="css/services.css">
+        <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+        <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
         <script defer src="scripts/main.js" type="module"></script>
         <script defer src="scripts/dialog.js"></script>
     </head>
@@ -85,7 +87,7 @@
                     <div class="breadcrumbs"><a href="#">Главная</a><span class="divide">/</span><span>Услуги</span></div>
                     <h1>Делаем ваш автомобиль действительно понятным</h1>
                     <div class="group"><span class="text">Все услуги по мультимедиа Toyota и Lexus — в одном месте: русификация, карты России с пробками, локальные онлайн‑сервисы, активация нужных функций. Интерфейс становится понятным и удобным, а системы работают стабильно и сохраняют настройки после обновлений и сервиса.</span><span class="language">中文</span></div>
-                </div><img class="background" src="images/services_main.webp">
+                </div><img class="background" src="images/services_main.webp"><img class="dots" src="images/dots.svg"><img class="dots" src="images/dots.svg">
             </section>
             <section class="services">
                 <div class="container">
@@ -170,10 +172,10 @@
                     <h3>Мы не универсальный сервис — работаем только с Lexus и Toyota. За 12 лет мы отточили решения для задач, от которых обычно отказывается дилер: язык, навигация и прошивки под любой рынок — с гарантией качества.</h3>
                     <div class="preview"><img src="images/digits.webp"></div>
                     <div class="list">
-                        <div class="item"><span class="digit">3 000+</span><span>выполненных работ</span></div>
-                        <div class="item"><span class="digit">12+</span><span>лет на рынке</span></div>
-                        <div class="item"><span class="digit">100%</span><span>гарантия качества</span></div>
-                    </div>
+                        <div class="item"><span class="digit" data-target="3000" data-symbol="+">3 000</span><span>выполненных работ</span></div>
+                        <div class="item"><span class="digit" data-target="12" data-symbol="+">12</span><span>лет на рынке</span></div>
+                        <div class="item"><span class="digit" data-target="100" data-symbol="%">100</span><span>гарантия качества</span></div>
+                    </div><img class="dots" src="images/dots.svg">
                 </div>
             </section>
             <section class="reviews">
@@ -192,7 +194,7 @@
                                                 <div class="author"><img src="images/avatar_empty.webp">
                                                     <div class="name"><span>Сергей Петров</span><span>Владелец Lexus RX</span></div>
                                                 </div>
-                                                <div class="stars"><img src="images/star.svg"><img src="images/star.svg"><img src="images/star.svg"><img src="images/star.svg"><img src="images/star.svg"></div><span class="review">«Привез машину в плохом состоянии, а забрал с полностью рабочей системой. Ребята крутые!»</span><img class="backgroound" src="images/review_background.webp">
+                                                <div class="stars"><img src="images/star.svg"><img src="images/star.svg"><img src="images/star.svg"><img src="images/star.svg"><img src="images/star.svg"></div><span class="review">«Привез машину в плохом состоянии, а забрал с полностью рабочей системой. Ребята крутые!»</span><img class="dots" src="images/dots.svg">
                                             </div>
                             </div>
                             <div class="swiper-slide">
@@ -200,7 +202,7 @@
                                                 <div class="author"><img src="images/avatar_empty.webp">
                                                     <div class="name"><span>Анна Сидорова</span><span>Владелец Toyota Camry</span></div>
                                                 </div>
-                                                <div class="stars"><img src="images/star.svg"><img src="images/star.svg"><img src="images/star.svg"><img src="images/star.svg"><img src="images/star.svg"></div><span class="review">«Услуга оказалась на высшем уровне! Быстро, качественно и с душой.»</span><img class="backgroound" src="images/review_background.webp">
+                                                <div class="stars"><img src="images/star.svg"><img src="images/star.svg"><img src="images/star.svg"><img src="images/star.svg"><img src="images/star.svg"></div><span class="review">«Услуга оказалась на высшем уровне! Быстро, качественно и с душой.»</span><img class="dots" src="images/dots.svg">
                                             </div>
                             </div>
                             <div class="swiper-slide">
@@ -208,7 +210,7 @@
                                                 <div class="author"><img src="images/avatar_empty.webp">
                                                     <div class="name"><span>Сергей Петров</span><span>Владелец Lexus RX</span></div>
                                                 </div>
-                                                <div class="stars"><img src="images/star.svg"><img src="images/star.svg"><img src="images/star.svg"><img src="images/star.svg"><img src="images/star.svg"></div><span class="review">«Привез машину в плохом состоянии, а забрал с полностью рабочей системой. Ребята крутые!»</span><img class="backgroound" src="images/review_background.webp">
+                                                <div class="stars"><img src="images/star.svg"><img src="images/star.svg"><img src="images/star.svg"><img src="images/star.svg"><img src="images/star.svg"></div><span class="review">«Привез машину в плохом состоянии, а забрал с полностью рабочей системой. Ребята крутые!»</span><img class="dots" src="images/dots.svg">
                                             </div>
                             </div>
                             <div class="swiper-slide">
@@ -216,7 +218,7 @@
                                                 <div class="author"><img src="images/avatar_empty.webp">
                                                     <div class="name"><span>Сергей Петров</span><span>Владелец Lexus RX</span></div>
                                                 </div>
-                                                <div class="stars"><img src="images/star.svg"><img src="images/star.svg"><img src="images/star.svg"><img src="images/star.svg"><img src="images/star.svg"></div><span class="review">«Привез машину в плохом состоянии, а забрал с полностью рабочей системой. Ребята крутые!»</span><img class="backgroound" src="images/review_background.webp">
+                                                <div class="stars"><img src="images/star.svg"><img src="images/star.svg"><img src="images/star.svg"><img src="images/star.svg"><img src="images/star.svg"></div><span class="review">«Привез машину в плохом состоянии, а забрал с полностью рабочей системой. Ребята крутые!»</span><img class="dots" src="images/dots.svg">
                                             </div>
                             </div>
                             <div class="swiper-slide">
@@ -224,7 +226,7 @@
                                                 <div class="author"><img src="images/avatar_empty.webp">
                                                     <div class="name"><span>Сергей Петров</span><span>Владелец Lexus RX</span></div>
                                                 </div>
-                                                <div class="stars"><img src="images/star.svg"><img src="images/star.svg"><img src="images/star.svg"><img src="images/star.svg"><img src="images/star.svg"></div><span class="review">«Привез машину в плохом состоянии, а забрал с полностью рабочей системой. Ребята крутые!»</span><img class="backgroound" src="images/review_background.webp">
+                                                <div class="stars"><img src="images/star.svg"><img src="images/star.svg"><img src="images/star.svg"><img src="images/star.svg"><img src="images/star.svg"></div><span class="review">«Привез машину в плохом состоянии, а забрал с полностью рабочей системой. Ребята крутые!»</span><img class="dots" src="images/dots.svg">
                                             </div>
                             </div>
                             <div class="swiper-slide">
@@ -232,7 +234,7 @@
                                                 <div class="author"><img src="images/avatar_empty.webp">
                                                     <div class="name"><span>Сергей Петров</span><span>Владелец Lexus RX</span></div>
                                                 </div>
-                                                <div class="stars"><img src="images/star.svg"><img src="images/star.svg"><img src="images/star.svg"><img src="images/star.svg"><img src="images/star.svg"></div><span class="review">«Привез машину в плохом состоянии, а забрал с полностью рабочей системой. Ребята крутые!»</span><img class="backgroound" src="images/review_background.webp">
+                                                <div class="stars"><img src="images/star.svg"><img src="images/star.svg"><img src="images/star.svg"><img src="images/star.svg"><img src="images/star.svg"></div><span class="review">«Привез машину в плохом состоянии, а забрал с полностью рабочей системой. Ребята крутые!»</span><img class="dots" src="images/dots.svg">
                                             </div>
                             </div>
                         </div>
@@ -343,7 +345,7 @@
                         <div class="map">
                             <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A3a68fd6473f89a894f39d13ec99479672416507740cdfd56a6d87b53b3694853&amp;amp;source=constructor" width="100%" height="100%" frameborder="0"></iframe>
                         </div>
-                    </div>
+                    </div><img class="dots" src="images/dots.svg">
                 </div>
             </section>
             <section class="navigation">
@@ -351,7 +353,7 @@
                     <div class="text">
                         <h2>Обновим навигацию в вашем авто бесплатно</h2><span>При русификации вашего автомобиля у нас вы получаете обновление навигационных карт в подарок. Без скрытых платежей и универсальных решений — только официальные обновления именно для вашей модели.</span>
                         <button>Записаться</button>
-                    </div><img class="desktop" src="images/navigation_desktop.webp"><img class="mobile" src="images/navigation_mobile.webp">
+                    </div><img class="background desktop" src="images/navigation_desktop.webp"><img class="background mobile" src="images/navigation_mobile.webp"><img class="dots" src="images/dots.svg">
                 </div>
             </section>
         </main>
