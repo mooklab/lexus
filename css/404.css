@@ -48,6 +48,12 @@ section.main div.group span b {
   color: white;
   font-weight: 400;
 }
+section.main div.group span a {
+  color: white;
+}
+section.main div.group span a:hover {
+  color: #15a0fd;
+}
 @media (max-width: 640px) {
   section.main div.group a.button {
     width: 100%;

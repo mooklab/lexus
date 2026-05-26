@@ -65,10 +65,26 @@ section.services
     padding-top: var(--section-gap)
     padding-bottom: var(--section-gap)
 
-    h2
+    div.title
         position: relative
         z-index: 2
         margin-bottom: 90px
+        display: grid
+        align-items: center
+        grid-template-columns: 1fr max-content
+
+        div.counter
+            font-weight: 400
+            font-size: 24px
+            line-height: 110%
+            letter-spacing: 0.01em
+            color: #fff
+            z-index: 3
+            +s(s)
+                display: none
+
+            span.total
+                opacity: 0.4
 
     div.slider
         max-width: 600px
@@ -230,6 +246,9 @@ section.example
                 &.playing
                     svg
                         opacity: 0
+
+section.decision
+    padding-top: var(--section-gap)
 
 @keyframes timeline
     from

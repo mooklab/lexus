@@ -34,11 +34,13 @@ button, a.button
     width: max-content
     +f(14px, 18px)
     +s(m)
-        padding: 12px 24px
+        padding: 14px 24px
     &:hover
         background: #76c8ff
 
-input[type=text]
+input[type=text],
+input[type=tel],
+input[type=email]
     border: 1px solid rgba(255, 255, 255, 0.6)
     border-radius: 48px
     padding: 20px 24px
@@ -51,7 +53,7 @@ input[type=text]
         color: rgba(255, 255, 255, 0.6)
 
 fieldset.select
-    user-select: none
+    // user-select: none
     position: relative
     z-index: 3
     +f(12px, 18px)
@@ -59,6 +61,7 @@ fieldset.select
         z-index: 5
 
     div.select_choice
+        pointer-events: none
         display: grid
         align-items: center
         grid-template-columns: 1fr max-content
@@ -71,6 +74,7 @@ fieldset.select
             padding: 12px 24px
 
         input
+            cursor: pointer
             position: absolute
             top: 0
             left: 0
@@ -95,6 +99,7 @@ fieldset.select
 
         div.select_choice
             border-color: white
+            pointer-events: auto
 
         div.select_dropdown
             grid-template-rows: 1fr
@@ -309,3 +314,14 @@ img.dots
     left: 0
     z-index: 1
     pointer-events: none
+    &.desktop
+        display: block
+    &.mobile
+        display: none
+
+    +s(m)
+        &.desktop
+            display: none
+        &.mobile
+            display: block
+            z-index: 3

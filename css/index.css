@@ -176,26 +176,15 @@ section.advantages div.list div.advantage {
   border-radius: 20px;
   overflow: clip;
   padding: 56px 40px;
-  height: 450px;
   background: black;
-}
-@media (max-width: 1600px) {
-  section.advantages div.list div.advantage {
-    height: 400px;
-  }
 }
 @media (max-width: 960px) {
   section.advantages div.list div.advantage {
-    height: 350px;
     padding: 32px 24px;
   }
 }
-@media (max-width: 640px) {
-  section.advantages div.list div.advantage {
-    height: 240px;
-  }
-}
 section.advantages div.list div.advantage div.text {
+  margin-top: 170px;
   position: relative;
   padding-top: 24px;
   border-top: 1px solid rgba(255, 255, 255, 0.4);
@@ -203,28 +192,50 @@ section.advantages div.list div.advantage div.text {
   grid-gap: 16px;
   z-index: 1;
 }
+@media (max-width: 960px) {
+  section.advantages div.list div.advantage div.text {
+    margin-top: 120px;
+  }
+}
 @media (max-width: 640px) {
   section.advantages div.list div.advantage div.text {
     grid-gap: 10px;
+    margin-top: 78px;
+  }
+}
+@media (max-width: 640px) {
+  section.advantages div.list div.advantage div.text br {
+    display: none;
   }
 }
 section.advantages div.list div.advantage div.text span {
   opacity: 0.7;
 }
+@media (max-width: 960px) {
+  section.advantages div.list div.advantage div.text span {
+    line-height: 130%;
+  }
+}
 section.advantages div.list div.advantage img.background {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
-  -o-object-fit: contain;
-     object-fit: contain;
-  -o-object-position: top left;
-     object-position: top left;
+}
+@media (max-width: 960px) {
+  section.advantages div.list div.advantage img.background {
+    -webkit-transform-origin: left top;
+        -ms-transform-origin: left top;
+            transform-origin: left top;
+    -webkit-transform: scale(0.7);
+        -ms-transform: scale(0.7);
+            transform: scale(0.7);
+  }
 }
 @media (max-width: 640px) {
   section.advantages div.list div.advantage img.background {
-    height: 80%;
+    -webkit-transform: scale(0.55);
+        -ms-transform: scale(0.55);
+            transform: scale(0.55);
   }
 }
 
@@ -443,7 +454,7 @@ section.navigation div.text {
   grid-gap: 24px;
   position: relative;
   grid-gap: 24px;
-  z-index: 1;
+  z-index: 3;
 }
 @media (max-width: 960px) {
   section.navigation div.text {
@@ -456,10 +467,16 @@ section.navigation div.text span {
 }
 section.navigation div.text button {
   margin-top: 24px;
+  min-width: 260px;
 }
 @media (max-width: 960px) {
   section.navigation div.text button {
     margin-top: 12px;
+  }
+}
+@media (max-width: 640px) {
+  section.navigation div.text button {
+    width: 100%;
   }
 }
 section.navigation img.background {
@@ -570,10 +587,32 @@ section.services {
   padding-top: var(--section-gap);
   padding-bottom: var(--section-gap);
 }
-section.services h2 {
+section.services div.title {
   position: relative;
   z-index: 2;
   margin-bottom: 90px;
+  display: grid;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  grid-template-columns: 1fr -webkit-max-content;
+  grid-template-columns: 1fr max-content;
+}
+section.services div.title div.counter {
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 110%;
+  letter-spacing: 0.01em;
+  color: #fff;
+  z-index: 3;
+}
+@media (max-width: 640px) {
+  section.services div.title div.counter {
+    display: none;
+  }
+}
+section.services div.title div.counter span.total {
+  opacity: 0.4;
 }
 section.services div.slider {
   max-width: 600px;
@@ -773,6 +812,10 @@ section.example div.container div.video div.play svg:hover rect {
 }
 section.example div.container div.video div.play.playing svg {
   opacity: 0;
+}
+
+section.decision {
+  padding-top: var(--section-gap);
 }
 
 @-webkit-keyframes timeline {

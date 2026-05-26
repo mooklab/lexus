@@ -6,6 +6,7 @@ const reviewSwiper = document.querySelector('section.reviews div.swiper')
 const exampleSwiper = document.querySelector('section.examples div.swiper')
 const resultSwiper = document.querySelector('section.results div.swiper')
 const select_labels = document.querySelectorAll('fieldset.select label')
+const select_choices = document.querySelectorAll('fieldset.select div.select_choice')
 const phoneInputs = document.querySelectorAll('input[type=tel]')
 const services = document.querySelectorAll('section.services div.service')
 const backgrounds = document.querySelectorAll('section.services div.backgrounds img')
@@ -115,6 +116,7 @@ if (services.length > 0) {
 
             services[index + 1].classList.add('active')
             backgrounds[index + 1].classList.add('active')
+            document.querySelector('section.services div.counter span.current').textContent = '0' + (index + 2)
         }, intervalTime)
     }
 
@@ -128,6 +130,7 @@ if (services.length > 0) {
             })
             service.classList.add('active')
             backgrounds[Array.from(service.parentElement.children).indexOf(service)].classList.add('active')
+            document.querySelector('section.services div.counter span.current').textContent = '0' + (Array.from(service.parentElement.children).indexOf(service) + 1)
         })
     })
 
@@ -212,7 +215,15 @@ initCookies()
 select_labels.forEach(label => {
     label.addEventListener('click', event => {
         setTimeout(() => {
-            document.querySelector('form').focus()
+            label.closest('form').focus()
+        }, 100)
+    })
+})
+
+select_choices.forEach(choice => {
+    choice.addEventListener('click', event => {
+        setTimeout(() => {
+            choice.closest('form').focus()
         }, 100)
     })
 })
@@ -243,7 +254,7 @@ playbuttons.forEach(playbutton => {
 
 
 
-// Анимация
+// Анимация при скролле
 const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
         // entry.isIntersecting ? entry.target.classList.add('animate') : entry.target.classList.remove('animate')
@@ -264,7 +275,7 @@ console.log(animateElements)
 
 
 
-
+// Меняющиейся цифры
 gsap.registerPlugin(ScrollTrigger);
 
 document.querySelectorAll('span.digit').forEach(counter => {
@@ -324,7 +335,12 @@ dots.forEach(dot => {
         x += (targetX - x) * speed;
         y += (targetY - y) * speed;
 
-        dot.style.transform = `translate(${x}px, ${y}px)`;
+
+        if (window.innerWidth <= 960) {
+            dot.style.transform = `scale(0.5) translate(${x}px, ${y}px)`;
+        } else {
+            dot.style.transform = `translate(${x}px, ${y}px)`;
+        }
 
         if (Math.hypot(targetX - x, targetY - y) < 2) {
             setNewTarget();

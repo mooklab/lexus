@@ -286,14 +286,16 @@ button, a.button {
 }
 @media (max-width: 960px) {
   button, a.button {
-    padding: 12px 24px;
+    padding: 14px 24px;
   }
 }
 button:hover, a.button:hover {
   background: #76c8ff;
 }
 
-input[type=text] {
+input[type=text],
+input[type=tel],
+input[type=email] {
   border: 1px solid rgba(255, 255, 255, 0.6);
   border-radius: 48px;
   padding: 20px 24px;
@@ -302,41 +304,45 @@ input[type=text] {
   font-size: 14px;
 }
 @media (min-width: 480px) {
-  input[type=text] {
+  input[type=text],
+  input[type=tel],
+  input[type=email] {
     font-size: calc(0.003125 * 100vw + 12.5px);
   }
 }
 @media (min-width: 1760px) {
-  input[type=text] {
+  input[type=text],
+  input[type=tel],
+  input[type=email] {
     font-size: 18px;
   }
 }
 @media (max-width: 640px) {
-  input[type=text] {
+  input[type=text],
+  input[type=tel],
+  input[type=email] {
     padding: 14px 24px;
   }
 }
-input[type=text]::-webkit-input-placeholder {
+input[type=text]::-webkit-input-placeholder, input[type=tel]::-webkit-input-placeholder, input[type=email]::-webkit-input-placeholder {
   color: rgba(255, 255, 255, 0.6);
 }
-input[type=text]::-moz-placeholder {
+input[type=text]::-moz-placeholder, input[type=tel]::-moz-placeholder, input[type=email]::-moz-placeholder {
   color: rgba(255, 255, 255, 0.6);
 }
-input[type=text]:-ms-input-placeholder {
+input[type=text]:-ms-input-placeholder, input[type=tel]:-ms-input-placeholder, input[type=email]:-ms-input-placeholder {
   color: rgba(255, 255, 255, 0.6);
 }
-input[type=text]::-ms-input-placeholder {
+input[type=text]::-ms-input-placeholder, input[type=tel]::-ms-input-placeholder, input[type=email]::-ms-input-placeholder {
   color: rgba(255, 255, 255, 0.6);
 }
-input[type=text]::placeholder {
+input[type=text]::placeholder,
+input[type=tel]::placeholder,
+input[type=email]::placeholder {
   color: rgba(255, 255, 255, 0.6);
 }
 
 fieldset.select {
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
   position: relative;
   z-index: 3;
   font-size: 12px;
@@ -355,6 +361,7 @@ fieldset.select:hover {
   z-index: 5;
 }
 fieldset.select div.select_choice {
+  pointer-events: none;
   display: grid;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -373,6 +380,7 @@ fieldset.select div.select_choice {
   }
 }
 fieldset.select div.select_choice input {
+  cursor: pointer;
   position: absolute;
   top: 0;
   left: 0;
@@ -400,6 +408,7 @@ fieldset.select:focus-within {
 }
 fieldset.select:focus-within div.select_choice {
   border-color: white;
+  pointer-events: auto;
 }
 fieldset.select:focus-within div.select_dropdown {
   grid-template-rows: 1fr;
@@ -682,6 +691,21 @@ img.dots {
   left: 0;
   z-index: 1;
   pointer-events: none;
+}
+img.dots.desktop {
+  display: block;
+}
+img.dots.mobile {
+  display: none;
+}
+@media (max-width: 960px) {
+  img.dots.desktop {
+    display: none;
+  }
+  img.dots.mobile {
+    display: block;
+    z-index: 3;
+  }
 }
 
 dialog[data-modal-name=callback] {

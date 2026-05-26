@@ -29,7 +29,13 @@ block content
 
     section.services
         div.container
-            h2 Что мы предлагаем
+
+            div.title
+                h2 Что мы предлагаем
+
+                div.counter
+                    span.current 01
+                    span.total  / 09
 
             div.slider
                 +service('Русификация Lexus / Toyota')
@@ -52,6 +58,7 @@ block content
                 img(src="images/service_7.webp").background
                 img(src="images/service_8.webp").background
                 img(src="images/service_9.webp").background
+        
         img(src="images/dots.svg").dots
         img(src="images/dots.svg").dots
         
