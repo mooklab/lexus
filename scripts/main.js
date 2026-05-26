@@ -271,7 +271,7 @@ const observer = new IntersectionObserver(entries => {
 
 var animateElements = document.querySelectorAll('div.observe')
 animateElements.forEach(element => observer.observe(element))
-console.log(animateElements)
+// console.log(animateElements)
 
 
 
