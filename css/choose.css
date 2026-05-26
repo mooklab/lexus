@@ -227,8 +227,15 @@ section.main form div.radios {
     height: 48px;
   }
 }
+section.main form div.radios input {
+  position: absolute;
+  display: none;
+  opacity: 0;
+}
 section.main form div.radios label {
+  display: block;
   cursor: pointer;
+  position: relative;
 }
 section.main form div.radios div.logotype {
   display: grid;
