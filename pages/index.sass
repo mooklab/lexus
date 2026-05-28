@@ -1,6 +1,7 @@
 @use '../components/common/sass/_mixins' as *
 @use '../components/common/sass/_variables' as *
 
+@use '../components/sections/_services' as *
 @use '../components/sections/_digits' as *
 @use '../components/sections/_advantages' as *
 @use '../components/sections/_decision' as *
@@ -28,7 +29,6 @@ section.main
         align-items: center
         grid-template-columns: 1fr max-content
         grid-gap: 32px
-        border-top: 1px solid #ffffff66
         padding-top: 40px
         +s(s)
             grid-template-columns: 1fr
@@ -47,6 +47,24 @@ section.main
                 width: 100%
                 text-align: center
 
+    div.wrap
+
+    hr.divide
+        width: 100%
+        height: 1px
+        background: white
+        opacity: 0.2
+
+    video
+        grid-column: full
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        object-fit: cover
+        z-index: 1
+
     img.background
         grid-column: full
         position: absolute
@@ -59,126 +77,6 @@ section.main
         +s(s)
             height: 50%
             object-position: left top
-
-section.services
-    background: black
-    padding-top: var(--section-gap)
-    padding-bottom: var(--section-gap)
-
-    div.title
-        position: relative
-        z-index: 2
-        margin-bottom: 90px
-        display: grid
-        align-items: center
-        grid-template-columns: 1fr max-content
-
-        div.counter
-            font-weight: 400
-            font-size: 24px
-            line-height: 110%
-            letter-spacing: 0.01em
-            color: #fff
-            z-index: 3
-            +s(s)
-                display: none
-
-            span.total
-                opacity: 0.4
-
-    div.slider
-        max-width: 600px
-
-        &:hover
-            div.service:after
-                animation: none
-
-    div.service
-        cursor: pointer
-        display: grid
-        grid-gap: 24px
-        position: relative
-        padding-right: 86px
-        border-top: 1px solid #ffffff66
-        padding-top: 24px
-        padding-bottom: 24px
-        margin-bottom: -24px
-        z-index: 2
-        h4
-            color: #ffffffb3
-        span
-            color: #ffffffb3
-
-        &::after
-            content: ''
-            position: absolute
-            top: 0
-            left: 0
-            display: block
-            width: 0%
-            height: 1px
-            background: #15A0FD
-            transition: all 5s linear
-
-        div.text
-            display: grid
-            grid-template-rows: 0fr
-            transition: all 0.5s
-            padding-bottom: 0px
-            transition: all 0.5s
-
-        div.overflow
-            overflow: hidden
-
-        a.button
-            position: absolute
-            top: 24px
-            right: 0
-            display: grid
-            align-items: center
-            justify-items: center
-            border-radius: 84px
-            padding: 0px
-            width: 64px
-            height: 40px
-            opacity: 0
-            pointer-events: none
-            transition: opacity 0.5s
-            +s(s)
-                width: 49px
-                height: 30px
-
-        &.active
-            &::after
-                animation: timeline 5s forwards
-                animation-direction: normal
-                animation-timing-function: linear
-            h4
-                color: white
-            div.text
-                grid-template-rows: 1fr
-                padding-bottom: 24px
-            a.button
-                opacity: 1
-                pointer-events: auto
-            img.background
-                display: block
-
-        &:hover
-            h4
-                color: #15A0FD
-
-    img.background
-        display: none
-        position: absolute
-        top: 0
-        left: 0
-        width: 100%
-        height: 100%
-        object-fit: cover
-        z-index: 1
-        &.active
-            display: block
 
 section.example
     color: black

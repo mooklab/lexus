@@ -1,0 +1,180 @@
+@use '../../components/common/sass/_variables' as *
+@use '../../components/common/sass/_mixins' as *
+
+section.services
+    background: black
+    padding-top: var(--section-gap)
+    padding-bottom: var(--section-gap)
+
+    div.title
+        position: relative
+        z-index: 2
+        margin-bottom: 90px
+        display: grid
+        align-items: center
+        grid-template-columns: 1fr max-content
+        +s(m)
+            margin-bottom: 30px
+
+        div.counter
+            font-weight: 400
+            font-size: 24px
+            line-height: 110%
+            letter-spacing: 0.01em
+            color: #fff
+            z-index: 3
+            +s(s)
+                display: none
+
+            span.total
+                opacity: 0.4
+
+    div.slider
+        position: relative
+        max-width: 600px
+        z-index: 2
+        +s(m)
+            display: none
+
+        &:hover
+            div.service:after
+                animation: none
+
+    div.service
+        cursor: pointer
+        display: grid
+        grid-gap: 24px
+        position: relative
+        padding-right: 86px
+        border-top: 1px solid #ffffff66
+        padding-top: 24px
+        padding-bottom: 24px
+        margin-bottom: -24px
+        z-index: 2
+        h4
+            color: #ffffffb3
+        span
+            color: #ffffffb3
+
+        &::after
+            content: ''
+            position: absolute
+            top: 0
+            left: 0
+            display: block
+            width: 0%
+            height: 1px
+            background: #15A0FD
+            transition: all 5s linear
+
+        div.text
+            display: grid
+            grid-template-rows: 0fr
+            transition: all 0.5s
+            padding-bottom: 0px
+            transition: all 0.5s
+
+        div.overflow
+            overflow: hidden
+
+        a.button
+            position: absolute
+            top: 24px
+            right: 0
+            display: grid
+            align-items: center
+            justify-items: center
+            border-radius: 84px
+            padding: 0px
+            width: 64px
+            height: 40px
+            opacity: 0
+            pointer-events: none
+            transition: opacity 0.5s
+            +s(s)
+                width: 49px
+                height: 30px
+
+        &.active
+            &::after
+                animation: timeline 5s forwards
+                animation-direction: normal
+                animation-timing-function: linear
+            h4
+                color: white
+            div.text
+                grid-template-rows: 1fr
+                padding-bottom: 24px
+            a.button
+                opacity: 1
+                pointer-events: auto
+            img.background
+                display: block
+
+        // &:hover
+        //     h4
+        //         color: #15A0FD
+
+    div.accordions
+        display: none
+        +s(m)
+            display: grid
+
+        img.preview
+            width: 100%
+            aspect-ratio: 16 / 9
+            object-fit: cover
+
+        div.accordion.open
+            div.accordion_caption
+
+                svg
+                    transform: rotate(180deg)
+                    opacity: 1
+                    path
+                        stroke: #15A0FD
+
+        div.accordion_caption
+            cursor: pointer
+            display: grid
+            grid-template-columns: 1fr max-content
+            align-items: center
+            border-bottom: 1px solid #ffffff33
+            padding: 24px 0
+
+            svg
+                width: 20px
+                opacity: 0.3
+                transition: all 0.3s
+
+        div.accordion_wrap
+            display: grid
+            grid-gap: 24px
+            padding-top: 24px
+            padding-bottom: 24px
+            span
+                opacity: 0.7
+            a.button
+                display: grid
+                grid-template-columns: repeat(2, max-content)
+                span
+                    color: black
+                    opacity: unset
+
+    div.backgrounds
+        +s(m)
+            display: none
+
+    img.background
+        opacity: 0
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        object-fit: cover
+        z-index: 1
+        pointer-events: none
+        transition: opacity 0.15s
+        &.active
+            opacity: 1

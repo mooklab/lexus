@@ -14,7 +14,7 @@ block content
                 a(href="#") Услуги
                 span.divide /
                 span Русификация мультимедиа
-            div.content
+            div.group
                 div.text
                     h1 Русификация мультимедиа
                     span Профессиональное обновление навигации и интерфейса вашего автомобиля. Оригинальные прошивки, полная гарантия и быстрое выполнение в России.
@@ -31,14 +31,17 @@ block content
                 img(src="images/service_main_preview.webp").preview
 
         img(src="images/service_main.webp").background
-        img(src="images/dots.svg").dots
-        img(src="images/dots.svg").dots
+        div.dots.left.bottom
+            include ../images/pattern.svg
+        div.dots.right.top
+            include ../images/pattern.svg
         
 
     section.about
         div.container
 
             h2 Об услуге
+            hr.divide
             div.text
                 h3 Мы переведем весь интерфейс вашей мультимедиа и приборной панели на русский язык, чтобы вы смогли использовать возможности своего авто на максимум
                 span Предлагаем русифицировать оригинальную мультимедиа в автомобилях Lexus и Toyota, ввезённых по параллельному импорту из Китая, Кореи, Японии, США и ОАЭ, в меню которых отсутствует русский язык. После перепрошивки вы получите полный перевод штатных пунктов меню и настройки автомобиля на русский язык.

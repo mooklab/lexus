@@ -4,65 +4,26 @@ include ../components/common/pug/_mixins.pug
 block links
     link(rel="stylesheet", href="css/index.css")
 
-mixin service(title)
-    div.service
-        h4= title
-        a(href="#").button
-            img(src="images/service_arrow.svg")
-        div.text
-            div.overflow
-                span Перевод интерфейса мультимедийной системы на русский язык для автомобилей с зарубежных рынков: 🇰🇷 Корея,🇯🇵 Япония, 🇨🇳 Китай, 🇦🇪 ОАЭ, 🇺🇸 США.
-
 block content
 
 
     section.main
         div.container
             h1 Русификация и обновление навигации для Lexus и Toyota
+            hr.divide
             div.group
                 span Профессиональная установка мультимедийных систем с полной русификацией интерфейса и актуальными картами навигации для автомобилей из #[b Кореи, Китая, ОАЭ, Японии и США.]
                 a(href="#").button Подобрать по авто
 
-        img(src="images/main_background.webp").background
-        img(src="images/dots.svg").dots
-        img(src="images/dots.svg").dots
-
-    section.services
-        div.container
-
-            div.title
-                h2 Что мы предлагаем
-
-                div.counter
-                    span.current 01
-                    span.total  / 09
-
-            div.slider
-                +service('Русификация Lexus / Toyota')
-                +service('Ремонт мультимедиа Lexus / Toyota')
-                +service('Установка противоугонного комплекса')
-                +service('Шумоизоляция автомобиля')
-                +service('Компьютерная диагностика')
-                +service('Чип-тюнинг')
-                +service('Установка Android систем')
-                +service('Активация CarPlay')
-                +service('Обновление навигации Lexus/Toyota')
-
-            div.backgrounds
-                img(src="images/service_1.webp").background
-                img(src="images/service_2.webp").background
-                img(src="images/service_3.webp").background
-                img(src="images/service_4.webp").background
-                img(src="images/service_5.webp").background
-                img(src="images/service_6.webp").background
-                img(src="images/service_7.webp").background
-                img(src="images/service_8.webp").background
-                img(src="images/service_9.webp").background
+        //- img(src="images/main_background.webp").background
+        video(src="images/video.webm" muted autoplay loop)
         
-        img(src="images/dots.svg").dots
-        img(src="images/dots.svg").dots
-        
+        div.dots.left.bottom
+            include ../images/pattern.svg
+        div.dots.right.top
+            include ../images/pattern.svg
 
+    include ../components/sections/_services.pug
     include ../components/sections/_digits.pug
     include ../components/sections/_advantages.pug
 

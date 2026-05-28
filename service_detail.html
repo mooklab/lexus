@@ -27,6 +27,7 @@
         <link rel="stylesheet" href="css/service_detail.css">
         <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
         <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+        <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/TextPlugin.min.js"></script>
         <script defer src="scripts/main.js" type="module"></script>
         <script defer src="scripts/dialog.js"></script>
     </head>
@@ -80,12 +81,13 @@
                 </div>
                 <div class="backdrop" onclick="headerPopup('close')"></div>
             </div>
+            <hr class="divide">
         </header>
         <main>
             <section class="main">
                 <div class="container">
                     <div class="breadcrumbs"><a href="#">Главная</a><span class="divide">/</span><a href="#">Услуги</a><span class="divide">/</span><span>Русификация мультимедиа Lexus ES 200 из Китая</span></div>
-                    <div class="content">
+                    <div class="group">
                         <div class="text">
                             <h1>Русификация мультимедиа Lexus ES 200 из Китая</h1><span>Полный перевод интерфейса мультимедийной системы и приборной панели на русский язык.</span>
                         </div>
@@ -96,11 +98,114 @@
                         </div><a class="button" href="#">Записаться</a>
                     </div>
                     <div class="preview"><img class="preview" src="images/service_main_preview.webp"></div>
-                </div><img class="background" src="images/service_main.webp"><img class="dots" src="images/dots.svg"><img class="dots" src="images/dots.svg">
+                </div><img class="background" src="images/service_main.webp">
+                <div class="dots left bottom"><svg class="dots" viewBox="0 0 1920 1920">
+    <defs>
+
+      <!-- градиент -->
+      <radialGradient
+        id="gradient"
+        gradientUnits="userSpaceOnUse"
+        preserveAspectRatio="xMidYMid slice"
+        cx="50%"
+        cy="50%"
+        r="30%"
+      >
+        <stop offset="0%" stop-color="white" stop-opacity="1" />
+        <stop offset="100%" stop-color="white" stop-opacity="0" />
+      </radialGradient>
+
+      <!-- паттерн точек -->
+      <pattern
+        id="dotPattern"
+        width="60"
+        height="60"
+        patternUnits="userSpaceOnUse"
+      >
+        <circle
+          cx="30"
+          cy="30"
+          r="4"
+          fill="white"
+        />
+      </pattern>
+
+      <!-- маска -->
+      <mask id="mask">
+        <rect
+          width="100%"
+          height="100%"
+          fill="url(#gradient)"
+        />
+      </mask>
+
+    </defs>
+
+    <!-- сами точки -->
+    <rect
+      width="100%"
+      height="100%"
+      fill="url(#dotPattern)"
+      mask="url(#mask)"
+    />
+  </svg>
+                </div>
+                <div class="dots right top"><svg class="dots" viewBox="0 0 1920 1920">
+    <defs>
+
+      <!-- градиент -->
+      <radialGradient
+        id="gradient"
+        gradientUnits="userSpaceOnUse"
+        preserveAspectRatio="xMidYMid slice"
+        cx="50%"
+        cy="50%"
+        r="30%"
+      >
+        <stop offset="0%" stop-color="white" stop-opacity="1" />
+        <stop offset="100%" stop-color="white" stop-opacity="0" />
+      </radialGradient>
+
+      <!-- паттерн точек -->
+      <pattern
+        id="dotPattern"
+        width="60"
+        height="60"
+        patternUnits="userSpaceOnUse"
+      >
+        <circle
+          cx="30"
+          cy="30"
+          r="4"
+          fill="white"
+        />
+      </pattern>
+
+      <!-- маска -->
+      <mask id="mask">
+        <rect
+          width="100%"
+          height="100%"
+          fill="url(#gradient)"
+        />
+      </mask>
+
+    </defs>
+
+    <!-- сами точки -->
+    <rect
+      width="100%"
+      height="100%"
+      fill="url(#dotPattern)"
+      mask="url(#mask)"
+    />
+  </svg>
+                </div>
             </section>
             <section class="about">
                 <div class="container">
                     <h2>Об услуге</h2>
+                    <hr class="divide">
                     <div class="text">
                         <h3>Мы переведем весь интерфейс вашей мультимедиа и приборной панели на русский язык, чтобы вы смогли использовать возможности своего авто на максимум</h3><span>Предлагаем русифицировать оригинальную мультимедиа в автомобилях Lexus ES 200  модельных рядов после 2023 года, ввезённых по параллельному импорту из Китая, в меню которых отсутствует русский язык. После перепрошивки вы получите полный перевод штатных пунктов меню и настройки автомобиля на русский язык.</span>
                     </div>
@@ -118,7 +223,23 @@
             <section class="get">
                 <div class="container">
                     <h2>Что вы получаете</h2>
-                    <div class="list"><span>Полностью русское меню мультимедиа — навигация, аудио, телефон, климат, настройки</span><span>Русскоязычные голосовые подсказки в навигации</span><span>Корректное отображение русских букв в телефонной книге и SMS</span><span>Актуальные карты России вместо зарубежных карт</span><span>Все оригинальные функции автомобиля сохраняются в полном объёме</span></div>
+                    <div class="list">
+                        <div class="item"><span class="number">01</span>
+                            <hr class="divide"><span>Полностью русское меню мультимедиа — навигация, аудио, телефон, климат, настройки</span>
+                        </div>
+                        <div class="item"><span class="number">02</span>
+                            <hr class="divide"><span>Русскоязычные голосовые подсказки в навигации</span>
+                        </div>
+                        <div class="item"><span class="number">03</span>
+                            <hr class="divide"><span>Корректное отображение русских букв в телефонной книге и SMS</span>
+                        </div>
+                        <div class="item"><span class="number">04</span>
+                            <hr class="divide"><span>Актуальные карты России вместо зарубежных карт</span>
+                        </div>
+                        <div class="item"><span class="number">05</span>
+                            <hr class="divide"><span>Все оригинальные функции автомобиля сохраняются в полном объёме</span>
+                        </div>
+                    </div>
                 </div>
             </section>
             <section class="results">
@@ -150,6 +271,108 @@
                     </div>
                     <div class="phone"><a class="phone" href="#"> <img src="images/consulting_phone.svg">
                             <h3>+7 (495) 150-60-70</h3></a><span class="schedule">Пн–Вс, 9:00–19:00</span></div><img class="hand" src="images/consulting_hand.webp"><img class="background" src="images/consulting_background.webp">
+                    <div class="dots left top"><svg class="dots" viewBox="0 0 1920 1920">
+    <defs>
+
+      <!-- градиент -->
+      <radialGradient
+        id="gradient"
+        gradientUnits="userSpaceOnUse"
+        preserveAspectRatio="xMidYMid slice"
+        cx="50%"
+        cy="50%"
+        r="30%"
+      >
+        <stop offset="0%" stop-color="white" stop-opacity="1" />
+        <stop offset="100%" stop-color="white" stop-opacity="0" />
+      </radialGradient>
+
+      <!-- паттерн точек -->
+      <pattern
+        id="dotPattern"
+        width="60"
+        height="60"
+        patternUnits="userSpaceOnUse"
+      >
+        <circle
+          cx="30"
+          cy="30"
+          r="4"
+          fill="white"
+        />
+      </pattern>
+
+      <!-- маска -->
+      <mask id="mask">
+        <rect
+          width="100%"
+          height="100%"
+          fill="url(#gradient)"
+        />
+      </mask>
+
+    </defs>
+
+    <!-- сами точки -->
+    <rect
+      width="100%"
+      height="100%"
+      fill="url(#dotPattern)"
+      mask="url(#mask)"
+    />
+  </svg>
+                    </div>
+                    <div class="dots right bottom"><svg class="dots" viewBox="0 0 1920 1920">
+    <defs>
+
+      <!-- градиент -->
+      <radialGradient
+        id="gradient"
+        gradientUnits="userSpaceOnUse"
+        preserveAspectRatio="xMidYMid slice"
+        cx="50%"
+        cy="50%"
+        r="30%"
+      >
+        <stop offset="0%" stop-color="white" stop-opacity="1" />
+        <stop offset="100%" stop-color="white" stop-opacity="0" />
+      </radialGradient>
+
+      <!-- паттерн точек -->
+      <pattern
+        id="dotPattern"
+        width="60"
+        height="60"
+        patternUnits="userSpaceOnUse"
+      >
+        <circle
+          cx="30"
+          cy="30"
+          r="4"
+          fill="white"
+        />
+      </pattern>
+
+      <!-- маска -->
+      <mask id="mask">
+        <rect
+          width="100%"
+          height="100%"
+          fill="url(#gradient)"
+        />
+      </mask>
+
+    </defs>
+
+    <!-- сами точки -->
+    <rect
+      width="100%"
+      height="100%"
+      fill="url(#dotPattern)"
+      mask="url(#mask)"
+    />
+  </svg>
+                    </div>
                 </div>
             </section>
             <section class="stages">
@@ -199,7 +422,58 @@
                                                 <div class="author"><img src="images/avatar_empty.webp">
                                                     <div class="name"><span>Сергей Петров</span><span>Владелец Lexus RX</span></div>
                                                 </div>
-                                                <div class="stars"><img src="images/star.svg"><img src="images/star.svg"><img src="images/star.svg"><img src="images/star.svg"><img src="images/star.svg"></div><span class="review">«Привез машину в плохом состоянии, а забрал с полностью рабочей системой. Ребята крутые!»</span><img class="dots" src="images/dots.svg">
+                                                <div class="stars"><img src="images/star.svg"><img src="images/star.svg"><img src="images/star.svg"><img src="images/star.svg"><img src="images/star.svg"></div><span class="review">«Привез машину в плохом состоянии, а забрал с полностью рабочей системой. Ребята крутые!»</span>
+                                                <div class="dots left top"><svg class="dots" viewBox="0 0 1920 1920">
+    <defs>
+
+      <!-- градиент -->
+      <radialGradient
+        id="gradient"
+        gradientUnits="userSpaceOnUse"
+        preserveAspectRatio="xMidYMid slice"
+        cx="50%"
+        cy="50%"
+        r="30%"
+      >
+        <stop offset="0%" stop-color="white" stop-opacity="1" />
+        <stop offset="100%" stop-color="white" stop-opacity="0" />
+      </radialGradient>
+
+      <!-- паттерн точек -->
+      <pattern
+        id="dotPattern"
+        width="60"
+        height="60"
+        patternUnits="userSpaceOnUse"
+      >
+        <circle
+          cx="30"
+          cy="30"
+          r="4"
+          fill="white"
+        />
+      </pattern>
+
+      <!-- маска -->
+      <mask id="mask">
+        <rect
+          width="100%"
+          height="100%"
+          fill="url(#gradient)"
+        />
+      </mask>
+
+    </defs>
+
+    <!-- сами точки -->
+    <rect
+      width="100%"
+      height="100%"
+      fill="url(#dotPattern)"
+      mask="url(#mask)"
+    />
+  </svg>
+                                                </div>
                                             </div>
                             </div>
                             <div class="swiper-slide">
@@ -207,7 +481,58 @@
                                                 <div class="author"><img src="images/avatar_empty.webp">
                                                     <div class="name"><span>Анна Сидорова</span><span>Владелец Toyota Camry</span></div>
                                                 </div>
-                                                <div class="stars"><img src="images/star.svg"><img src="images/star.svg"><img src="images/star.svg"><img src="images/star.svg"><img src="images/star.svg"></div><span class="review">«Услуга оказалась на высшем уровне! Быстро, качественно и с душой.»</span><img class="dots" src="images/dots.svg">
+                                                <div class="stars"><img src="images/star.svg"><img src="images/star.svg"><img src="images/star.svg"><img src="images/star.svg"><img src="images/star.svg"></div><span class="review">«Услуга оказалась на высшем уровне! Быстро, качественно и с душой.»</span>
+                                                <div class="dots left top"><svg class="dots" viewBox="0 0 1920 1920">
+    <defs>
+
+      <!-- градиент -->
+      <radialGradient
+        id="gradient"
+        gradientUnits="userSpaceOnUse"
+        preserveAspectRatio="xMidYMid slice"
+        cx="50%"
+        cy="50%"
+        r="30%"
+      >
+        <stop offset="0%" stop-color="white" stop-opacity="1" />
+        <stop offset="100%" stop-color="white" stop-opacity="0" />
+      </radialGradient>
+
+      <!-- паттерн точек -->
+      <pattern
+        id="dotPattern"
+        width="60"
+        height="60"
+        patternUnits="userSpaceOnUse"
+      >
+        <circle
+          cx="30"
+          cy="30"
+          r="4"
+          fill="white"
+        />
+      </pattern>
+
+      <!-- маска -->
+      <mask id="mask">
+        <rect
+          width="100%"
+          height="100%"
+          fill="url(#gradient)"
+        />
+      </mask>
+
+    </defs>
+
+    <!-- сами точки -->
+    <rect
+      width="100%"
+      height="100%"
+      fill="url(#dotPattern)"
+      mask="url(#mask)"
+    />
+  </svg>
+                                                </div>
                                             </div>
                             </div>
                             <div class="swiper-slide">
@@ -215,7 +540,58 @@
                                                 <div class="author"><img src="images/avatar_empty.webp">
                                                     <div class="name"><span>Сергей Петров</span><span>Владелец Lexus RX</span></div>
                                                 </div>
-                                                <div class="stars"><img src="images/star.svg"><img src="images/star.svg"><img src="images/star.svg"><img src="images/star.svg"><img src="images/star.svg"></div><span class="review">«Привез машину в плохом состоянии, а забрал с полностью рабочей системой. Ребята крутые!»</span><img class="dots" src="images/dots.svg">
+                                                <div class="stars"><img src="images/star.svg"><img src="images/star.svg"><img src="images/star.svg"><img src="images/star.svg"><img src="images/star.svg"></div><span class="review">«Привез машину в плохом состоянии, а забрал с полностью рабочей системой. Ребята крутые!»</span>
+                                                <div class="dots left top"><svg class="dots" viewBox="0 0 1920 1920">
+    <defs>
+
+      <!-- градиент -->
+      <radialGradient
+        id="gradient"
+        gradientUnits="userSpaceOnUse"
+        preserveAspectRatio="xMidYMid slice"
+        cx="50%"
+        cy="50%"
+        r="30%"
+      >
+        <stop offset="0%" stop-color="white" stop-opacity="1" />
+        <stop offset="100%" stop-color="white" stop-opacity="0" />
+      </radialGradient>
+
+      <!-- паттерн точек -->
+      <pattern
+        id="dotPattern"
+        width="60"
+        height="60"
+        patternUnits="userSpaceOnUse"
+      >
+        <circle
+          cx="30"
+          cy="30"
+          r="4"
+          fill="white"
+        />
+      </pattern>
+
+      <!-- маска -->
+      <mask id="mask">
+        <rect
+          width="100%"
+          height="100%"
+          fill="url(#gradient)"
+        />
+      </mask>
+
+    </defs>
+
+    <!-- сами точки -->
+    <rect
+      width="100%"
+      height="100%"
+      fill="url(#dotPattern)"
+      mask="url(#mask)"
+    />
+  </svg>
+                                                </div>
                                             </div>
                             </div>
                             <div class="swiper-slide">
@@ -223,7 +599,58 @@
                                                 <div class="author"><img src="images/avatar_empty.webp">
                                                     <div class="name"><span>Сергей Петров</span><span>Владелец Lexus RX</span></div>
                                                 </div>
-                                                <div class="stars"><img src="images/star.svg"><img src="images/star.svg"><img src="images/star.svg"><img src="images/star.svg"><img src="images/star.svg"></div><span class="review">«Привез машину в плохом состоянии, а забрал с полностью рабочей системой. Ребята крутые!»</span><img class="dots" src="images/dots.svg">
+                                                <div class="stars"><img src="images/star.svg"><img src="images/star.svg"><img src="images/star.svg"><img src="images/star.svg"><img src="images/star.svg"></div><span class="review">«Привез машину в плохом состоянии, а забрал с полностью рабочей системой. Ребята крутые!»</span>
+                                                <div class="dots left top"><svg class="dots" viewBox="0 0 1920 1920">
+    <defs>
+
+      <!-- градиент -->
+      <radialGradient
+        id="gradient"
+        gradientUnits="userSpaceOnUse"
+        preserveAspectRatio="xMidYMid slice"
+        cx="50%"
+        cy="50%"
+        r="30%"
+      >
+        <stop offset="0%" stop-color="white" stop-opacity="1" />
+        <stop offset="100%" stop-color="white" stop-opacity="0" />
+      </radialGradient>
+
+      <!-- паттерн точек -->
+      <pattern
+        id="dotPattern"
+        width="60"
+        height="60"
+        patternUnits="userSpaceOnUse"
+      >
+        <circle
+          cx="30"
+          cy="30"
+          r="4"
+          fill="white"
+        />
+      </pattern>
+
+      <!-- маска -->
+      <mask id="mask">
+        <rect
+          width="100%"
+          height="100%"
+          fill="url(#gradient)"
+        />
+      </mask>
+
+    </defs>
+
+    <!-- сами точки -->
+    <rect
+      width="100%"
+      height="100%"
+      fill="url(#dotPattern)"
+      mask="url(#mask)"
+    />
+  </svg>
+                                                </div>
                                             </div>
                             </div>
                             <div class="swiper-slide">
@@ -231,7 +658,58 @@
                                                 <div class="author"><img src="images/avatar_empty.webp">
                                                     <div class="name"><span>Сергей Петров</span><span>Владелец Lexus RX</span></div>
                                                 </div>
-                                                <div class="stars"><img src="images/star.svg"><img src="images/star.svg"><img src="images/star.svg"><img src="images/star.svg"><img src="images/star.svg"></div><span class="review">«Привез машину в плохом состоянии, а забрал с полностью рабочей системой. Ребята крутые!»</span><img class="dots" src="images/dots.svg">
+                                                <div class="stars"><img src="images/star.svg"><img src="images/star.svg"><img src="images/star.svg"><img src="images/star.svg"><img src="images/star.svg"></div><span class="review">«Привез машину в плохом состоянии, а забрал с полностью рабочей системой. Ребята крутые!»</span>
+                                                <div class="dots left top"><svg class="dots" viewBox="0 0 1920 1920">
+    <defs>
+
+      <!-- градиент -->
+      <radialGradient
+        id="gradient"
+        gradientUnits="userSpaceOnUse"
+        preserveAspectRatio="xMidYMid slice"
+        cx="50%"
+        cy="50%"
+        r="30%"
+      >
+        <stop offset="0%" stop-color="white" stop-opacity="1" />
+        <stop offset="100%" stop-color="white" stop-opacity="0" />
+      </radialGradient>
+
+      <!-- паттерн точек -->
+      <pattern
+        id="dotPattern"
+        width="60"
+        height="60"
+        patternUnits="userSpaceOnUse"
+      >
+        <circle
+          cx="30"
+          cy="30"
+          r="4"
+          fill="white"
+        />
+      </pattern>
+
+      <!-- маска -->
+      <mask id="mask">
+        <rect
+          width="100%"
+          height="100%"
+          fill="url(#gradient)"
+        />
+      </mask>
+
+    </defs>
+
+    <!-- сами точки -->
+    <rect
+      width="100%"
+      height="100%"
+      fill="url(#dotPattern)"
+      mask="url(#mask)"
+    />
+  </svg>
+                                                </div>
                                             </div>
                             </div>
                             <div class="swiper-slide">
@@ -239,7 +717,58 @@
                                                 <div class="author"><img src="images/avatar_empty.webp">
                                                     <div class="name"><span>Сергей Петров</span><span>Владелец Lexus RX</span></div>
                                                 </div>
-                                                <div class="stars"><img src="images/star.svg"><img src="images/star.svg"><img src="images/star.svg"><img src="images/star.svg"><img src="images/star.svg"></div><span class="review">«Привез машину в плохом состоянии, а забрал с полностью рабочей системой. Ребята крутые!»</span><img class="dots" src="images/dots.svg">
+                                                <div class="stars"><img src="images/star.svg"><img src="images/star.svg"><img src="images/star.svg"><img src="images/star.svg"><img src="images/star.svg"></div><span class="review">«Привез машину в плохом состоянии, а забрал с полностью рабочей системой. Ребята крутые!»</span>
+                                                <div class="dots left top"><svg class="dots" viewBox="0 0 1920 1920">
+    <defs>
+
+      <!-- градиент -->
+      <radialGradient
+        id="gradient"
+        gradientUnits="userSpaceOnUse"
+        preserveAspectRatio="xMidYMid slice"
+        cx="50%"
+        cy="50%"
+        r="30%"
+      >
+        <stop offset="0%" stop-color="white" stop-opacity="1" />
+        <stop offset="100%" stop-color="white" stop-opacity="0" />
+      </radialGradient>
+
+      <!-- паттерн точек -->
+      <pattern
+        id="dotPattern"
+        width="60"
+        height="60"
+        patternUnits="userSpaceOnUse"
+      >
+        <circle
+          cx="30"
+          cy="30"
+          r="4"
+          fill="white"
+        />
+      </pattern>
+
+      <!-- маска -->
+      <mask id="mask">
+        <rect
+          width="100%"
+          height="100%"
+          fill="url(#gradient)"
+        />
+      </mask>
+
+    </defs>
+
+    <!-- сами точки -->
+    <rect
+      width="100%"
+      height="100%"
+      fill="url(#dotPattern)"
+      mask="url(#mask)"
+    />
+  </svg>
+                                                </div>
                                             </div>
                             </div>
                         </div>
@@ -350,7 +879,58 @@
                         <div class="map">
                             <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A3a68fd6473f89a894f39d13ec99479672416507740cdfd56a6d87b53b3694853&amp;amp;source=constructor" width="100%" height="100%" frameborder="0"></iframe>
                         </div>
-                    </div><img class="dots" src="images/dots.svg">
+                    </div>
+                    <div class="dots right top"><svg class="dots" viewBox="0 0 1920 1920">
+    <defs>
+
+      <!-- градиент -->
+      <radialGradient
+        id="gradient"
+        gradientUnits="userSpaceOnUse"
+        preserveAspectRatio="xMidYMid slice"
+        cx="50%"
+        cy="50%"
+        r="30%"
+      >
+        <stop offset="0%" stop-color="white" stop-opacity="1" />
+        <stop offset="100%" stop-color="white" stop-opacity="0" />
+      </radialGradient>
+
+      <!-- паттерн точек -->
+      <pattern
+        id="dotPattern"
+        width="60"
+        height="60"
+        patternUnits="userSpaceOnUse"
+      >
+        <circle
+          cx="30"
+          cy="30"
+          r="4"
+          fill="white"
+        />
+      </pattern>
+
+      <!-- маска -->
+      <mask id="mask">
+        <rect
+          width="100%"
+          height="100%"
+          fill="url(#gradient)"
+        />
+      </mask>
+
+    </defs>
+
+    <!-- сами точки -->
+    <rect
+      width="100%"
+      height="100%"
+      fill="url(#dotPattern)"
+      mask="url(#mask)"
+    />
+  </svg>
+                    </div>
                 </div>
             </section>
             <section class="navigation">
@@ -358,7 +938,109 @@
                     <div class="text">
                         <h2>Обновим навигацию в вашем авто бесплатно</h2><span>При русификации вашего автомобиля у нас вы получаете обновление навигационных карт в подарок. Без скрытых платежей и универсальных решений — только официальные обновления именно для вашей модели.</span>
                         <button>Записаться</button>
-                    </div><img class="background desktop" src="images/navigation_desktop.webp"><img class="background mobile" src="images/navigation_mobile.webp"><img class="dots" src="images/dots.svg">
+                    </div><img class="background desktop" src="images/navigation_desktop.webp"><img class="background mobile" src="images/navigation_mobile.webp">
+                    <div class="dots left top"><svg class="dots" viewBox="0 0 1920 1920">
+    <defs>
+
+      <!-- градиент -->
+      <radialGradient
+        id="gradient"
+        gradientUnits="userSpaceOnUse"
+        preserveAspectRatio="xMidYMid slice"
+        cx="50%"
+        cy="50%"
+        r="30%"
+      >
+        <stop offset="0%" stop-color="white" stop-opacity="1" />
+        <stop offset="100%" stop-color="white" stop-opacity="0" />
+      </radialGradient>
+
+      <!-- паттерн точек -->
+      <pattern
+        id="dotPattern"
+        width="60"
+        height="60"
+        patternUnits="userSpaceOnUse"
+      >
+        <circle
+          cx="30"
+          cy="30"
+          r="4"
+          fill="white"
+        />
+      </pattern>
+
+      <!-- маска -->
+      <mask id="mask">
+        <rect
+          width="100%"
+          height="100%"
+          fill="url(#gradient)"
+        />
+      </mask>
+
+    </defs>
+
+    <!-- сами точки -->
+    <rect
+      width="100%"
+      height="100%"
+      fill="url(#dotPattern)"
+      mask="url(#mask)"
+    />
+  </svg>
+                    </div>
+                    <div class="dots right bottom"><svg class="dots" viewBox="0 0 1920 1920">
+    <defs>
+
+      <!-- градиент -->
+      <radialGradient
+        id="gradient"
+        gradientUnits="userSpaceOnUse"
+        preserveAspectRatio="xMidYMid slice"
+        cx="50%"
+        cy="50%"
+        r="30%"
+      >
+        <stop offset="0%" stop-color="white" stop-opacity="1" />
+        <stop offset="100%" stop-color="white" stop-opacity="0" />
+      </radialGradient>
+
+      <!-- паттерн точек -->
+      <pattern
+        id="dotPattern"
+        width="60"
+        height="60"
+        patternUnits="userSpaceOnUse"
+      >
+        <circle
+          cx="30"
+          cy="30"
+          r="4"
+          fill="white"
+        />
+      </pattern>
+
+      <!-- маска -->
+      <mask id="mask">
+        <rect
+          width="100%"
+          height="100%"
+          fill="url(#gradient)"
+        />
+      </mask>
+
+    </defs>
+
+    <!-- сами точки -->
+    <rect
+      width="100%"
+      height="100%"
+      fill="url(#dotPattern)"
+      mask="url(#mask)"
+    />
+  </svg>
+                    </div>
                 </div>
             </section>
         </main>
@@ -416,6 +1098,7 @@
 </svg>
                             info@lexus-navi.ru</a><span> <img src="images/footer_pin.svg">г. Москва, 3-й Угрешский проезд, 8а стр. 3</span></div><img class="scroll_top" src="images/scroll_top.svg" onclick="window.scrollTo(0, 0);">
                 </div>
+                <hr class="divide">
                 <div class="bottom"><span>© 2026 Lexus-Navi. Все права защищены.</span><a href="#">Настройки cookies</a><a href="#">Условия использования</a><a href="#">Политика конфиденциальности</a><a class="develop" href="#"><span>Дизайн, разработка сайта</span><img src="images/mwi.svg" alt="MWI"></a></div><img class="background" src="images/footer_background.webp">
             </div>
         </footer>

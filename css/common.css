@@ -685,27 +685,45 @@ div.work div.content div.details span.note {
   opacity: 0.7;
 }
 
-img.dots {
+div.dots {
   position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 1;
+  width: 600px;
+  aspect-ratio: 1/1;
+  z-index: 20;
   pointer-events: none;
-}
-img.dots.desktop {
-  display: block;
-}
-img.dots.mobile {
-  display: none;
+  opacity: 0.5;
 }
 @media (max-width: 960px) {
-  img.dots.desktop {
-    display: none;
+  div.dots {
+    -webkit-transform: scale(0.75);
+        -ms-transform: scale(0.75);
+            transform: scale(0.75);
   }
-  img.dots.mobile {
-    display: block;
-    z-index: 3;
+}
+div.dots.left {
+  left: 0;
+}
+div.dots.right {
+  right: 0;
+}
+div.dots.middle {
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+@media (max-width: 960px) {
+  div.dots.middle {
+    -webkit-transform: translateX(-50%) scale(0.75);
+        -ms-transform: translateX(-50%) scale(0.75);
+            transform: translateX(-50%) scale(0.75);
   }
+}
+div.dots.top {
+  top: 0;
+}
+div.dots.bottom {
+  bottom: 0;
 }
 
 dialog[data-modal-name=callback] {
@@ -1425,6 +1443,16 @@ header.search div.search_popup {
   opacity: 1;
   pointer-events: auto;
 }
+header hr.divide {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  grid-column: full;
+  width: 100%;
+  height: 1px;
+  background: white;
+  opacity: 0.2;
+}
 
 footer {
   background: #000;
@@ -1715,6 +1743,15 @@ footer div.top img.scroll_top:hover {
   -webkit-filter: brightness(120%);
           filter: brightness(120%);
 }
+footer hr.divide {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 1px;
+  background: white;
+  opacity: 0.2;
+  z-index: 2;
+}
 footer div.bottom {
   position: relative;
   display: grid;
@@ -1725,7 +1762,6 @@ footer div.bottom {
           justify-content: space-between;
   grid-gap: var(--grid-gap);
   color: rgba(255, 255, 255, 0.7);
-  border-top: 1px solid rgba(255, 255, 255, 0.3019607843);
   padding-top: 40px;
   padding-bottom: 40px;
   z-index: 2;

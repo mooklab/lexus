@@ -1,3 +1,222 @@
+section.services {
+  background: black;
+  padding-top: var(--section-gap);
+  padding-bottom: var(--section-gap);
+}
+section.services div.title {
+  position: relative;
+  z-index: 2;
+  margin-bottom: 90px;
+  display: grid;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  grid-template-columns: 1fr -webkit-max-content;
+  grid-template-columns: 1fr max-content;
+}
+@media (max-width: 960px) {
+  section.services div.title {
+    margin-bottom: 30px;
+  }
+}
+section.services div.title div.counter {
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 110%;
+  letter-spacing: 0.01em;
+  color: #fff;
+  z-index: 3;
+}
+@media (max-width: 640px) {
+  section.services div.title div.counter {
+    display: none;
+  }
+}
+section.services div.title div.counter span.total {
+  opacity: 0.4;
+}
+section.services div.slider {
+  position: relative;
+  max-width: 600px;
+  z-index: 2;
+}
+@media (max-width: 960px) {
+  section.services div.slider {
+    display: none;
+  }
+}
+section.services div.slider:hover div.service:after {
+  -webkit-animation: none;
+          animation: none;
+}
+section.services div.service {
+  cursor: pointer;
+  display: grid;
+  grid-gap: 24px;
+  position: relative;
+  padding-right: 86px;
+  border-top: 1px solid rgba(255, 255, 255, 0.4);
+  padding-top: 24px;
+  padding-bottom: 24px;
+  margin-bottom: -24px;
+  z-index: 2;
+}
+section.services div.service h4 {
+  color: rgba(255, 255, 255, 0.7019607843);
+}
+section.services div.service span {
+  color: rgba(255, 255, 255, 0.7019607843);
+}
+section.services div.service::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 0%;
+  height: 1px;
+  background: #15A0FD;
+  -webkit-transition: all 5s linear;
+  transition: all 5s linear;
+}
+section.services div.service div.text {
+  display: grid;
+  grid-template-rows: 0fr;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  padding-bottom: 0px;
+  transition: all 0.5s;
+}
+section.services div.service div.overflow {
+  overflow: hidden;
+}
+section.services div.service a.button {
+  position: absolute;
+  top: 24px;
+  right: 0;
+  display: grid;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  justify-items: center;
+  border-radius: 84px;
+  padding: 0px;
+  width: 64px;
+  height: 40px;
+  opacity: 0;
+  pointer-events: none;
+  -webkit-transition: opacity 0.5s;
+  transition: opacity 0.5s;
+}
+@media (max-width: 640px) {
+  section.services div.service a.button {
+    width: 49px;
+    height: 30px;
+  }
+}
+section.services div.service.active::after {
+  -webkit-animation: timeline 5s forwards;
+          animation: timeline 5s forwards;
+  -webkit-animation-direction: normal;
+          animation-direction: normal;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+}
+section.services div.service.active h4 {
+  color: white;
+}
+section.services div.service.active div.text {
+  grid-template-rows: 1fr;
+  padding-bottom: 24px;
+}
+section.services div.service.active a.button {
+  opacity: 1;
+  pointer-events: auto;
+}
+section.services div.service.active img.background {
+  display: block;
+}
+section.services div.accordions {
+  display: none;
+}
+@media (max-width: 960px) {
+  section.services div.accordions {
+    display: grid;
+  }
+}
+section.services div.accordions img.preview {
+  width: 100%;
+  aspect-ratio: 16/9;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+section.services div.accordions div.accordion.open div.accordion_caption svg {
+  -webkit-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+          transform: rotate(180deg);
+  opacity: 1;
+}
+section.services div.accordions div.accordion.open div.accordion_caption svg path {
+  stroke: #15A0FD;
+}
+section.services div.accordions div.accordion_caption {
+  cursor: pointer;
+  display: grid;
+  grid-template-columns: 1fr -webkit-max-content;
+  grid-template-columns: 1fr max-content;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 24px 0;
+}
+section.services div.accordions div.accordion_caption svg {
+  width: 20px;
+  opacity: 0.3;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+section.services div.accordions div.accordion_wrap {
+  display: grid;
+  grid-gap: 24px;
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+section.services div.accordions div.accordion_wrap span {
+  opacity: 0.7;
+}
+section.services div.accordions div.accordion_wrap a.button {
+  display: grid;
+  grid-template-columns: repeat(2, -webkit-max-content);
+  grid-template-columns: repeat(2, max-content);
+}
+section.services div.accordions div.accordion_wrap a.button span {
+  color: black;
+  opacity: unset;
+}
+@media (max-width: 960px) {
+  section.services div.backgrounds {
+    display: none;
+  }
+}
+section.services img.background {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  z-index: 1;
+  pointer-events: none;
+  -webkit-transition: opacity 0.15s;
+  transition: opacity 0.15s;
+}
+section.services img.background.active {
+  opacity: 1;
+}
+
 section.digits {
   margin-top: var(--section-gap);
   margin-bottom: var(--section-gap);
@@ -76,7 +295,7 @@ section.digits div.container div.preview img {
 }
 section.digits div.container div.list {
   display: grid;
-  grid-template-columns: repeat(3, auto);
+  grid-template-columns: repeat(3, 1fr);
   grid-gap: 72px;
   grid-column: 2 span;
   padding-left: 48px;
@@ -539,7 +758,6 @@ section.main div.group {
   grid-template-columns: 1fr -webkit-max-content;
   grid-template-columns: 1fr max-content;
   grid-gap: 32px;
-  border-top: 1px solid rgba(255, 255, 255, 0.4);
   padding-top: 40px;
 }
 @media (max-width: 640px) {
@@ -563,6 +781,23 @@ section.main div.group span b {
     text-align: center;
   }
 }
+section.main hr.divide {
+  width: 100%;
+  height: 1px;
+  background: white;
+  opacity: 0.2;
+}
+section.main video {
+  grid-column: full;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  z-index: 1;
+}
 section.main img.background {
   grid-column: full;
   position: absolute;
@@ -580,150 +815,6 @@ section.main img.background {
     -o-object-position: left top;
        object-position: left top;
   }
-}
-
-section.services {
-  background: black;
-  padding-top: var(--section-gap);
-  padding-bottom: var(--section-gap);
-}
-section.services div.title {
-  position: relative;
-  z-index: 2;
-  margin-bottom: 90px;
-  display: grid;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  grid-template-columns: 1fr -webkit-max-content;
-  grid-template-columns: 1fr max-content;
-}
-section.services div.title div.counter {
-  font-weight: 400;
-  font-size: 24px;
-  line-height: 110%;
-  letter-spacing: 0.01em;
-  color: #fff;
-  z-index: 3;
-}
-@media (max-width: 640px) {
-  section.services div.title div.counter {
-    display: none;
-  }
-}
-section.services div.title div.counter span.total {
-  opacity: 0.4;
-}
-section.services div.slider {
-  max-width: 600px;
-}
-section.services div.slider:hover div.service:after {
-  -webkit-animation: none;
-          animation: none;
-}
-section.services div.service {
-  cursor: pointer;
-  display: grid;
-  grid-gap: 24px;
-  position: relative;
-  padding-right: 86px;
-  border-top: 1px solid rgba(255, 255, 255, 0.4);
-  padding-top: 24px;
-  padding-bottom: 24px;
-  margin-bottom: -24px;
-  z-index: 2;
-}
-section.services div.service h4 {
-  color: rgba(255, 255, 255, 0.7019607843);
-}
-section.services div.service span {
-  color: rgba(255, 255, 255, 0.7019607843);
-}
-section.services div.service::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  display: block;
-  width: 0%;
-  height: 1px;
-  background: #15A0FD;
-  -webkit-transition: all 5s linear;
-  transition: all 5s linear;
-}
-section.services div.service div.text {
-  display: grid;
-  grid-template-rows: 0fr;
-  -webkit-transition: all 0.5s;
-  transition: all 0.5s;
-  padding-bottom: 0px;
-  transition: all 0.5s;
-}
-section.services div.service div.overflow {
-  overflow: hidden;
-}
-section.services div.service a.button {
-  position: absolute;
-  top: 24px;
-  right: 0;
-  display: grid;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  justify-items: center;
-  border-radius: 84px;
-  padding: 0px;
-  width: 64px;
-  height: 40px;
-  opacity: 0;
-  pointer-events: none;
-  -webkit-transition: opacity 0.5s;
-  transition: opacity 0.5s;
-}
-@media (max-width: 640px) {
-  section.services div.service a.button {
-    width: 49px;
-    height: 30px;
-  }
-}
-section.services div.service.active::after {
-  -webkit-animation: timeline 5s forwards;
-          animation: timeline 5s forwards;
-  -webkit-animation-direction: normal;
-          animation-direction: normal;
-  -webkit-animation-timing-function: linear;
-          animation-timing-function: linear;
-}
-section.services div.service.active h4 {
-  color: white;
-}
-section.services div.service.active div.text {
-  grid-template-rows: 1fr;
-  padding-bottom: 24px;
-}
-section.services div.service.active a.button {
-  opacity: 1;
-  pointer-events: auto;
-}
-section.services div.service.active img.background {
-  display: block;
-}
-section.services div.service:hover h4 {
-  color: #15A0FD;
-}
-section.services img.background {
-  display: none;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  z-index: 1;
-}
-section.services img.background.active {
-  display: block;
 }
 
 section.example {

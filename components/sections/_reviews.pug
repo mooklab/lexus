@@ -12,7 +12,8 @@ mixin review(name, car, review)
             img(src="images/star.svg")
             img(src="images/star.svg")
         span.review= review
-        img(src="images/dots.svg").dots
+        div.dots.left.top
+            include ../../images/pattern.svg
 
 section.reviews
     div.container

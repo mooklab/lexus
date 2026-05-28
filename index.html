@@ -27,6 +27,7 @@
         <link rel="stylesheet" href="css/index.css">
         <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
         <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+        <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/TextPlugin.min.js"></script>
         <script defer src="scripts/main.js" type="module"></script>
         <script defer src="scripts/dialog.js"></script>
     </head>
@@ -80,13 +81,118 @@
                 </div>
                 <div class="backdrop" onclick="headerPopup('close')"></div>
             </div>
+            <hr class="divide">
         </header>
         <main>
             <section class="main">
                 <div class="container">
                     <h1>Русификация и обновление навигации для Lexus и Toyota</h1>
+                    <hr class="divide">
                     <div class="group"><span>Профессиональная установка мультимедийных систем с полной русификацией интерфейса и актуальными картами навигации для автомобилей из <b>Кореи, Китая, ОАЭ, Японии и США.</b></span><a class="button" href="#">Подобрать по авто</a></div>
-                </div><img class="background" src="images/main_background.webp"><img class="dots" src="images/dots.svg"><img class="dots" src="images/dots.svg">
+                </div>
+                <video src="images/video.webm" muted autoplay loop></video>
+                <div class="dots left bottom"><svg class="dots" viewBox="0 0 1920 1920">
+    <defs>
+
+      <!-- градиент -->
+      <radialGradient
+        id="gradient"
+        gradientUnits="userSpaceOnUse"
+        preserveAspectRatio="xMidYMid slice"
+        cx="50%"
+        cy="50%"
+        r="30%"
+      >
+        <stop offset="0%" stop-color="white" stop-opacity="1" />
+        <stop offset="100%" stop-color="white" stop-opacity="0" />
+      </radialGradient>
+
+      <!-- паттерн точек -->
+      <pattern
+        id="dotPattern"
+        width="60"
+        height="60"
+        patternUnits="userSpaceOnUse"
+      >
+        <circle
+          cx="30"
+          cy="30"
+          r="4"
+          fill="white"
+        />
+      </pattern>
+
+      <!-- маска -->
+      <mask id="mask">
+        <rect
+          width="100%"
+          height="100%"
+          fill="url(#gradient)"
+        />
+      </mask>
+
+    </defs>
+
+    <!-- сами точки -->
+    <rect
+      width="100%"
+      height="100%"
+      fill="url(#dotPattern)"
+      mask="url(#mask)"
+    />
+  </svg>
+                </div>
+                <div class="dots right top"><svg class="dots" viewBox="0 0 1920 1920">
+    <defs>
+
+      <!-- градиент -->
+      <radialGradient
+        id="gradient"
+        gradientUnits="userSpaceOnUse"
+        preserveAspectRatio="xMidYMid slice"
+        cx="50%"
+        cy="50%"
+        r="30%"
+      >
+        <stop offset="0%" stop-color="white" stop-opacity="1" />
+        <stop offset="100%" stop-color="white" stop-opacity="0" />
+      </radialGradient>
+
+      <!-- паттерн точек -->
+      <pattern
+        id="dotPattern"
+        width="60"
+        height="60"
+        patternUnits="userSpaceOnUse"
+      >
+        <circle
+          cx="30"
+          cy="30"
+          r="4"
+          fill="white"
+        />
+      </pattern>
+
+      <!-- маска -->
+      <mask id="mask">
+        <rect
+          width="100%"
+          height="100%"
+          fill="url(#gradient)"
+        />
+      </mask>
+
+    </defs>
+
+    <!-- сами точки -->
+    <rect
+      width="100%"
+      height="100%"
+      fill="url(#dotPattern)"
+      mask="url(#mask)"
+    />
+  </svg>
+                </div>
             </section>
             <section class="services">
                 <div class="container">
@@ -95,63 +201,257 @@
                         <div class="counter"><span class="current">01</span><span class="total"> / 09</span></div>
                     </div>
                     <div class="slider">
-                        <div class="service">
-                            <h4>Русификация Lexus / Toyota</h4><a class="button" href="#"><img src="images/service_arrow.svg"/></a>
-                            <div class="text">
-                                <div class="overflow"><span>Перевод интерфейса мультимедийной системы на русский язык для автомобилей с зарубежных рынков: 🇰🇷 Корея,🇯🇵 Япония, 🇨🇳 Китай, 🇦🇪 ОАЭ, 🇺🇸 США.</span></div>
-                            </div>
-                        </div>
-                        <div class="service">
-                            <h4>Ремонт мультимедиа Lexus / Toyota</h4><a class="button" href="#"><img src="images/service_arrow.svg"/></a>
-                            <div class="text">
-                                <div class="overflow"><span>Перевод интерфейса мультимедийной системы на русский язык для автомобилей с зарубежных рынков: 🇰🇷 Корея,🇯🇵 Япония, 🇨🇳 Китай, 🇦🇪 ОАЭ, 🇺🇸 США.</span></div>
-                            </div>
-                        </div>
-                        <div class="service">
-                            <h4>Установка противоугонного комплекса</h4><a class="button" href="#"><img src="images/service_arrow.svg"/></a>
-                            <div class="text">
-                                <div class="overflow"><span>Перевод интерфейса мультимедийной системы на русский язык для автомобилей с зарубежных рынков: 🇰🇷 Корея,🇯🇵 Япония, 🇨🇳 Китай, 🇦🇪 ОАЭ, 🇺🇸 США.</span></div>
-                            </div>
-                        </div>
-                        <div class="service">
-                            <h4>Шумоизоляция автомобиля</h4><a class="button" href="#"><img src="images/service_arrow.svg"/></a>
-                            <div class="text">
-                                <div class="overflow"><span>Перевод интерфейса мультимедийной системы на русский язык для автомобилей с зарубежных рынков: 🇰🇷 Корея,🇯🇵 Япония, 🇨🇳 Китай, 🇦🇪 ОАЭ, 🇺🇸 США.</span></div>
-                            </div>
-                        </div>
-                        <div class="service">
-                            <h4>Компьютерная диагностика</h4><a class="button" href="#"><img src="images/service_arrow.svg"/></a>
-                            <div class="text">
-                                <div class="overflow"><span>Перевод интерфейса мультимедийной системы на русский язык для автомобилей с зарубежных рынков: 🇰🇷 Корея,🇯🇵 Япония, 🇨🇳 Китай, 🇦🇪 ОАЭ, 🇺🇸 США.</span></div>
-                            </div>
-                        </div>
-                        <div class="service">
-                            <h4>Чип-тюнинг</h4><a class="button" href="#"><img src="images/service_arrow.svg"/></a>
-                            <div class="text">
-                                <div class="overflow"><span>Перевод интерфейса мультимедийной системы на русский язык для автомобилей с зарубежных рынков: 🇰🇷 Корея,🇯🇵 Япония, 🇨🇳 Китай, 🇦🇪 ОАЭ, 🇺🇸 США.</span></div>
-                            </div>
-                        </div>
-                        <div class="service">
-                            <h4>Установка Android систем</h4><a class="button" href="#"><img src="images/service_arrow.svg"/></a>
-                            <div class="text">
-                                <div class="overflow"><span>Перевод интерфейса мультимедийной системы на русский язык для автомобилей с зарубежных рынков: 🇰🇷 Корея,🇯🇵 Япония, 🇨🇳 Китай, 🇦🇪 ОАЭ, 🇺🇸 США.</span></div>
-                            </div>
-                        </div>
-                        <div class="service">
-                            <h4>Активация CarPlay</h4><a class="button" href="#"><img src="images/service_arrow.svg"/></a>
-                            <div class="text">
-                                <div class="overflow"><span>Перевод интерфейса мультимедийной системы на русский язык для автомобилей с зарубежных рынков: 🇰🇷 Корея,🇯🇵 Япония, 🇨🇳 Китай, 🇦🇪 ОАЭ, 🇺🇸 США.</span></div>
-                            </div>
-                        </div>
-                        <div class="service">
-                            <h4>Обновление навигации Lexus/Toyota</h4><a class="button" href="#"><img src="images/service_arrow.svg"/></a>
-                            <div class="text">
-                                <div class="overflow"><span>Перевод интерфейса мультимедийной системы на русский язык для автомобилей с зарубежных рынков: 🇰🇷 Корея,🇯🇵 Япония, 🇨🇳 Китай, 🇦🇪 ОАЭ, 🇺🇸 США.</span></div>
-                            </div>
-                        </div>
+                                    <div class="service">
+                                        <h4>Русификация Lexus / Toyota</h4><a class="button" href="#"><img src="images/service_arrow.svg"></a>
+                                        <div class="text">
+                                            <div class="overflow"><span>Перевод интерфейса мультимедийной системы на русский язык для автомобилей с зарубежных рынков: 🇰🇷 Корея,🇯🇵 Япония, 🇨🇳 Китай, 🇦🇪 ОАЭ, 🇺🇸 США.</span></div>
+                                        </div>
+                                    </div>
+                                    <div class="service">
+                                        <h4>Ремонт мультимедиа Lexus / Toyota</h4><a class="button" href="#"><img src="images/service_arrow.svg"></a>
+                                        <div class="text">
+                                            <div class="overflow"><span>Перевод интерфейса мультимедийной системы на русский язык для автомобилей с зарубежных рынков: 🇰🇷 Корея,🇯🇵 Япония, 🇨🇳 Китай, 🇦🇪 ОАЭ, 🇺🇸 США.</span></div>
+                                        </div>
+                                    </div>
+                                    <div class="service">
+                                        <h4>Установка противоугонного комплекса</h4><a class="button" href="#"><img src="images/service_arrow.svg"></a>
+                                        <div class="text">
+                                            <div class="overflow"><span>Перевод интерфейса мультимедийной системы на русский язык для автомобилей с зарубежных рынков: 🇰🇷 Корея,🇯🇵 Япония, 🇨🇳 Китай, 🇦🇪 ОАЭ, 🇺🇸 США.</span></div>
+                                        </div>
+                                    </div>
+                                    <div class="service">
+                                        <h4>Шумоизоляция автомобиля</h4><a class="button" href="#"><img src="images/service_arrow.svg"></a>
+                                        <div class="text">
+                                            <div class="overflow"><span>Перевод интерфейса мультимедийной системы на русский язык для автомобилей с зарубежных рынков: 🇰🇷 Корея,🇯🇵 Япония, 🇨🇳 Китай, 🇦🇪 ОАЭ, 🇺🇸 США.</span></div>
+                                        </div>
+                                    </div>
+                                    <div class="service">
+                                        <h4>Компьютерная диагностика</h4><a class="button" href="#"><img src="images/service_arrow.svg"></a>
+                                        <div class="text">
+                                            <div class="overflow"><span>Перевод интерфейса мультимедийной системы на русский язык для автомобилей с зарубежных рынков: 🇰🇷 Корея,🇯🇵 Япония, 🇨🇳 Китай, 🇦🇪 ОАЭ, 🇺🇸 США.</span></div>
+                                        </div>
+                                    </div>
+                                    <div class="service">
+                                        <h4>Чип-тюнинг</h4><a class="button" href="#"><img src="images/service_arrow.svg"></a>
+                                        <div class="text">
+                                            <div class="overflow"><span>Перевод интерфейса мультимедийной системы на русский язык для автомобилей с зарубежных рынков: 🇰🇷 Корея,🇯🇵 Япония, 🇨🇳 Китай, 🇦🇪 ОАЭ, 🇺🇸 США.</span></div>
+                                        </div>
+                                    </div>
+                                    <div class="service">
+                                        <h4>Установка Android систем</h4><a class="button" href="#"><img src="images/service_arrow.svg"></a>
+                                        <div class="text">
+                                            <div class="overflow"><span>Перевод интерфейса мультимедийной системы на русский язык для автомобилей с зарубежных рынков: 🇰🇷 Корея,🇯🇵 Япония, 🇨🇳 Китай, 🇦🇪 ОАЭ, 🇺🇸 США.</span></div>
+                                        </div>
+                                    </div>
+                                    <div class="service">
+                                        <h4>Активация CarPlay</h4><a class="button" href="#"><img src="images/service_arrow.svg"></a>
+                                        <div class="text">
+                                            <div class="overflow"><span>Перевод интерфейса мультимедийной системы на русский язык для автомобилей с зарубежных рынков: 🇰🇷 Корея,🇯🇵 Япония, 🇨🇳 Китай, 🇦🇪 ОАЭ, 🇺🇸 США.</span></div>
+                                        </div>
+                                    </div>
+                                    <div class="service">
+                                        <h4>Обновление навигации Lexus/Toyota</h4><a class="button" href="#"><img src="images/service_arrow.svg"></a>
+                                        <div class="text">
+                                            <div class="overflow"><span>Перевод интерфейса мультимедийной системы на русский язык для автомобилей с зарубежных рынков: 🇰🇷 Корея,🇯🇵 Япония, 🇨🇳 Китай, 🇦🇪 ОАЭ, 🇺🇸 США.</span></div>
+                                        </div>
+                                    </div>
                     </div>
-                    <div class="backgrounds"><img class="background" src="images/service_1.webp"><img class="background" src="images/service_2.webp"><img class="background" src="images/service_3.webp"><img class="background" src="images/service_4.webp"><img class="background" src="images/service_5.webp"><img class="background" src="images/service_6.webp"><img class="background" src="images/service_7.webp"><img class="background" src="images/service_8.webp"><img class="background" src="images/service_9.webp"></div>
-                </div><img class="dots" src="images/dots.svg"><img class="dots" src="images/dots.svg">
+                    <div class="accordions">
+                                    <div class="accordion">
+                                        <div class="accordion_caption">
+                                            <h4>Русификация Lexus / Toyota</h4><svg class="svc-chevron" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                                        </div>
+                                        <div class="accordion_content">
+                                            <div class="accordion_overflow">
+                                                <div class="accordion_wrap"><img class="preview" src="images/service_1.webp" alt="Русификация Lexus / Toyota" onerror="this.style.display='none'"><span>Комплексное восстановление мультимедийных систем: устраняем неполадки и возвращаем комфорт в каждую поездку.</span><a class="button" href="#"><span>Подробнее</span><img src="images/service_arrow.svg"></a></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion">
+                                        <div class="accordion_caption">
+                                            <h4>Ремонт мультимедиа Lexus / Toyota</h4><svg class="svc-chevron" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                                        </div>
+                                        <div class="accordion_content">
+                                            <div class="accordion_overflow">
+                                                <div class="accordion_wrap"><img class="preview" src="images/service_22.webp" alt="Ремонт мультимедиа Lexus / Toyota" onerror="this.style.display='none'"><span>Комплексное восстановление мультимедийных систем: устраняем неполадки и возвращаем комфорт в каждую поездку.</span><a class="button" href="#"><span>Подробнее</span><img src="images/service_arrow.svg"></a></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion">
+                                        <div class="accordion_caption">
+                                            <h4>Установка противоугонного комплекса</h4><svg class="svc-chevron" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                                        </div>
+                                        <div class="accordion_content">
+                                            <div class="accordion_overflow">
+                                                <div class="accordion_wrap"><img class="preview" src="images/service_3.webp" alt="Установка противоугонного комплекса" onerror="this.style.display='none'"><span>Комплексное восстановление мультимедийных систем: устраняем неполадки и возвращаем комфорт в каждую поездку.</span><a class="button" href="#"><span>Подробнее</span><img src="images/service_arrow.svg"></a></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion">
+                                        <div class="accordion_caption">
+                                            <h4>Шумоизоляция автомобиля</h4><svg class="svc-chevron" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                                        </div>
+                                        <div class="accordion_content">
+                                            <div class="accordion_overflow">
+                                                <div class="accordion_wrap"><img class="preview" src="images/service_4.webp" alt="Шумоизоляция автомобиля" onerror="this.style.display='none'"><span>Комплексное восстановление мультимедийных систем: устраняем неполадки и возвращаем комфорт в каждую поездку.</span><a class="button" href="#"><span>Подробнее</span><img src="images/service_arrow.svg"></a></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion">
+                                        <div class="accordion_caption">
+                                            <h4>Компьютерная диагностика</h4><svg class="svc-chevron" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                                        </div>
+                                        <div class="accordion_content">
+                                            <div class="accordion_overflow">
+                                                <div class="accordion_wrap"><img class="preview" src="images/service_5.webp" alt="Компьютерная диагностика" onerror="this.style.display='none'"><span>Комплексное восстановление мультимедийных систем: устраняем неполадки и возвращаем комфорт в каждую поездку.</span><a class="button" href="#"><span>Подробнее</span><img src="images/service_arrow.svg"></a></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion">
+                                        <div class="accordion_caption">
+                                            <h4>Чип-тюнинг</h4><svg class="svc-chevron" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                                        </div>
+                                        <div class="accordion_content">
+                                            <div class="accordion_overflow">
+                                                <div class="accordion_wrap"><img class="preview" src="images/service_6.webp" alt="Чип-тюнинг" onerror="this.style.display='none'"><span>Комплексное восстановление мультимедийных систем: устраняем неполадки и возвращаем комфорт в каждую поездку.</span><a class="button" href="#"><span>Подробнее</span><img src="images/service_arrow.svg"></a></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion">
+                                        <div class="accordion_caption">
+                                            <h4>Установка Android систем</h4><svg class="svc-chevron" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                                        </div>
+                                        <div class="accordion_content">
+                                            <div class="accordion_overflow">
+                                                <div class="accordion_wrap"><img class="preview" src="images/service_7.webp" alt="Установка Android систем" onerror="this.style.display='none'"><span>Комплексное восстановление мультимедийных систем: устраняем неполадки и возвращаем комфорт в каждую поездку.</span><a class="button" href="#"><span>Подробнее</span><img src="images/service_arrow.svg"></a></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion">
+                                        <div class="accordion_caption">
+                                            <h4>Активация CarPlay</h4><svg class="svc-chevron" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                                        </div>
+                                        <div class="accordion_content">
+                                            <div class="accordion_overflow">
+                                                <div class="accordion_wrap"><img class="preview" src="images/service_8.webp" alt="Активация CarPlay" onerror="this.style.display='none'"><span>Комплексное восстановление мультимедийных систем: устраняем неполадки и возвращаем комфорт в каждую поездку.</span><a class="button" href="#"><span>Подробнее</span><img src="images/service_arrow.svg"></a></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion">
+                                        <div class="accordion_caption">
+                                            <h4>Обновление навигации Lexus/Toyota</h4><svg class="svc-chevron" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                                        </div>
+                                        <div class="accordion_content">
+                                            <div class="accordion_overflow">
+                                                <div class="accordion_wrap"><img class="preview" src="images/service_9.webp" alt="Обновление навигации Lexus/Toyota" onerror="this.style.display='none'"><span>Комплексное восстановление мультимедийных систем: устраняем неполадки и возвращаем комфорт в каждую поездку.</span><a class="button" href="#"><span>Подробнее</span><img src="images/service_arrow.svg"></a></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                    </div>
+                    <div class="backgrounds"><img class="background" src="images/service_1.webp" onerror="this.style.display='none'"><img class="background" src="images/service_22.webp" onerror="this.style.display='none'"><img class="background" src="images/service_3.webp" onerror="this.style.display='none'"><img class="background" src="images/service_4.webp" onerror="this.style.display='none'"><img class="background" src="images/service_5.webp" onerror="this.style.display='none'"><img class="background" src="images/service_6.webp" onerror="this.style.display='none'"><img class="background" src="images/service_7.webp" onerror="this.style.display='none'"><img class="background" src="images/service_8.webp" onerror="this.style.display='none'"><img class="background" src="images/service_9.webp" onerror="this.style.display='none'"></div>
+                </div>
+                <div class="dots middle bottom"><svg class="dots" viewBox="0 0 1920 1920">
+    <defs>
+
+      <!-- градиент -->
+      <radialGradient
+        id="gradient"
+        gradientUnits="userSpaceOnUse"
+        preserveAspectRatio="xMidYMid slice"
+        cx="50%"
+        cy="50%"
+        r="30%"
+      >
+        <stop offset="0%" stop-color="white" stop-opacity="1" />
+        <stop offset="100%" stop-color="white" stop-opacity="0" />
+      </radialGradient>
+
+      <!-- паттерн точек -->
+      <pattern
+        id="dotPattern"
+        width="60"
+        height="60"
+        patternUnits="userSpaceOnUse"
+      >
+        <circle
+          cx="30"
+          cy="30"
+          r="4"
+          fill="white"
+        />
+      </pattern>
+
+      <!-- маска -->
+      <mask id="mask">
+        <rect
+          width="100%"
+          height="100%"
+          fill="url(#gradient)"
+        />
+      </mask>
+
+    </defs>
+
+    <!-- сами точки -->
+    <rect
+      width="100%"
+      height="100%"
+      fill="url(#dotPattern)"
+      mask="url(#mask)"
+    />
+  </svg>
+                </div>
+                <div class="dots right top"><svg class="dots" viewBox="0 0 1920 1920">
+    <defs>
+
+      <!-- градиент -->
+      <radialGradient
+        id="gradient"
+        gradientUnits="userSpaceOnUse"
+        preserveAspectRatio="xMidYMid slice"
+        cx="50%"
+        cy="50%"
+        r="30%"
+      >
+        <stop offset="0%" stop-color="white" stop-opacity="1" />
+        <stop offset="100%" stop-color="white" stop-opacity="0" />
+      </radialGradient>
+
+      <!-- паттерн точек -->
+      <pattern
+        id="dotPattern"
+        width="60"
+        height="60"
+        patternUnits="userSpaceOnUse"
+      >
+        <circle
+          cx="30"
+          cy="30"
+          r="4"
+          fill="white"
+        />
+      </pattern>
+
+      <!-- маска -->
+      <mask id="mask">
+        <rect
+          width="100%"
+          height="100%"
+          fill="url(#gradient)"
+        />
+      </mask>
+
+    </defs>
+
+    <!-- сами точки -->
+    <rect
+      width="100%"
+      height="100%"
+      fill="url(#dotPattern)"
+      mask="url(#mask)"
+    />
+  </svg>
+                </div>
             </section>
             <section class="digits">
                 <div class="container">
@@ -159,9 +459,60 @@
                     <div class="preview"><img src="images/digits.webp"></div>
                     <div class="list">
                         <div class="item"><span class="digit" data-target="3000" data-symbol="+">3 000</span><span>выполненных работ</span></div>
-                        <div class="item"><span class="digit" data-target="12" data-symbol="+">12</span><span>лет на рынке</span></div>
                         <div class="item"><span class="digit" data-target="100" data-symbol="%">100</span><span>гарантия качества</span></div>
-                    </div><img class="dots" src="images/dots.svg">
+                        <div class="item"><span class="digit" data-target="12" data-symbol="+">12</span><span>лет на рынке</span></div>
+                    </div>
+                    <div class="dots middle"><svg class="dots" viewBox="0 0 1920 1920">
+    <defs>
+
+      <!-- градиент -->
+      <radialGradient
+        id="gradient"
+        gradientUnits="userSpaceOnUse"
+        preserveAspectRatio="xMidYMid slice"
+        cx="50%"
+        cy="50%"
+        r="30%"
+      >
+        <stop offset="0%" stop-color="white" stop-opacity="1" />
+        <stop offset="100%" stop-color="white" stop-opacity="0" />
+      </radialGradient>
+
+      <!-- паттерн точек -->
+      <pattern
+        id="dotPattern"
+        width="60"
+        height="60"
+        patternUnits="userSpaceOnUse"
+      >
+        <circle
+          cx="30"
+          cy="30"
+          r="4"
+          fill="white"
+        />
+      </pattern>
+
+      <!-- маска -->
+      <mask id="mask">
+        <rect
+          width="100%"
+          height="100%"
+          fill="url(#gradient)"
+        />
+      </mask>
+
+    </defs>
+
+    <!-- сами точки -->
+    <rect
+      width="100%"
+      height="100%"
+      fill="url(#dotPattern)"
+      mask="url(#mask)"
+    />
+  </svg>
+                    </div>
                 </div>
             </section>
             <section class="advantages">
@@ -171,17 +522,170 @@
                         <div class="advantage">
                             <div class="text">
                                 <h3>Многолетний <br>опыт и надежность</h3><span>Мы уже десять лет работаем с Lexus и Toyota, и знаем все тонкости и нюансы работы.</span>
-                            </div><img class="background" src="images/advantage_1.webp"><img class="dots" src="images/dots.svg">
+                            </div><img class="background" src="images/advantage_1.webp">
+                            <div class="dots left top"><svg class="dots" viewBox="0 0 1920 1920">
+    <defs>
+
+      <!-- градиент -->
+      <radialGradient
+        id="gradient"
+        gradientUnits="userSpaceOnUse"
+        preserveAspectRatio="xMidYMid slice"
+        cx="50%"
+        cy="50%"
+        r="30%"
+      >
+        <stop offset="0%" stop-color="white" stop-opacity="1" />
+        <stop offset="100%" stop-color="white" stop-opacity="0" />
+      </radialGradient>
+
+      <!-- паттерн точек -->
+      <pattern
+        id="dotPattern"
+        width="60"
+        height="60"
+        patternUnits="userSpaceOnUse"
+      >
+        <circle
+          cx="30"
+          cy="30"
+          r="4"
+          fill="white"
+        />
+      </pattern>
+
+      <!-- маска -->
+      <mask id="mask">
+        <rect
+          width="100%"
+          height="100%"
+          fill="url(#gradient)"
+        />
+      </mask>
+
+    </defs>
+
+    <!-- сами точки -->
+    <rect
+      width="100%"
+      height="100%"
+      fill="url(#dotPattern)"
+      mask="url(#mask)"
+    />
+  </svg>
+                            </div>
                         </div>
                         <div class="advantage">
                             <div class="text">
                                 <h3>Оригинальные <br>комплектующие</h3><span>Мы слушаем каждого клиента и находим решение, которое подходит именно его машине.</span>
-                            </div><img class="background" src="images/advantage_2.webp"><img class="dots" src="images/dots.svg">
+                            </div><img class="background" src="images/advantage_2.webp">
+                            <div class="dots right top"><svg class="dots" viewBox="0 0 1920 1920">
+    <defs>
+
+      <!-- градиент -->
+      <radialGradient
+        id="gradient"
+        gradientUnits="userSpaceOnUse"
+        preserveAspectRatio="xMidYMid slice"
+        cx="50%"
+        cy="50%"
+        r="30%"
+      >
+        <stop offset="0%" stop-color="white" stop-opacity="1" />
+        <stop offset="100%" stop-color="white" stop-opacity="0" />
+      </radialGradient>
+
+      <!-- паттерн точек -->
+      <pattern
+        id="dotPattern"
+        width="60"
+        height="60"
+        patternUnits="userSpaceOnUse"
+      >
+        <circle
+          cx="30"
+          cy="30"
+          r="4"
+          fill="white"
+        />
+      </pattern>
+
+      <!-- маска -->
+      <mask id="mask">
+        <rect
+          width="100%"
+          height="100%"
+          fill="url(#gradient)"
+        />
+      </mask>
+
+    </defs>
+
+    <!-- сами точки -->
+    <rect
+      width="100%"
+      height="100%"
+      fill="url(#dotPattern)"
+      mask="url(#mask)"
+    />
+  </svg>
+                            </div>
                         </div>
                         <div class="advantage">
                             <div class="text">
                                 <h3>Гарантийное <br>обслуживание</h3><span>Каждая работа выполняется оригинальными компонентами и гарантией на все выполненное.</span>
-                            </div><img class="background" src="images/advantage_3.webp"><img class="dots" src="images/dots.svg">
+                            </div><img class="background" src="images/advantage_3.webp">
+                            <div class="dots middle bottom"><svg class="dots" viewBox="0 0 1920 1920">
+    <defs>
+
+      <!-- градиент -->
+      <radialGradient
+        id="gradient"
+        gradientUnits="userSpaceOnUse"
+        preserveAspectRatio="xMidYMid slice"
+        cx="50%"
+        cy="50%"
+        r="30%"
+      >
+        <stop offset="0%" stop-color="white" stop-opacity="1" />
+        <stop offset="100%" stop-color="white" stop-opacity="0" />
+      </radialGradient>
+
+      <!-- паттерн точек -->
+      <pattern
+        id="dotPattern"
+        width="60"
+        height="60"
+        patternUnits="userSpaceOnUse"
+      >
+        <circle
+          cx="30"
+          cy="30"
+          r="4"
+          fill="white"
+        />
+      </pattern>
+
+      <!-- маска -->
+      <mask id="mask">
+        <rect
+          width="100%"
+          height="100%"
+          fill="url(#gradient)"
+        />
+      </mask>
+
+    </defs>
+
+    <!-- сами точки -->
+    <rect
+      width="100%"
+      height="100%"
+      fill="url(#dotPattern)"
+      mask="url(#mask)"
+    />
+  </svg>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -237,7 +741,58 @@
                         <div class="map">
                             <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A3a68fd6473f89a894f39d13ec99479672416507740cdfd56a6d87b53b3694853&amp;amp;source=constructor" width="100%" height="100%" frameborder="0"></iframe>
                         </div>
-                    </div><img class="dots" src="images/dots.svg">
+                    </div>
+                    <div class="dots right top"><svg class="dots" viewBox="0 0 1920 1920">
+    <defs>
+
+      <!-- градиент -->
+      <radialGradient
+        id="gradient"
+        gradientUnits="userSpaceOnUse"
+        preserveAspectRatio="xMidYMid slice"
+        cx="50%"
+        cy="50%"
+        r="30%"
+      >
+        <stop offset="0%" stop-color="white" stop-opacity="1" />
+        <stop offset="100%" stop-color="white" stop-opacity="0" />
+      </radialGradient>
+
+      <!-- паттерн точек -->
+      <pattern
+        id="dotPattern"
+        width="60"
+        height="60"
+        patternUnits="userSpaceOnUse"
+      >
+        <circle
+          cx="30"
+          cy="30"
+          r="4"
+          fill="white"
+        />
+      </pattern>
+
+      <!-- маска -->
+      <mask id="mask">
+        <rect
+          width="100%"
+          height="100%"
+          fill="url(#gradient)"
+        />
+      </mask>
+
+    </defs>
+
+    <!-- сами точки -->
+    <rect
+      width="100%"
+      height="100%"
+      fill="url(#dotPattern)"
+      mask="url(#mask)"
+    />
+  </svg>
+                    </div>
                 </div>
             </section>
             <section class="navigation">
@@ -245,7 +800,109 @@
                     <div class="text">
                         <h2>Обновим навигацию в вашем авто бесплатно</h2><span>При русификации вашего автомобиля у нас вы получаете обновление навигационных карт в подарок. Без скрытых платежей и универсальных решений — только официальные обновления именно для вашей модели.</span>
                         <button>Записаться</button>
-                    </div><img class="background desktop" src="images/navigation_desktop.webp"><img class="background mobile" src="images/navigation_mobile.webp"><img class="dots" src="images/dots.svg">
+                    </div><img class="background desktop" src="images/navigation_desktop.webp"><img class="background mobile" src="images/navigation_mobile.webp">
+                    <div class="dots left top"><svg class="dots" viewBox="0 0 1920 1920">
+    <defs>
+
+      <!-- градиент -->
+      <radialGradient
+        id="gradient"
+        gradientUnits="userSpaceOnUse"
+        preserveAspectRatio="xMidYMid slice"
+        cx="50%"
+        cy="50%"
+        r="30%"
+      >
+        <stop offset="0%" stop-color="white" stop-opacity="1" />
+        <stop offset="100%" stop-color="white" stop-opacity="0" />
+      </radialGradient>
+
+      <!-- паттерн точек -->
+      <pattern
+        id="dotPattern"
+        width="60"
+        height="60"
+        patternUnits="userSpaceOnUse"
+      >
+        <circle
+          cx="30"
+          cy="30"
+          r="4"
+          fill="white"
+        />
+      </pattern>
+
+      <!-- маска -->
+      <mask id="mask">
+        <rect
+          width="100%"
+          height="100%"
+          fill="url(#gradient)"
+        />
+      </mask>
+
+    </defs>
+
+    <!-- сами точки -->
+    <rect
+      width="100%"
+      height="100%"
+      fill="url(#dotPattern)"
+      mask="url(#mask)"
+    />
+  </svg>
+                    </div>
+                    <div class="dots right bottom"><svg class="dots" viewBox="0 0 1920 1920">
+    <defs>
+
+      <!-- градиент -->
+      <radialGradient
+        id="gradient"
+        gradientUnits="userSpaceOnUse"
+        preserveAspectRatio="xMidYMid slice"
+        cx="50%"
+        cy="50%"
+        r="30%"
+      >
+        <stop offset="0%" stop-color="white" stop-opacity="1" />
+        <stop offset="100%" stop-color="white" stop-opacity="0" />
+      </radialGradient>
+
+      <!-- паттерн точек -->
+      <pattern
+        id="dotPattern"
+        width="60"
+        height="60"
+        patternUnits="userSpaceOnUse"
+      >
+        <circle
+          cx="30"
+          cy="30"
+          r="4"
+          fill="white"
+        />
+      </pattern>
+
+      <!-- маска -->
+      <mask id="mask">
+        <rect
+          width="100%"
+          height="100%"
+          fill="url(#gradient)"
+        />
+      </mask>
+
+    </defs>
+
+    <!-- сами точки -->
+    <rect
+      width="100%"
+      height="100%"
+      fill="url(#dotPattern)"
+      mask="url(#mask)"
+    />
+  </svg>
+                    </div>
                 </div>
             </section>
         </main>
@@ -303,6 +960,7 @@
 </svg>
                             info@lexus-navi.ru</a><span> <img src="images/footer_pin.svg">г. Москва, 3-й Угрешский проезд, 8а стр. 3</span></div><img class="scroll_top" src="images/scroll_top.svg" onclick="window.scrollTo(0, 0);">
                 </div>
+                <hr class="divide">
                 <div class="bottom"><span>© 2026 Lexus-Navi. Все права защищены.</span><a href="#">Настройки cookies</a><a href="#">Условия использования</a><a href="#">Политика конфиденциальности</a><a class="develop" href="#"><span>Дизайн, разработка сайта</span><img src="images/mwi.svg" alt="MWI"></a></div><img class="background" src="images/footer_background.webp">
             </div>
         </footer>

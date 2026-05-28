@@ -1,0 +1,71 @@
+mixin service(title)
+    div.service
+        h4= title
+        a(href="#").button
+            img(src="images/service_arrow.svg")
+        div.text
+            div.overflow
+                span Перевод интерфейса мультимедийной системы на русский язык для автомобилей с зарубежных рынков: 🇰🇷 Корея,🇯🇵 Япония, 🇨🇳 Китай, 🇦🇪 ОАЭ, 🇺🇸 США.
+
+mixin accordion(image, title)
+    div.accordion
+        div.accordion_caption
+            h4= title
+            include ../../images/accordion_arrow.svg
+        div.accordion_content
+            div.accordion_overflow
+                div.accordion_wrap
+                    img(src=image, alt=title, onerror="this.style.display='none'").preview
+                    span Комплексное восстановление мультимедийных систем: устраняем неполадки и возвращаем комфорт в каждую поездку.
+                    a(href="#").button
+                        span Подробнее
+                        img(src="images/service_arrow.svg")
+                        
+
+section.services
+    div.container
+
+        div.title
+            h2 Что мы предлагаем
+
+            div.counter
+                span.current 01
+                span.total  / 09
+
+        div.slider
+            +service('Русификация Lexus / Toyota')
+            +service('Ремонт мультимедиа Lexus / Toyota')
+            +service('Установка противоугонного комплекса')
+            +service('Шумоизоляция автомобиля')
+            +service('Компьютерная диагностика')
+            +service('Чип-тюнинг')
+            +service('Установка Android систем')
+            +service('Активация CarPlay')
+            +service('Обновление навигации Lexus/Toyota')
+
+        div.accordions
+            +accordion('images/service_1.webp', 'Русификация Lexus / Toyota')
+            +accordion('images/service_22.webp', 'Ремонт мультимедиа Lexus / Toyota')
+            +accordion('images/service_3.webp', 'Установка противоугонного комплекса')
+            +accordion('images/service_4.webp', 'Шумоизоляция автомобиля')
+            +accordion('images/service_5.webp', 'Компьютерная диагностика')
+            +accordion('images/service_6.webp', 'Чип-тюнинг')
+            +accordion('images/service_7.webp', 'Установка Android систем')
+            +accordion('images/service_8.webp', 'Активация CarPlay')
+            +accordion('images/service_9.webp', 'Обновление навигации Lexus/Toyota')
+
+        div.backgrounds
+            img(src="images/service_1.webp", onerror="this.style.display='none'").background
+            img(src="images/service_22.webp", onerror="this.style.display='none'").background
+            img(src="images/service_3.webp", onerror="this.style.display='none'").background
+            img(src="images/service_4.webp", onerror="this.style.display='none'").background
+            img(src="images/service_5.webp", onerror="this.style.display='none'").background
+            img(src="images/service_6.webp", onerror="this.style.display='none'").background
+            img(src="images/service_7.webp", onerror="this.style.display='none'").background
+            img(src="images/service_8.webp", onerror="this.style.display='none'").background
+            img(src="images/service_9.webp", onerror="this.style.display='none'").background
+                
+    div.dots.middle.bottom
+        include ../../images/pattern.svg
+    div.dots.right.top
+        include ../../images/pattern.svg

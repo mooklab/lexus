@@ -27,6 +27,7 @@
         <link rel="stylesheet" href="css/choose.css">
         <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
         <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+        <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/TextPlugin.min.js"></script>
         <script defer src="scripts/main.js" type="module"></script>
         <script defer src="scripts/dialog.js"></script>
     </head>
@@ -80,13 +81,14 @@
                 </div>
                 <div class="backdrop" onclick="headerPopup('close')"></div>
             </div>
+            <hr class="divide">
         </header>
         <main>
             <section class="main padding">
                 <div class="container">
                     <div class="breadcrumbs"><a href="#">Главная</a><span class="divide">/</span><span>Подбор по авто</span></div>
-                    <div class="text">
-                        <h2>Подбор услуг по автомобилю</h2><span>Выберите марку, модель и комплектацию — покажем, что можем сделать именно для вашей машины</span>
+                    <div class="group">
+                        <h2>Подбор услуг <br>по автомобилю</h2><span>Выберите марку, модель и комплектацию — покажем, что можем сделать именно для вашей машины</span>
                     </div>
                     <form tabindex="1">
                         <div class="select"><span>Марка</span>
@@ -191,7 +193,109 @@
                             </fieldset>
                         </div>
                     </form>
-                </div><img class="background" src="images/choose_background.webp"><img class="dots" src="images/dots.svg"><img class="dots" src="images/dots.svg">
+                </div><img class="background" src="images/choose_background.webp">
+                <div class="dots left bottom"><svg class="dots" viewBox="0 0 1920 1920">
+    <defs>
+
+      <!-- градиент -->
+      <radialGradient
+        id="gradient"
+        gradientUnits="userSpaceOnUse"
+        preserveAspectRatio="xMidYMid slice"
+        cx="50%"
+        cy="50%"
+        r="30%"
+      >
+        <stop offset="0%" stop-color="white" stop-opacity="1" />
+        <stop offset="100%" stop-color="white" stop-opacity="0" />
+      </radialGradient>
+
+      <!-- паттерн точек -->
+      <pattern
+        id="dotPattern"
+        width="60"
+        height="60"
+        patternUnits="userSpaceOnUse"
+      >
+        <circle
+          cx="30"
+          cy="30"
+          r="4"
+          fill="white"
+        />
+      </pattern>
+
+      <!-- маска -->
+      <mask id="mask">
+        <rect
+          width="100%"
+          height="100%"
+          fill="url(#gradient)"
+        />
+      </mask>
+
+    </defs>
+
+    <!-- сами точки -->
+    <rect
+      width="100%"
+      height="100%"
+      fill="url(#dotPattern)"
+      mask="url(#mask)"
+    />
+  </svg>
+                </div>
+                <div class="dots right top"><svg class="dots" viewBox="0 0 1920 1920">
+    <defs>
+
+      <!-- градиент -->
+      <radialGradient
+        id="gradient"
+        gradientUnits="userSpaceOnUse"
+        preserveAspectRatio="xMidYMid slice"
+        cx="50%"
+        cy="50%"
+        r="30%"
+      >
+        <stop offset="0%" stop-color="white" stop-opacity="1" />
+        <stop offset="100%" stop-color="white" stop-opacity="0" />
+      </radialGradient>
+
+      <!-- паттерн точек -->
+      <pattern
+        id="dotPattern"
+        width="60"
+        height="60"
+        patternUnits="userSpaceOnUse"
+      >
+        <circle
+          cx="30"
+          cy="30"
+          r="4"
+          fill="white"
+        />
+      </pattern>
+
+      <!-- маска -->
+      <mask id="mask">
+        <rect
+          width="100%"
+          height="100%"
+          fill="url(#gradient)"
+        />
+      </mask>
+
+    </defs>
+
+    <!-- сами точки -->
+    <rect
+      width="100%"
+      height="100%"
+      fill="url(#dotPattern)"
+      mask="url(#mask)"
+    />
+  </svg>
+                </div>
             </section>
         </main>
         <footer>
@@ -248,6 +352,7 @@
 </svg>
                             info@lexus-navi.ru</a><span> <img src="images/footer_pin.svg">г. Москва, 3-й Угрешский проезд, 8а стр. 3</span></div><img class="scroll_top" src="images/scroll_top.svg" onclick="window.scrollTo(0, 0);">
                 </div>
+                <hr class="divide">
                 <div class="bottom"><span>© 2026 Lexus-Navi. Все права защищены.</span><a href="#">Настройки cookies</a><a href="#">Условия использования</a><a href="#">Политика конфиденциальности</a><a class="develop" href="#"><span>Дизайн, разработка сайта</span><img src="images/mwi.svg" alt="MWI"></a></div><img class="background" src="images/footer_background.webp">
             </div>
         </footer>
