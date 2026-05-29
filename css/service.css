@@ -1169,17 +1169,17 @@ section.decision div.container div.grid div.map {
   }
 }
 
-section.navigation {
+section.choose {
   background: #000;
   padding-top: var(--section-gap);
   padding-bottom: var(--section-gap);
 }
 @media (max-width: 960px) {
-  section.navigation {
+  section.choose {
     padding-top: unset;
   }
 }
-section.navigation div.container {
+section.choose div.container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-gap: var(--grid-gap);
@@ -1190,13 +1190,13 @@ section.navigation div.container {
   overflow: clip;
 }
 @media (max-width: 640px) {
-  section.navigation div.container {
+  section.choose div.container {
+    height: 360px;
     grid-template-columns: 1fr;
-    grid-template-rows: repeat(2, 1fr);
     padding: 20px;
   }
 }
-section.navigation div.text {
+section.choose div.text {
   display: grid;
   grid-gap: 24px;
   position: relative;
@@ -1204,29 +1204,70 @@ section.navigation div.text {
   z-index: 3;
 }
 @media (max-width: 960px) {
-  section.navigation div.text {
+  section.choose div.text {
     grid-gap: 12px;
   }
 }
-section.navigation div.text span {
+@media (max-width: 640px) {
+  section.choose div.text {
+    grid-template-rows: -webkit-max-content 1fr -webkit-max-content;
+    grid-template-rows: max-content 1fr max-content;
+  }
+}
+section.choose div.text span {
   max-width: 680px;
   opacity: 0.7;
 }
-section.navigation div.text button {
+section.choose div.buttons {
+  display: grid;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  grid-template-columns: repeat(2, -webkit-max-content);
+  grid-template-columns: repeat(2, max-content);
+  grid-gap: 16px;
   margin-top: 24px;
-  min-width: 260px;
 }
 @media (max-width: 960px) {
-  section.navigation div.text button {
+  section.choose div.buttons {
     margin-top: 12px;
   }
 }
 @media (max-width: 640px) {
-  section.navigation div.text button {
+  section.choose div.buttons {
     width: 100%;
   }
 }
-section.navigation img.background {
+@media (max-width: 640px) {
+  section.choose div.buttons {
+    grid-template-columns: 1fr;
+    grid-gap: 12px;
+  }
+}
+section.choose div.buttons a.button {
+  min-width: 260px;
+  text-align: center;
+}
+@media (max-width: 640px) {
+  section.choose div.buttons a.button {
+    width: 100%;
+  }
+}
+section.choose div.buttons button {
+  color: #15A0FD;
+  background: transparent;
+  border: 1px solid #15A0FD;
+}
+@media (max-width: 640px) {
+  section.choose div.buttons button {
+    width: 100%;
+  }
+}
+section.choose div.buttons button:hover {
+  background: #15A0FD;
+  color: black;
+}
+section.choose img.background {
   position: absolute;
   top: 0;
   left: 0;
@@ -1235,21 +1276,21 @@ section.navigation img.background {
   -o-object-fit: cover;
      object-fit: cover;
 }
-section.navigation img.background.desktop {
+section.choose img.background.desktop {
   display: block;
 }
 @media (max-width: 640px) {
-  section.navigation img.background.desktop {
+  section.choose img.background.desktop {
     display: none;
   }
 }
-section.navigation img.background.mobile {
+section.choose img.background.mobile {
   display: none;
   -o-object-position: bottom;
      object-position: bottom;
 }
 @media (max-width: 640px) {
-  section.navigation img.background.mobile {
+  section.choose img.background.mobile {
     display: block;
   }
 }
