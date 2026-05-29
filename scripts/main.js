@@ -537,7 +537,7 @@ timelineAdvantages.to(advantagesListItem, { opacity: 1, x: 0, stagger: 0.1 })
 
 
 // GSAP - Common Titles
-const sectionTitles = document.querySelectorAll(':is(section.example, section.decision, section.navigation) div.text')
+const sectionTitles = document.querySelectorAll(':is(section.example, section.decision, section.navigation, section.choose) div.text')
 sectionTitles.forEach(title => {
 
     const timeline = createTimeline(title)
