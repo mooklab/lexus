@@ -112,7 +112,7 @@ section.consulting div.container img.hand {
 @media (max-width: 960px) {
   section.consulting div.container img.hand {
     height: 250px;
-    top: 200px;
+    top: -50px;
     left: 50%;
     bottom: unset;
     -webkit-transform: translate(-50%, -100%);
@@ -337,6 +337,7 @@ section.search div.form {
   padding: 32px 40px;
   background: black;
   border-radius: 16px;
+  max-width: 1168px;
 }
 @media (max-width: 960px) {
   section.search div.form {

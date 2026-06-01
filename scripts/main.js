@@ -672,15 +672,18 @@ timelineGet.to(getDividers, { width: '100%', stagger: 0.15 }, '-=0.7')
 const searchBreadcrumbs = document.querySelectorAll('section.search div.breadcrumbs')
 const searchTitle = document.querySelectorAll('section.search h2')
 const searchForm = document.querySelectorAll('section.search div.form')
+const searchResults = document.querySelectorAll('section.search div.results')
 const timelineSearch = createTimeline('section.search')
 
 gsap.set(searchBreadcrumbs, { opacity: 0, y: 50 })
 gsap.set(searchTitle, { opacity: 0, y: 50 })
 gsap.set(searchForm, { opacity: 0, y: 50 })
+gsap.set(searchResults, { opacity: 0, y: 50 })
 
 timelineSearch.to(searchBreadcrumbs, { opacity: 1, y: 0 })
 timelineSearch.to(searchTitle, { opacity: 1, y: 0, stagger: 0.1 })
 timelineSearch.to(searchForm, { opacity: 1, y: 0 }, '-=0.3')
+timelineSearch.to(searchResults, { opacity: 1, y: 0 }, '-=0.3')
 
 
 

@@ -23,7 +23,7 @@ section.services
             letter-spacing: 0.01em
             color: #fff
             z-index: 3
-            +s(s)
+            +s(m)
                 display: none
 
             span.total
@@ -120,10 +120,20 @@ section.services
         +s(m)
             display: grid
 
-        img.preview
+        div.preview
             width: 100%
             aspect-ratio: 16 / 9
+            position: relative
+            overflow: hidden
+            border-radius: 10px
+        img.preview
+            position: absolute
+            top: 0
+            right: 0
+            width: 150%
+            height: 100%
             object-fit: cover
+            object-position: right center
 
         div.accordion.open
             div.accordion_caption
@@ -178,3 +188,9 @@ section.services
         transition: opacity 0.15s
         &.active
             opacity: 1
+
+@keyframes timeline
+    from
+        width: 0%
+    to
+        width: 100%

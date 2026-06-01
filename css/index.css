@@ -27,7 +27,7 @@ section.services div.title div.counter {
   color: #fff;
   z-index: 3;
 }
-@media (max-width: 640px) {
+@media (max-width: 960px) {
   section.services div.title div.counter {
     display: none;
   }
@@ -144,11 +144,23 @@ section.services div.accordions {
     display: grid;
   }
 }
-section.services div.accordions img.preview {
+section.services div.accordions div.preview {
   width: 100%;
   aspect-ratio: 16/9;
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+}
+section.services div.accordions img.preview {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 150%;
+  height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  -o-object-position: right center;
+     object-position: right center;
 }
 section.services div.accordions div.accordion.open div.accordion_caption svg {
   -webkit-transform: rotate(180deg);
@@ -217,6 +229,23 @@ section.services img.background.active {
   opacity: 1;
 }
 
+@-webkit-keyframes timeline {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes timeline {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+}
 section.digits {
   margin-top: var(--section-gap);
   margin-bottom: var(--section-gap);
@@ -911,22 +940,4 @@ section.example div.container div.video div.play.playing svg {
 
 section.decision {
   padding-top: var(--section-gap);
-}
-
-@-webkit-keyframes timeline {
-  from {
-    width: 0%;
-  }
-  to {
-    width: 100%;
-  }
-}
-
-@keyframes timeline {
-  from {
-    width: 0%;
-  }
-  to {
-    width: 100%;
-  }
 }/*# sourceMappingURL=index.css.map */

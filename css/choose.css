@@ -112,7 +112,7 @@ section.consulting div.container img.hand {
 @media (max-width: 960px) {
   section.consulting div.container img.hand {
     height: 250px;
-    top: 200px;
+    top: -50px;
     left: 50%;
     bottom: unset;
     -webkit-transform: translate(-50%, -100%);

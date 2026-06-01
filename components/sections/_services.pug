@@ -15,7 +15,8 @@ mixin accordion(image, title)
         div.accordion_content
             div.accordion_overflow
                 div.accordion_wrap
-                    img(src=image, alt=title, onerror="this.style.display='none'").preview
+                    div.preview
+                        img(src=image, alt=title, onerror="this.style.display='none'").preview
                     span Комплексное восстановление мультимедийных систем: устраняем неполадки и возвращаем комфорт в каждую поездку.
                     a(href="#").button
                         span Подробнее
