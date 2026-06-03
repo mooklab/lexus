@@ -349,6 +349,7 @@ function createTimeline(target) {
     return gsap.timeline({
         scrollTrigger: {
             trigger: target,
+            invalidateOnRefresh: true,
             start: "top center",
             toggleActions: "play none none none"
         }
@@ -362,15 +363,15 @@ function createTimeline(target) {
 
 const ease = 'cubic-bezier()'
 const timelineIndexMain = gsap.timeline()
-const header = document.querySelector('header')
-const headerDivide = document.querySelector('header hr.divide')
+const header = document.querySelectorAll('header')
+const headerDivide = document.querySelectorAll('header hr.divide')
 
-const mainTitle = document.querySelector('section.main div.container > h1')
-const mainBreadcrumbs = document.querySelector('section.main div.breadcrumbs')
-const mainDivide = document.querySelector('section.main hr.divide')
+const mainTitle = document.querySelectorAll('section.main div.container > h1')
+const mainBreadcrumbs = document.querySelectorAll('section.main div.breadcrumbs')
+const mainDivide = document.querySelectorAll('section.main hr.divide')
 const mainGroup = document.querySelectorAll('section.main div.group > *')
-const mainPreview = document.querySelector('section.main img.preview')
-const mainForm = document.querySelector('section.main form')
+const mainPreview = document.querySelectorAll('section.main img.preview')
+const mainForm = document.querySelectorAll('section.main form')
 
 function safeTimeline(target, vars, delay) {
     if (target) timelineIndexMain.to(target, vars, delay)
@@ -466,9 +467,9 @@ mainLanguage?.addEventListener("mouseleave", () => {
 
 // GSAP - Index Services
 
-const indexServicesTitle = document.querySelector('section.services div.title h2')
-const indexServicesList = document.querySelector('section.services div.slider')
-const indexServicesCounter = document.querySelector('section.services div.counter')
+const indexServicesTitle = document.querySelectorAll('section.services div.title h2')
+const indexServicesList = document.querySelectorAll('section.services div.slider')
+const indexServicesCounter = document.querySelectorAll('section.services div.counter')
 const timelineIndexServices = createTimeline('section.services')
 
 gsap.set(indexServicesTitle, { opacity: 0, y: 50 })
@@ -524,7 +525,7 @@ digitsCounterBlocks.forEach((counter, index) => {
 
 // GSAP - Common Advantages
 
-const advantagesTitle = document.querySelector('section.advantages h2')
+const advantagesTitle = document.querySelectorAll('section.advantages h2')
 const advantagesListItem = document.querySelectorAll('section.advantages div.advantage')
 const timelineAdvantages = createTimeline('section.advantages')
 
@@ -551,7 +552,7 @@ sectionTitles.forEach(title => {
 // GSAP - Common Footer
 
 const footerTopColumns = document.querySelectorAll('footer div.top > *, footer div.top div.menus > *')
-const footerDivide = document.querySelector('footer hr.divide')
+const footerDivide = document.querySelectorAll('footer hr.divide')
 const footerBottomColumns = document.querySelectorAll('footer div.bottom > *')
 const timelineFooter = createTimeline('footer')
 
@@ -732,4 +733,9 @@ gsap.ticker.add(() => {
 
     gradient.setAttribute("cx", x)
     gradient.setAttribute("cy", y)
+})
+
+
+window.addEventListener('resize', () => {
+    ScrollTrigger.refresh()
 })

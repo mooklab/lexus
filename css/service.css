@@ -456,26 +456,35 @@ section.consulting div.container div.phone a.phone img {
 section.consulting div.container div.phone span.schedule {
   opacity: 0.7;
 }
-section.consulting div.container img.hand {
+section.consulting div.container div.hand {
   position: absolute;
+  display: grid;
+  justify-items: center;
   bottom: 0;
-  left: 75%;
+  left: 50%;
+  width: 50%;
   height: 500px;
   z-index: 2;
-  -webkit-transform: translateX(-50%);
-      -ms-transform: translateX(-50%);
-          transform: translateX(-50%);
 }
 @media (max-width: 960px) {
-  section.consulting div.container img.hand {
+  section.consulting div.container div.hand {
     height: 250px;
     top: -50px;
-    left: 50%;
+    left: 0%;
+    width: 100%;
     bottom: unset;
-    -webkit-transform: translate(-50%, -100%);
-        -ms-transform: translate(-50%, -100%);
-            transform: translate(-50%, -100%);
   }
+}
+section.consulting div.container div.hand img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  -o-object-position: center center;
+     object-position: center center;
 }
 section.consulting div.container img.background {
   position: absolute;
